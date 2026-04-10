@@ -1741,12 +1741,14 @@
       if (r.ok) {
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({ event: 'form_submit', form_type: 'essai_gratuit', moto_model: m });
-        document.querySelector('.ef').innerHTML =
-          '<div style="text-align:center;padding:40px 20px">'
-          + '<div style="font-size:48px;margin-bottom:16px">✅</div>'
-          + '<h3 style="color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3>'
-          + '<p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au ' + p + '<br>pour confirmer votre essai.</p>'
-          + '</div>';
+        var successHTML = [
+          '<div style="text-align:center;padding:40px 20px">',
+          '<div style="font-size:48px;margin-bottom:16px">✅</div>',
+          '<h3 style="color:#fff;font-family:Barlow Condensed,sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3>',
+          '<p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au ' + p + '<br>pour confirmer votre essai.</p>',
+          '</div>'
+        ].join('');
+        document.querySelector('.ef').innerHTML = successHTML;
       } else {
         btn.disabled = false;
         btn.textContent = "Envoyer ma demande d'essai";
