@@ -27,10 +27,7 @@
     <link
       rel="preload"
       as="style"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      onload="this.onload=null;this.rel='stylesheet';"
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap"
     />
     <noscript
@@ -79,7 +76,8 @@
         overflow-x: hidden;
         font-size: 17px;
         line-height: 1.6;
-      } /* ── NAV ── */
+      }
+      /* ── NAV ── */
       nav {
         position: fixed;
         top: 0;
@@ -143,7 +141,8 @@
         height: 2px;
         background: #fff;
         display: block;
-      } /* ── MOBILE MENU ── */
+      }
+      /* ── MOBILE MENU ── */
       .mmenu {
         display: none;
         position: fixed;
@@ -178,15 +177,11 @@
         color: #222;
         font-size: 28px;
         cursor: pointer;
-      } /* ── HERO ── */
+      }
+      /* ── HERO ── */
       #hero {
         min-height: 100vh;
-        background: linear-gradient(
-          160deg,
-          #050505 0%,
-          #0f0505 50%,
-          #050505 100%
-        );
+        background: linear-gradient(160deg, #050505 0%, #0f0505 50%, #050505 100%);
         display: flex;
         align-items: center;
         padding: 80px 20px 60px;
@@ -200,11 +195,7 @@
         right: -5%;
         width: 60%;
         height: 120%;
-        background: radial-gradient(
-          ellipse,
-          rgba(224, 25, 15, 0.09),
-          transparent 65%
-        );
+        background: radial-gradient(ellipse, rgba(224, 25, 15, 0.09), transparent 65%);
         pointer-events: none;
       }
       #hero::after {
@@ -215,7 +206,8 @@
         right: 0;
         height: 1px;
         background: linear-gradient(90deg, transparent, var(--r), transparent);
-      } /* ── HERO SPLIT LAYOUT ── */
+      }
+      /* ── HERO SPLIT LAYOUT ── */
       .hero-in {
         max-width: 1200px;
         margin: 0 auto;
@@ -225,8 +217,10 @@
         gap: 56px;
         align-items: center;
       }
+      /* ── CHANGE 1: badge centered via display:table + auto margins ── */
       .badge {
-        display: inline-block;
+        display: table;
+        margin: 0 auto 18px;
         font-family: "Barlow Condensed", sans-serif;
         font-size: 14px;
         font-weight: 700;
@@ -236,7 +230,6 @@
         border: 1px solid rgba(224, 25, 15, 0.5);
         padding: 5px 14px;
         border-radius: 2px;
-        margin-bottom: 18px;
       }
       h1 {
         font-family: "Barlow Condensed", sans-serif;
@@ -247,6 +240,7 @@
         text-transform: uppercase;
         margin-bottom: 18px;
         color: #fff;
+        text-align: center;
       }
       h1 span {
         color: var(--r);
@@ -323,16 +317,15 @@
         letter-spacing: 0.5px;
         margin-top: 2px;
         font-weight: 500;
-      } /* ── CAROUSEL ── */
+      }
+      /* ── CAROUSEL ── */
       .carousel-wrap {
         position: relative;
         border-radius: 10px;
         overflow: hidden;
         aspect-ratio: 3/2;
         background: #111;
-        box-shadow:
-          0 32px 80px rgba(0, 0, 0, 0.7),
-          0 0 0 1px rgba(255, 255, 255, 0.06);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06);
       }
       .carousel-slide {
         position: absolute;
@@ -353,11 +346,15 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.65) 0%,
-          transparent 55%
-        );
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 55%);
+        /* z-index 0 — sits above img but below overlay link & caption */
+      }
+      /* ── CHANGE 3: overlay link style ── */
+      .carousel-link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        cursor: pointer;
       }
       .carousel-caption {
         position: absolute;
@@ -367,6 +364,7 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+        pointer-events: none;
       }
       .carousel-tag {
         font-family: "Barlow Condensed", sans-serif;
@@ -405,9 +403,7 @@
         background: rgba(255, 255, 255, 0.35);
         cursor: pointer;
         border: none;
-        transition:
-          background 0.3s,
-          transform 0.3s;
+        transition: background 0.3s, transform 0.3s;
         padding: 0;
       }
       .carousel-dot.active {
@@ -421,7 +417,8 @@
         border: 1px solid rgba(224, 25, 15, 0.25);
         pointer-events: none;
         z-index: 3;
-      } /* ── ESSAI BANNER ── */
+      }
+      /* ── ESSAI BANNER ── */
       #eb {
         background: var(--r);
       }
@@ -466,7 +463,8 @@
       .btn-w:hover {
         background: #f0f0f0;
         transform: scale(1.02);
-      } /* ── GAMME ── */
+      }
+      /* ── GAMME ── */
       #gamme {
         padding: 80px 20px;
         background: var(--md);
@@ -505,7 +503,8 @@
         margin-top: 14px;
         max-width: 560px;
         line-height: 1.7;
-      } /* Cards grid */
+      }
+      /* Cards grid */
       .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -519,9 +518,7 @@
         text-decoration: none;
         display: flex;
         flex-direction: column;
-        transition:
-          border-color 0.3s,
-          transform 0.3s;
+        transition: border-color 0.3s, transform 0.3s;
       }
       .card:hover {
         border-color: var(--r);
@@ -609,11 +606,12 @@
         border-top: 1px solid var(--br);
         margin-bottom: 18px;
       }
+      /* ── CHANGE 8: card-spec values in red ── */
       .cs-val {
         font-family: "Barlow Condensed", sans-serif;
         font-size: 20px;
         font-weight: 900;
-        color: #fff;
+        color: var(--r);
       }
       .cs-lbl {
         font-size: 10px;
@@ -636,10 +634,7 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         color: var(--tx);
-        transition:
-          background 0.2s,
-          border-color 0.2s,
-          color 0.2s;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
       }
       .card:hover .card-cta {
         background: var(--r);
@@ -652,7 +647,8 @@
       }
       .card:hover .card-arrow {
         transform: translateX(4px);
-      } /* ── AVIS ── */
+      }
+      /* ── AVIS ── */
       #avis {
         padding: 80px 20px;
         background: var(--dk);
@@ -762,18 +758,11 @@
         font-size: 18px;
         font-weight: 700;
       }
-      .g-logo .g-b {
-        color: #4285f4;
-      }
-      .g-logo .g-r {
-        color: #ea4335;
-      }
-      .g-logo .g-y {
-        color: #fbbc05;
-      }
-      .g-logo .g-g {
-        color: #34a853;
-      } /* ── CONTACT ── */
+      .g-logo .g-b { color: #4285f4; }
+      .g-logo .g-r { color: #ea4335; }
+      .g-logo .g-y { color: #fbbc05; }
+      .g-logo .g-g { color: #34a853; }
+      /* ── CONTACT ── */
       #contact {
         padding: 80px 20px;
         background: var(--md);
@@ -926,7 +915,8 @@
       }
       .fsub:hover {
         background: #c0140b;
-      } /* ── FOOTER ── */
+      }
+      /* ── FOOTER ── */
       footer {
         background: #030303;
         border-top: 1px solid var(--br);
@@ -947,7 +937,8 @@
       }
       footer a:hover {
         color: var(--r);
-      } /* ── STICKY MOBILE ── */
+      }
+      /* ── STICKY MOBILE ── */
       .sbar {
         position: fixed;
         bottom: 0;
@@ -980,18 +971,18 @@
         background: transparent;
         color: #fff;
         border: 1px solid rgba(255, 255, 255, 0.3);
-      } /* ── FADE ANIM ── */
+      }
+      /* ── FADE ANIM ── */
       .fi {
         opacity: 0;
         transform: translateY(22px);
-        transition:
-          opacity 0.65s,
-          transform 0.65s;
+        transition: opacity 0.65s, transform 0.65s;
       }
       .fi.vis {
         opacity: 1;
         transform: translateY(0);
-      } /* ── RESPONSIVE ── */
+      }
+      /* ── RESPONSIVE ── */
       @media (max-width: 900px) {
         .hero-in {
           grid-template-columns: 1fr;
@@ -1062,80 +1053,65 @@
     </style>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) --><noscript
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe></noscript
-    ><!-- End Google Tag Manager (noscript) --><!-- ── NAV ── -->
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ── NAV ── -->
     <nav>
-      <img
-        class="logo"
-        src="images/logo-galaxie2roo.webp"
-        alt="Galaxie 2 Roo"
-      />
+      <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo" />
       <ul class="nav-links">
         <li><a href="#gamme">Nos Motos</a></li>
         <li><a href="#avis">Avis</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a
-        href="tel:+33963221470"
-        class="cta-nav"
-        onclick="dlPush('phone_call', 'nav')"
-        >📞 Appelez-nous</a
-      ><button class="burger" aria-label="Menu" onclick="openMenu()">
+      <a href="tel:+33963221470" class="cta-nav" onclick="dlPush('phone_call', 'nav')">📞 Appelez-nous</a>
+      <button class="burger" aria-label="Menu" onclick="openMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
+
     <!-- ── MOBILE MENU ── -->
     <div class="mmenu" id="mm">
-      <button class="mclose" aria-label="Fermer le menu" onclick="closeMenu()">
-        ✕</button
-      ><a href="#gamme" onclick="closeMenu()">Nos Motos</a
-      ><a href="#avis" onclick="closeMenu()">Avis Clients</a
-      ><a href="#contact" onclick="closeMenu()">Contact</a
-      ><a
-        href="tel:+33963221470"
-        class="red"
-        onclick="
-          closeMenu();
-          dlPush('phone_call', 'menu');
-        "
-        >📞 Appelez-nous</a
-      >
+      <button class="mclose" aria-label="Fermer le menu" onclick="closeMenu()">✕</button>
+      <a href="#gamme" onclick="closeMenu()">Nos Motos</a>
+      <a href="#avis" onclick="closeMenu()">Avis Clients</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="tel:+33963221470" class="red" onclick="closeMenu(); dlPush('phone_call', 'menu');">📞 Appelez-nous</a>
     </div>
+
     <!-- ── HERO ── -->
     <section id="hero">
       <div class="hero-in">
+
         <!-- LEFT: texte -->
         <div class="hero-left fi">
+          <!-- CHANGE 1: badge centered via display:table in CSS -->
           <span class="badge">★ Concessionnaire Voge Cholet ★</span>
-          <h1>La moto<br />qui <span>change</span><br />tout.</h1>
+          <!-- CHANGE 2: new h1 -->
+          <h1>Gamme Voge<br /><span>2026</span></h1>
           <p class="hero-sub">
             <strong>Galaxie 2 Roo</strong>, votre concessionnaire Voge à Cholet
             (La Séguinière), vous propose la gamme complète Voge 2026 — tout
             équipé de série, essai gratuit sur rendez-vous.
           </p>
           <div class="actions">
-            <a
-              href="#gamme"
-              class="btn-p"
-              onclick="dlPush('cta_click', 'gamme_hero')"
-              >🏍️ Voir la gamme</a
-            ><a
-              href="tel:+33963221470"
-              class="btn-s"
-              onclick="dlPush('phone_call', 'hero')"
-              >📞 Appelez-nous</a
-            >
+            <a href="#gamme" class="btn-p" onclick="dlPush('cta_click', 'gamme_hero')">🏍️ Voir la gamme</a>
+            <!-- CHANGE 4: "Appelez-nous" → "Faire un essai" linking to form -->
+            <a href="#essai-form" class="btn-s" onclick="dlPush('cta_click', 'essai_hero')">🏍️ Faire un essai</a>
           </div>
           <div class="stats">
             <div class="stat-item">
               <div class="sv">4</div>
-              <div class="sl">Modèles en stock</div>
+              <!-- CHANGE 5: "Modèles en stock" → "Modèles disponibles" -->
+              <div class="sl">Modèles disponibles</div>
             </div>
             <div class="stat-item">
               <div class="sv">100%</div>
@@ -1151,9 +1127,12 @@
             </div>
           </div>
         </div>
+
         <!-- RIGHT: carousel 4 modèles -->
         <div class="hero-right fi" style="transition-delay: 0.15s">
           <div class="carousel-wrap" id="carousel">
+
+            <!-- CHANGE 3: each slide has a clickable overlay link (z-index:1, above gradient, below caption) -->
             <div class="carousel-slide active">
               <img
                 src="images/voge-ds900x-03.webp"
@@ -1162,11 +1141,13 @@
                 height="467"
                 fetchpriority="high"
               />
+              <a class="carousel-link" href="https://galaxie2roo.fr/voge-900-dsx/" aria-label="Découvrir la DS 900X" onclick="dlPush('model_click', '900dsx_carousel')"></a>
               <div class="carousel-caption">
-                <span class="carousel-tag">Trail Aventure</span
-                ><span class="carousel-model">DS 900X</span>
+                <span class="carousel-tag">Trail Aventure</span>
+                <span class="carousel-model">DS 900X</span>
               </div>
             </div>
+
             <div class="carousel-slide">
               <img
                 src="images/voge-625dsx-06.webp"
@@ -1175,11 +1156,13 @@
                 height="467"
                 loading="lazy"
               />
+              <a class="carousel-link" href="https://galaxie2roo.fr/voge-625-dsx/" aria-label="Découvrir la 625 DSX" onclick="dlPush('model_click', '625dsx_carousel')"></a>
               <div class="carousel-caption">
-                <span class="carousel-tag">Trail Routier</span
-                ><span class="carousel-model">625 DSX</span>
+                <span class="carousel-tag">Trail Routier</span>
+                <span class="carousel-model">625 DSX</span>
               </div>
             </div>
+
             <div class="carousel-slide">
               <img
                 src="images/voge-800dsx-02.webp"
@@ -1188,11 +1171,13 @@
                 height="467"
                 loading="lazy"
               />
+              <a class="carousel-link" href="https://galaxie2roo.fr/voge-800-dsx-rally/" aria-label="Découvrir la DS 800X Rally" onclick="dlPush('model_click', '800rally_carousel')"></a>
               <div class="carousel-caption">
-                <span class="carousel-tag">Rally Raid</span
-                ><span class="carousel-model">DS 800X Rally</span>
+                <span class="carousel-tag">Rally Raid</span>
+                <span class="carousel-model">DS 800X Rally</span>
               </div>
             </div>
+
             <div class="carousel-slide">
               <img
                 src="images/voge-r625-07.webp"
@@ -1201,55 +1186,38 @@
                 height="467"
                 loading="lazy"
               />
+              <a class="carousel-link" href="https://galaxie2roo.fr/voge-r625/" aria-label="Découvrir la Naked R 625" onclick="dlPush('model_click', 'r625_carousel')"></a>
               <div class="carousel-caption">
-                <span class="carousel-tag">Roadster</span
-                ><span class="carousel-model">Naked R 625</span>
+                <span class="carousel-tag">Roadster</span>
+                <span class="carousel-model">Naked R 625</span>
               </div>
             </div>
+
             <div class="carousel-dots">
-              <button
-                class="carousel-dot active"
-                aria-label="DS 900X"
-                onclick="goSlide(0)"
-              ></button
-              ><button
-                class="carousel-dot"
-                aria-label="625 DSX"
-                onclick="goSlide(1)"
-              ></button
-              ><button
-                class="carousel-dot"
-                aria-label="DS 800X Rally"
-                onclick="goSlide(2)"
-              ></button
-              ><button
-                class="carousel-dot"
-                aria-label="Naked R 625"
-                onclick="goSlide(3)"
-              ></button>
+              <button class="carousel-dot active" aria-label="DS 900X" onclick="goSlide(0)"></button>
+              <button class="carousel-dot" aria-label="625 DSX" onclick="goSlide(1)"></button>
+              <button class="carousel-dot" aria-label="DS 800X Rally" onclick="goSlide(2)"></button>
+              <button class="carousel-dot" aria-label="Naked R 625" onclick="goSlide(3)"></button>
             </div>
             <div class="carousel-border"></div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- ── ESSAI BANNER ── -->
     <section id="eb">
       <div class="eb-in">
         <div>
-          <h2>Essai Gratuit — Venez Ressentir la Différence</h2>
-          <p>
-            Sur rendez-vous à Cholet · Tous les modèles disponibles à l'essai
-          </p>
+          <!-- CHANGE 6: new banner headline -->
+          <h2>Essayez votre prochaine Voge en concession</h2>
+          <p>Sur rendez-vous à Cholet · Tous les modèles disponibles à l'essai</p>
         </div>
-        <a
-          href="#essai-form"
-          class="btn-w"
-          onclick="dlPush('cta_click', 'essai_banner')"
-          >Réserver un essai →</a
-        >
+        <!-- CHANGE 7: "Réserver un essai" → "Faire un essai" -->
+        <a href="#essai-form" class="btn-w" onclick="dlPush('cta_click', 'essai_banner')">Faire un essai →</a>
       </div>
     </section>
+
     <!-- ── GAMME ── -->
     <section id="gamme">
       <div class="in">
@@ -1262,18 +1230,11 @@
           </p>
         </div>
         <div class="cards">
-          <a
-            href="https://galaxie2roo.fr/voge-900-dsx/"
-            class="card fi"
-            onclick="dlPush('model_click', '900dsx')"
-            ><div class="card-img">
-              <img
-                src="images/voge-ds900x-03.webp"
-                alt="Voge DS900X 2026 — Galaxie 2 Roo Cholet"
-                loading="lazy"
-                width="700"
-                height="467"
-              /><span class="card-tag">Trail Aventure</span>
+
+          <a href="https://galaxie2roo.fr/voge-900-dsx/" class="card fi" onclick="dlPush('model_click', '900dsx')">
+            <div class="card-img">
+              <img src="images/voge-ds900x-03.webp" alt="Voge DS900X 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <span class="card-tag">Trail Aventure</span>
             </div>
             <div class="card-body">
               <span class="card-cat">Voge</span>
@@ -1284,6 +1245,7 @@
                 ch, équipement électronique complet — radar de recul, contrôle
                 de traction, modes de conduite. Pour les grands voyages.
               </p>
+              <!-- CHANGE 8: cs-val color set to var(--r) in CSS -->
               <div class="card-specs">
                 <div>
                   <div class="cs-val">895cc</div>
@@ -1298,23 +1260,14 @@
                   <div class="cs-lbl">De série</div>
                 </div>
               </div>
-              <div class="card-cta">
-                Découvrir la DS 900X <span class="card-arrow">→</span>
-              </div>
-            </div></a
-          ><a
-            href="https://galaxie2roo.fr/voge-625-dsx/"
-            class="card fi"
-            style="transition-delay: 0.1s"
-            onclick="dlPush('model_click', '625dsx')"
-            ><div class="card-img">
-              <img
-                src="images/voge-625dsx-01.webp"
-                alt="Voge 625 DSX 2026 — Galaxie 2 Roo Cholet"
-                loading="lazy"
-                width="700"
-                height="467"
-              /><span class="card-tag">Trail Routier</span>
+              <div class="card-cta">Découvrir la DS 900X <span class="card-arrow">→</span></div>
+            </div>
+          </a>
+
+          <a href="https://galaxie2roo.fr/voge-625-dsx/" class="card fi" style="transition-delay: 0.1s" onclick="dlPush('model_click', '625dsx')">
+            <div class="card-img">
+              <img src="images/voge-625dsx-01.webp" alt="Voge 625 DSX 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <span class="card-tag">Trail Routier</span>
             </div>
             <div class="card-body">
               <span class="card-cat">Voge</span>
@@ -1339,23 +1292,14 @@
                   <div class="cs-lbl">Homologué</div>
                 </div>
               </div>
-              <div class="card-cta">
-                Découvrir la 625 DSX <span class="card-arrow">→</span>
-              </div>
-            </div></a
-          ><a
-            href="https://galaxie2roo.fr/voge-800-dsx-rally/"
-            class="card fi"
-            style="transition-delay: 0.2s"
-            onclick="dlPush('model_click', '800rally')"
-            ><div class="card-img">
-              <img
-                src="images/voge-800dsx-01.webp"
-                alt="Voge DS800X Rally 2026 — Galaxie 2 Roo Cholet"
-                loading="lazy"
-                width="700"
-                height="467"
-              /><span class="card-tag">Rally Raid</span>
+              <div class="card-cta">Découvrir la 625 DSX <span class="card-arrow">→</span></div>
+            </div>
+          </a>
+
+          <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="card fi" style="transition-delay: 0.2s" onclick="dlPush('model_click', '800rally')">
+            <div class="card-img">
+              <img src="images/voge-800dsx-01.webp" alt="Voge DS800X Rally 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <span class="card-tag">Rally Raid</span>
             </div>
             <div class="card-body">
               <span class="card-cat">Voge</span>
@@ -1380,23 +1324,14 @@
                   <div class="cs-lbl">Réservoir</div>
                 </div>
               </div>
-              <div class="card-cta">
-                Découvrir la DS 800X Rally <span class="card-arrow">→</span>
-              </div>
-            </div></a
-          ><a
-            href="https://galaxie2roo.fr/voge-r625/"
-            class="card fi"
-            style="transition-delay: 0.3s"
-            onclick="dlPush('model_click', 'r625')"
-            ><div class="card-img">
-              <img
-                src="images/voge-r625-04.webp"
-                alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet"
-                loading="lazy"
-                width="700"
-                height="467"
-              /><span class="card-tag">Roadster</span>
+              <div class="card-cta">Découvrir la DS 800X Rally <span class="card-arrow">→</span></div>
+            </div>
+          </a>
+
+          <a href="https://galaxie2roo.fr/voge-r625/" class="card fi" style="transition-delay: 0.3s" onclick="dlPush('model_click', 'r625')">
+            <div class="card-img">
+              <img src="images/voge-r625-04.webp" alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <span class="card-tag">Roadster</span>
             </div>
             <div class="card-body">
               <span class="card-cat">Voge</span>
@@ -1421,14 +1356,14 @@
                   <div class="cs-lbl">Homologué</div>
                 </div>
               </div>
-              <div class="card-cta">
-                Découvrir la Naked R 625 <span class="card-arrow">→</span>
-              </div>
-            </div></a
-          >
+              <div class="card-cta">Découvrir la Naked R 625 <span class="card-arrow">→</span></div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
+
     <!-- ── AVIS ── -->
     <section id="avis">
       <div class="in">
@@ -1456,8 +1391,7 @@
             <p class="avis-text">
               Accueil exceptionnel, l'équipe prend le temps d'expliquer chaque
               moto. <strong>J'ai pu essayer la DS900X avant d'acheter</strong> —
-              une expérience top, livraison rapide et moto parfaitement
-              préparée.
+              une expérience top, livraison rapide et moto parfaitement préparée.
             </p>
           </div>
           <div class="avis-card fi" style="transition-delay: 0.1s">
@@ -1471,10 +1405,8 @@
             <div class="stars">★★★★★</div>
             <p class="avis-text">
               J'hésitais entre la Voge et une concurrente japonaise.
-              <strong
-                >Même niveau d'équipement, prix imbattable, tout équipé de
-                série</strong
-              >. Le concessionnaire à Cholet est nickel.
+              <strong>Même niveau d'équipement, prix imbattable, tout équipé de série</strong>.
+              Le concessionnaire à Cholet est nickel.
             </p>
           </div>
           <div class="avis-card fi" style="transition-delay: 0.2s">
@@ -1494,14 +1426,14 @@
           </div>
         </div>
         <div class="google-badge fi" style="margin-top: 36px">
-          <span class="g-logo"
-            ><span class="g-b">G</span><span class="g-r">o</span
-            ><span class="g-y">o</span><span class="g-b">g</span
-            ><span class="g-g">l</span><span class="g-r">e</span></span
-          ><span>Avis Google My Business · Galaxie 2 Roo Cholet</span>
+          <span class="g-logo">
+            <span class="g-b">G</span><span class="g-r">o</span><span class="g-y">o</span><span class="g-b">g</span><span class="g-g">l</span><span class="g-r">e</span>
+          </span>
+          <span>Avis Google My Business · Galaxie 2 Roo Cholet</span>
         </div>
       </div>
     </section>
+
     <!-- ── CONTACT ── -->
     <section id="contact">
       <div class="in">
@@ -1512,9 +1444,7 @@
               <div class="ii">📍</div>
               <div class="ic">
                 <div class="lbl">Adresse</div>
-                <div class="val">
-                  Rue des Deux Sèvres<br />49280 La Séguinière (Cholet)
-                </div>
+                <div class="val">Rue des Deux Sèvres<br />49280 La Séguinière (Cholet)</div>
               </div>
             </div>
             <div class="ib">
@@ -1522,11 +1452,7 @@
               <div class="ic">
                 <div class="lbl">Téléphone</div>
                 <div class="val">
-                  <a
-                    href="tel:+33963221470"
-                    onclick="dlPush('phone_call', 'contact')"
-                    >09 63 22 14 70</a
-                  >
+                  <a href="tel:+33963221470" onclick="dlPush('phone_call', 'contact')">09 63 22 14 70</a>
                 </div>
               </div>
             </div>
@@ -1535,9 +1461,7 @@
               <div class="ic">
                 <div class="lbl">Email</div>
                 <div class="val">
-                  <a href="mailto:galaxie2roo@orange.fr"
-                    >galaxie2roo@orange.fr</a
-                  >
+                  <a href="mailto:galaxie2roo@orange.fr">galaxie2roo@orange.fr</a>
                 </div>
               </div>
             </div>
@@ -1571,195 +1495,177 @@
               ></iframe>
             </div>
           </div>
+
           <div class="fi" id="essai-form">
             <div class="ef">
               <h3>🏍️ Réserver un Essai Gratuit</h3>
               <div class="fg">
-                <label>Prénom &amp; Nom</label
-                ><input type="text" placeholder="Jean Dupont" id="fn" />
+                <label>Prénom &amp; Nom</label>
+                <input type="text" placeholder="Jean Dupont" id="fn" />
               </div>
               <div class="fg">
-                <label>Téléphone</label
-                ><input type="tel" placeholder="06 00 00 00 00" id="fp" />
+                <label>Téléphone</label>
+                <input type="tel" placeholder="06 00 00 00 00" id="fp" />
               </div>
               <div class="fg">
-                <label>Modèle souhaité</label
-                ><select id="fm">
+                <label>Modèle souhaité</label>
+                <select id="fm">
                   <option value="Voge DS900X 2026">Voge DS 900X 2026</option>
                   <option value="Voge 625 DSX 2026">Voge 625 DSX 2026</option>
-                  <option value="Voge DS800X Rally 2026">
-                    Voge DS 800X Rally 2026
-                  </option>
-                  <option value="Voge Naked R625 2026">
-                    Voge Naked R 625 2026
-                  </option>
+                  <option value="Voge DS800X Rally 2026">Voge DS 800X Rally 2026</option>
+                  <option value="Voge Naked R625 2026">Voge Naked R 625 2026</option>
                 </select>
               </div>
               <div class="fg">
-                <label>Date souhaitée</label><input type="date" id="fd" />
+                <label>Date souhaitée</label>
+                <input type="date" id="fd" />
               </div>
               <div class="fg">
-                <label>Message (optionnel)</label
-                ><textarea
-                  placeholder="Votre permis, expérience, questions..."
-                  id="fmsg"
-                ></textarea>
+                <label>Message (optionnel)</label>
+                <textarea placeholder="Votre permis, expérience, questions..." id="fmsg"></textarea>
               </div>
-              <button class="fsub" onclick="submitForm()">
-                Envoyer ma demande d'essai
-              </button>
+              <button class="fsub" onclick="submitForm()">Envoyer ma demande d'essai</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- ── FOOTER ── -->
     <footer>
       <div><img src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo" /></div>
-      <p>
-        © 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La
-        Séguinière
-      </p>
+      <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
       <p style="margin-top: 8px">
         <a href="#">Mentions légales</a> &middot;
         <a href="#">Confidentialité</a>
       </p>
     </footer>
+
     <!-- ── STICKY MOBILE ── -->
     <div class="sbar">
-      <a
-        href="tel:+33963221470"
-        class="sc"
-        onclick="dlPush('phone_call', 'sticky')"
-        >📞 Appelez-nous</a
-      ><a
-        href="#essai-form"
-        class="se"
-        onclick="dlPush('cta_click', 'essai_sticky')"
-        >🏍️ Essai Gratuit</a
-      >
+      <a href="tel:+33963221470" class="sc" onclick="dlPush('phone_call', 'sticky')">📞 Appelez-nous</a>
+      <a href="#essai-form" class="se" onclick="dlPush('cta_click', 'essai_sticky')">🏍️ Essai Gratuit</a>
     </div>
+
     <script>
-  /* NAV */
-  function openMenu() {
-    document.getElementById('mm').classList.add('open');
-  }
-  function closeMenu() {
-    document.getElementById('mm').classList.remove('open');
-  }
-
-  /* CAROUSEL */
-  (function () {
-    var slides = document.querySelectorAll('.carousel-slide');
-    var dots = document.querySelectorAll('.carousel-dot');
-    var current = 0;
-    var timer;
-
-    function goSlide(idx) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = idx;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
-      resetTimer();
-    }
-
-    function nextSlide() {
-      goSlide((current + 1) % slides.length);
-    }
-
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(nextSlide, 4200);
-    }
-
-    window.goSlide = goSlide;
-    resetTimer();
-
-    var carousel = document.getElementById('carousel');
-    carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
-    carousel.addEventListener('mouseleave', function () { resetTimer(); });
-
-    var touchX = 0;
-    carousel.addEventListener('touchstart', function (e) {
-      touchX = e.touches[0].clientX;
-    }, { passive: true });
-    carousel.addEventListener('touchend', function (e) {
-      var dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 40) {
-        dx < 0 ? nextSlide() : goSlide((current - 1 + slides.length) % slides.length);
+      /* NAV */
+      function openMenu() {
+        document.getElementById('mm').classList.add('open');
       }
-    }, { passive: true });
-  })();
+      function closeMenu() {
+        document.getElementById('mm').classList.remove('open');
+      }
 
-  /* FADE IN ON SCROLL */
-  var obs = new IntersectionObserver(function (entries) {
-    requestAnimationFrame(function () {
-      entries.forEach(function (x) {
-        if (x.isIntersecting) {
-          x.target.classList.add('vis');
-          obs.unobserve(x.target);
+      /* CAROUSEL */
+      (function () {
+        var slides = document.querySelectorAll('.carousel-slide');
+        var dots = document.querySelectorAll('.carousel-dot');
+        var current = 0;
+        var timer;
+
+        function goSlide(idx) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = idx;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+          resetTimer();
         }
-      });
-    });
-  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+        function nextSlide() {
+          goSlide((current + 1) % slides.length);
+        }
+        function resetTimer() {
+          clearInterval(timer);
+          timer = setInterval(nextSlide, 4200);
+        }
 
-  document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el); });
+        window.goSlide = goSlide;
+        resetTimer();
 
-  setTimeout(function () {
-    document.querySelectorAll('.fi').forEach(function (el) {
-      if (!el.classList.contains('vis')) el.classList.add('vis');
-    });
-  }, 400);
+        var carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+        carousel.addEventListener('mouseleave', function () { resetTimer(); });
 
-  /* GTM HELPER */
-  function dlPush(event, label) {
-    window.dataLayer = window.dataLayer || [];
-    dataLayer.push({ event: event, cta_location: label });
-  }
+        var touchX = 0;
+        carousel.addEventListener('touchstart', function (e) {
+          touchX = e.touches[0].clientX;
+        }, { passive: true });
+        carousel.addEventListener('touchend', function (e) {
+          var dx = e.changedTouches[0].clientX - touchX;
+          if (Math.abs(dx) > 40) {
+            dx < 0 ? nextSlide() : goSlide((current - 1 + slides.length) % slides.length);
+          }
+        }, { passive: true });
+      })();
 
-  /* FORM SUBMIT */
-  function submitForm() {
-    var n = document.getElementById('fn').value.trim();
-    var p = document.getElementById('fp').value.trim();
-    var m = document.getElementById('fm').value;
-    var d = document.getElementById('fd').value;
-    var msg = document.getElementById('fmsg').value.trim();
+      /* FADE IN ON SCROLL */
+      var obs = new IntersectionObserver(function (entries) {
+        requestAnimationFrame(function () {
+          entries.forEach(function (x) {
+            if (x.isIntersecting) {
+              x.target.classList.add('vis');
+              obs.unobserve(x.target);
+            }
+          });
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
-    if (!n) { alert('Merci de renseigner votre prénom et nom.'); return; }
-    if (!p) { alert('Merci de renseigner votre numéro de téléphone.'); return; }
+      document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el); });
 
-    var btn = document.querySelector('.fsub');
-    btn.disabled = true;
-    btn.textContent = 'Envoi en cours...';
+      setTimeout(function () {
+        document.querySelectorAll('.fi').forEach(function (el) {
+          if (!el.classList.contains('vis')) el.classList.add('vis');
+        });
+      }, 400);
 
-    fetch('https://formspree.io/f/xlgwqpez', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ name: n, phone: p, model: m, date: d || 'Non précisée', message: msg || 'Aucun message' })
-    }).then(function (r) {
-      if (r.ok) {
+      /* GTM HELPER */
+      function dlPush(event, label) {
         window.dataLayer = window.dataLayer || [];
-        dataLayer.push({ event: 'form_submit', form_type: 'essai_gratuit', moto_model: m });
-        var successHTML = [
-          '<div style="text-align:center;padding:40px 20px">',
-          '<div style="font-size:48px;margin-bottom:16px">✅</div>',
-          '<h3 style="color:#fff;font-family:Barlow Condensed,sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3>',
-          '<p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au ' + p + '<br>pour confirmer votre essai.</p>',
-          '</div>'
-        ].join('');
-        document.querySelector('.ef').innerHTML = successHTML;
-      } else {
-        btn.disabled = false;
-        btn.textContent = "Envoyer ma demande d'essai";
-        alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');
+        dataLayer.push({ event: event, cta_location: label });
       }
-    }).catch(function () {
-      btn.disabled = false;
-      btn.textContent = "Envoyer ma demande d'essai";
-      alert('Une erreur est survenue. Merci de nous appeler directement au 09 63 22 14 70.');
-    });
-  }
-</script>
-</body>
+
+      /* FORM SUBMIT */
+      function submitForm() {
+        var n = document.getElementById('fn').value.trim();
+        var p = document.getElementById('fp').value.trim();
+        var m = document.getElementById('fm').value;
+        var d = document.getElementById('fd').value;
+        var msg = document.getElementById('fmsg').value.trim();
+
+        if (!n) { alert('Merci de renseigner votre prénom et nom.'); return; }
+        if (!p) { alert('Merci de renseigner votre numéro de téléphone.'); return; }
+
+        var btn = document.querySelector('.fsub');
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours...';
+
+        fetch('https://formspree.io/f/xlgwqpez', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name: n, phone: p, model: m, date: d || 'Non précisée', message: msg || 'Aucun message' })
+        }).then(function (r) {
+          if (r.ok) {
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({ event: 'form_submit', form_type: 'essai_gratuit', moto_model: m });
+            var successHTML = [
+              '<div style="text-align:center;padding:40px 20px">',
+              '<div style="font-size:48px;margin-bottom:16px">✅</div>',
+              '<h3 style="color:#fff;font-family:Barlow Condensed,sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3>',
+              '<p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au ' + p + '<br>pour confirmer votre essai.</p>',
+              '</div>'
+            ].join('');
+            document.querySelector('.ef').innerHTML = successHTML;
+          } else {
+            btn.disabled = false;
+            btn.textContent = "Envoyer ma demande d'essai";
+            alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');
+          }
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = "Envoyer ma demande d'essai";
+          alert('Une erreur est survenue. Merci de nous appeler directement au 09 63 22 14 70.');
+        });
+      }
+    </script>
+  </body>
 </html>
