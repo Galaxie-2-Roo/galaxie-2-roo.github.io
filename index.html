@@ -410,6 +410,25 @@
         background: var(--r);
         transform: scale(1.35);
       }
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(255,255,255,0.2);
+        color: #fff;
+        font-size: 32px;
+        width: 44px;
+        height: 44px;
+        border-radius: 3px;
+        cursor: pointer;
+        line-height: 1;
+        transition: background 0.2s;
+      }
+      .carousel-btn:hover { background: var(--r); }
+      .carousel-btn--prev { left: 12px; }
+      .carousel-btn--next { right: 12px; }
       .carousel-border {
         position: absolute;
         inset: 0;
@@ -1199,6 +1218,8 @@
               <button class="carousel-dot" aria-label="DS 800X Rally" onclick="goSlide(2)"></button>
               <button class="carousel-dot" aria-label="Naked R 625" onclick="goSlide(3)"></button>
             </div>
+            <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
+            <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
             <div class="carousel-border"></div>
           </div>
         </div>
@@ -1580,6 +1601,8 @@
         }
 
         window.goSlide = goSlide;
+        document.getElementById('carouselPrev').addEventListener('click', function() { goSlide((current - 1 + slides.length) % slides.length); });
+        document.getElementById('carouselNext').addEventListener('click', function() { goSlide((current + 1) % slides.length); });
         resetTimer();
 
         var carousel = document.getElementById('carousel');
