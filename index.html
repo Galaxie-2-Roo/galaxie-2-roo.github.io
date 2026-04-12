@@ -1068,7 +1068,20 @@
         .sdesc {
           margin: 0 auto;
         }
-      }
+        }
+      @media (hover: none) {
+  .card {
+    border-color: var(--r);
+  }
+  .card-cta {
+    background: var(--r);
+    border-color: var(--r);
+    color: #fff;
+  }
+  .card-arrow {
+    transform: translateX(4px);
+  }
+}
     </style>
   </head>
   <body>
