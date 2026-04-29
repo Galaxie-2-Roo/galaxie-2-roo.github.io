@@ -319,124 +319,126 @@
         font-weight: 500;
       }
       /* ── CAROUSEL ── */
-      .carousel-wrap {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        aspect-ratio: 3/2;
-        background: #111;
-        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06);
-      }
-      .carousel-slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 0.9s ease;
-      }
-      .carousel-slide.active {
-        opacity: 1;
-      }
-      .carousel-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .carousel-slide::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 55%);
-        /* z-index 0 — sits above img but below overlay link & caption */
-      }
-      /* ── CHANGE 3: overlay link style ── */
-      .carousel-link {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        cursor: pointer;
-      }
-      .carousel-caption {
-        position: absolute;
-        bottom: 18px;
-        left: 18px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        pointer-events: none;
-      }
-      .carousel-tag {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: #fff;
-        background: var(--r);
-        padding: 3px 9px;
-        border-radius: 2px;
-        width: fit-content;
-      }
-      .carousel-model {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 28px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: #fff;
-        line-height: 1;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
-      }
-      .carousel-dots {
-        position: absolute;
-        bottom: 18px;
-        right: 16px;
-        z-index: 2;
-        display: flex;
-        gap: 7px;
-        align-items: center;
-      }
-      .carousel-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.35);
-        cursor: pointer;
-        border: none;
-        transition: background 0.3s, transform 0.3s;
-        padding: 0;
-      }
-      .carousel-dot.active {
-        background: var(--r);
-        transform: scale(1.35);
-      }
-      .carousel-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        background: rgba(0,0,0,0.5);
-        border: 1px solid rgba(255,255,255,0.2);
-        color: #fff;
-        font-size: 32px;
-        width: 44px;
-        height: 44px;
-        border-radius: 3px;
-        cursor: pointer;
-        line-height: 1;
-        transition: background 0.2s;
-      }
-      .carousel-btn:hover { background: var(--r); }
-      .carousel-btn--prev { left: 12px; }
-      .carousel-btn--next { right: 12px; }
-      .carousel-border {
-        position: absolute;
-        inset: 0;
-        border-radius: 10px;
-        border: 1px solid rgba(224, 25, 15, 0.25);
-        pointer-events: none;
-        z-index: 3;
-      }
+.carousel-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+  background: #111;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.carousel-slide.active { opacity: 1; }
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* gradient removed — text is now outside the image */
+
+.carousel-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* ── Caption block — BELOW the wrap ── */
+.carousel-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px 0;
+  min-height: 36px;
+}
+.carousel-tag {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--r);
+  padding: 3px 9px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.carousel-model {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+/* ── Dots ── */
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s, transform 0.3s;
+  padding: 0;
+}
+.carousel-dot.active {
+  background: var(--r);
+  transform: scale(1.35);
+}
+
+/* ── Arrows — discreet, round, red ── */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0,0,0,0.15);
+  border: 1.5px solid var(--r);
+  color: var(--r);
+  font-size: 22px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+}
+.carousel-btn:hover {
+  background: var(--r);
+  color: #fff;
+  opacity: 1;
+}
+.carousel-btn--prev { left: 10px; }
+.carousel-btn--next { right: 10px; }
+
+.carousel-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(224,25,15,0.25);
+  pointer-events: none;
+  z-index: 3;
+}
       /* ── ESSAI BANNER ── */
       #eb {
         background: var(--r);
@@ -1160,7 +1162,7 @@
         <div class="hero-right fi" style="transition-delay: 0.15s">
           <div class="carousel-wrap" id="carousel">
 
-            <div class="carousel-slide active">
+            <div class="carousel-slide active" data-tag="Trail Aventure" data-model="DS 900X">
               <img
                 src="images/voge-ds900x-03.webp"
                 alt="Voge DS 900X 2026 — Trail Aventure"
@@ -1169,13 +1171,9 @@
                 fetchpriority="high"
               />
               <a class="carousel-link" href="https://galaxie2roo.fr/voge-900-dsx/" aria-label="Découvrir la DS 900X" onclick="dlPush('model_click', '900dsx_carousel')"></a>
-              <div class="carousel-caption">
-                <span class="carousel-tag">Trail Aventure</span>
-                <span class="carousel-model">DS 900X</span>
-              </div>
             </div>
 
-            <div class="carousel-slide">
+            <div class="carousel-slide" data-tag="Trail Routier" data-model="625 DSX">
               <img
                 src="images/voge-625dsx-06.webp"
                 alt="Voge 625 DSX 2026 — Trail Routier"
@@ -1184,13 +1182,9 @@
                 loading="lazy"
               />
               <a class="carousel-link" href="https://galaxie2roo.fr/voge-625-dsx/" aria-label="Découvrir la 625 DSX" onclick="dlPush('model_click', '625dsx_carousel')"></a>
-              <div class="carousel-caption">
-                <span class="carousel-tag">Trail Routier</span>
-                <span class="carousel-model">625 DSX</span>
-              </div>
             </div>
 
-            <div class="carousel-slide">
+            <div class="carousel-slide" data-tag="Rally Raid" data-model="DS 800X Rally">
               <img
                 src="images/voge-800dsx-02.webp"
                 alt="Voge DS 800X Rally 2026 — Rally Raid"
@@ -1199,13 +1193,9 @@
                 loading="lazy"
               />
               <a class="carousel-link" href="https://galaxie2roo.fr/voge-800-dsx-rally/" aria-label="Découvrir la DS 800X Rally" onclick="dlPush('model_click', '800rally_carousel')"></a>
-              <div class="carousel-caption">
-                <span class="carousel-tag">Rally Raid</span>
-                <span class="carousel-model">DS 800X Rally</span>
-              </div>
             </div>
 
-            <div class="carousel-slide">
+            <div class="carousel-slide" data-tag="Roadster" data-model="Naked R 625">
               <img
                 src="images/voge-r625-07.webp"
                 alt="Voge Naked R 625 2026 — Roadster"
@@ -1214,10 +1204,6 @@
                 loading="lazy"
               />
               <a class="carousel-link" href="https://galaxie2roo.fr/voge-r625/" aria-label="Découvrir la Naked R 625" onclick="dlPush('model_click', 'r625_carousel')"></a>
-              <div class="carousel-caption">
-                <span class="carousel-tag">Roadster</span>
-                <span class="carousel-model">Naked R 625</span>
-              </div>
             </div>
 
             <div class="carousel-dots">
@@ -1229,7 +1215,14 @@
             <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
             <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
             <div class="carousel-border"></div>
+
+          </div><!-- end .carousel-wrap -->
+
+          <div class="carousel-info">
+            <span class="carousel-tag" id="carouselTag">Trail Aventure</span>
+            <span class="carousel-model" id="carouselModel">DS 900X</span>
           </div>
+
         </div>
       </div>
     </section>
@@ -1592,12 +1585,18 @@
         var current = 0;
         var timer;
 
+        function updateCaption(idx) {
+          document.getElementById('carouselTag').textContent = slides[idx].dataset.tag;
+          document.getElementById('carouselModel').textContent = slides[idx].dataset.model;
+        }
+
         function goSlide(idx) {
           slides[current].classList.remove('active');
           dots[current].classList.remove('active');
           current = idx;
           slides[current].classList.add('active');
           dots[current].classList.add('active');
+          updateCaption(idx);
           resetTimer();
         }
         function nextSlide() {
@@ -1607,16 +1606,13 @@
           clearInterval(timer);
           timer = setInterval(nextSlide, 4200);
         }
-
         window.goSlide = goSlide;
         document.getElementById('carouselPrev').addEventListener('click', function() { goSlide((current - 1 + slides.length) % slides.length); });
         document.getElementById('carouselNext').addEventListener('click', function() { goSlide((current + 1) % slides.length); });
         resetTimer();
-
         var carousel = document.getElementById('carousel');
         carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
         carousel.addEventListener('mouseleave', function () { resetTimer(); });
-
         var touchX = 0;
         carousel.addEventListener('touchstart', function (e) {
           touchX = e.touches[0].clientX;
