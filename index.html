@@ -440,6 +440,70 @@
   pointer-events: none;
   z-index: 3;
 }
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.active { display: flex; }
+.lightbox-inner {
+  position: relative;
+  max-width: 90vw;
+}
+.lightbox-inner img {
+  max-width: 90vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+.lightbox-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: var(--r);
+  border: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 4px 0;
+}
+.lightbox-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lightbox-cta {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--r);
+  padding: 6px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.lightbox-cta:hover { opacity: 0.85; }
+      
       /* ── ESSAI BANNER ── */
       #eb {
         background: var(--r);
@@ -1163,7 +1227,7 @@
         <div class="hero-right fi" style="transition-delay: 0.15s">
           <div class="carousel-wrap" id="carousel">
 
-            <div class="carousel-slide active" data-tag="Trail Aventure" data-model="900 DSX">
+            <div class="carousel-slide active" data-tag="Trail Aventure" data-model="DS 900X" data-href="https://galaxie2roo.fr/voge-900-dsx/">
               <img
                 src="images/voge-ds900x-03.webp"
                 alt="Voge DS 900X 2026 — Trail Aventure"
@@ -1171,10 +1235,10 @@
                 height="467"
                 fetchpriority="high"
               />
-              <a class="carousel-link" href="https://galaxie2roo.fr/voge-900-dsx/" aria-label="Découvrir la DS 900X" onclick="dlPush('model_click', '900dsx_carousel')"></a>
+              <button class="carousel-link" aria-label="Voir la DS 900X en grand" onclick="openLightbox()"></button>
             </div>
 
-            <div class="carousel-slide" data-tag="Trail Routier" data-model="625 DSX">
+            <div class="carousel-slide" data-tag="Trail Routier" data-model="625 DSX" data-href="https://galaxie2roo.fr/voge-625-dsx/">
               <img
                 src="images/voge-625dsx-06.webp"
                 alt="Voge 625 DSX 2026 — Trail Routier"
@@ -1182,10 +1246,10 @@
                 height="467"
                 loading="lazy"
               />
-              <a class="carousel-link" href="https://galaxie2roo.fr/voge-625-dsx/" aria-label="Découvrir la 625 DSX" onclick="dlPush('model_click', '625dsx_carousel')"></a>
+              <button class="carousel-link" aria-label="Voir la 625 DSX en grand" onclick="openLightbox()"></button>
             </div>
 
-            <div class="carousel-slide" data-tag="Rally Raid" data-model="DS 800X Rally">
+            <div class="carousel-slide" data-tag="Rally Raid" data-model="DS 800X Rally" data-href="https://galaxie2roo.fr/voge-800-dsx-rally/">
               <img
                 src="images/voge-800dsx-02.webp"
                 alt="Voge DS 800X Rally 2026 — Rally Raid"
@@ -1193,10 +1257,10 @@
                 height="467"
                 loading="lazy"
               />
-              <a class="carousel-link" href="https://galaxie2roo.fr/voge-800-dsx-rally/" aria-label="Découvrir la DS 800X Rally" onclick="dlPush('model_click', '800rally_carousel')"></a>
+              <button class="carousel-link" aria-label="Voir la DS 800X Rally en grand" onclick="openLightbox()"></button>
             </div>
 
-            <div class="carousel-slide" data-tag="Roadster" data-model="Naked R 625">
+            <div class="carousel-slide" data-tag="Roadster" data-model="Naked R 625" data-href="https://galaxie2roo.fr/voge-r625/">
               <img
                 src="images/voge-r625-07.webp"
                 alt="Voge Naked R 625 2026 — Roadster"
@@ -1204,7 +1268,7 @@
                 height="467"
                 loading="lazy"
               />
-              <a class="carousel-link" href="https://galaxie2roo.fr/voge-r625/" aria-label="Découvrir la Naked R 625" onclick="dlPush('model_click', 'r625_carousel')"></a>
+              <button class="carousel-link" aria-label="Voir la Naked R 625 en grand" onclick="openLightbox()"></button>
             </div>
 
             <div class="carousel-dots">
@@ -1607,10 +1671,32 @@
           clearInterval(timer);
           timer = setInterval(nextSlide, 4200);
         }
+
         window.goSlide = goSlide;
+        window.openLightbox = function () {
+          var slide = slides[current];
+          var img = slide.querySelector('img');
+          document.getElementById('lbImg').src = img.src;
+          document.getElementById('lbImg').alt = img.alt;
+          document.getElementById('lbTag').textContent = slide.dataset.tag;
+          document.getElementById('lbModel').textContent = slide.dataset.model;
+          document.getElementById('lbLink').href = slide.dataset.href;
+          document.getElementById('lightbox').classList.add('active');
+          clearInterval(timer);
+        };
+        window.closeLightbox = function () {
+          document.getElementById('lightbox').classList.remove('active');
+          resetTimer();
+        };
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') window.closeLightbox();
+        });
+
         document.getElementById('carouselPrev').addEventListener('click', function() { goSlide((current - 1 + slides.length) % slides.length); });
         document.getElementById('carouselNext').addEventListener('click', function() { goSlide((current + 1) % slides.length); });
         resetTimer();
+
         var carousel = document.getElementById('carousel');
         carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
         carousel.addEventListener('mouseleave', function () { resetTimer(); });
@@ -1695,5 +1781,18 @@
         });
       }
     </script>
+    <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
+    <img id="lbImg" src="" alt="" />
+    <div class="lightbox-footer">
+      <div class="lightbox-caption">
+        <span class="carousel-tag" id="lbTag"></span>
+        <span class="carousel-model" id="lbModel"></span>
+      </div>
+      <a id="lbLink" href="#" class="lightbox-cta">Découvrir →</a>
+    </div>
+  </div>
+</div>
   </body>
 </html>
