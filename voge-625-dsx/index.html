@@ -191,6 +191,10 @@ footer a:hover{color:var(--r);}
 .lightbox-inner{position:relative;max-width:90vw;}
 .lightbox-inner img{max-width:90vw;max-height:80vh;object-fit:contain;border-radius:6px;display:block;}
 .lightbox-close{position:absolute;top:-14px;right:-14px;background:var(--r);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:1.5px solid var(--r);color:var(--r);font-size:28px;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;z-index:1001;}
+.lightbox-nav:hover{background:var(--r);color:#fff;}
+.lightbox-nav--prev{left:16px;}
+.lightbox-nav--next{right:16px;}
 
 /* RESPONSIVE */
 
@@ -685,10 +689,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function resetTimer() { clearInterval(timer); timer = setInterval(nextSlide, 4200); }
 
   window.goSlide = goSlide;
-  window.openLightbox = function () {
-    var img = slides[current].querySelector('img');
+  var lbIndex = 0;
+
+  function showLbImage(idx) {
+    lbIndex = ((idx % slides.length) + slides.length) % slides.length;
+    var img = slides[lbIndex].querySelector('img');
     document.getElementById('lbImg').src = img.src;
     document.getElementById('lbImg').alt = img.alt;
+  }
+
+  window.openLightbox = function () {
+    showLbImage(current);
     document.getElementById('lightbox').classList.add('active');
     clearInterval(timer);
   };
@@ -696,10 +707,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('lightbox').classList.remove('active');
     resetTimer();
   };
+  window.lbNav = function (dir) {
+    showLbImage(lbIndex + dir);
+  };
 
   document.addEventListener('keydown', function (e) {
     if (document.getElementById('lightbox').classList.contains('active')) {
-      if (e.key === 'Escape') window.closeLightbox();
+      if (e.key === 'Escape')      window.closeLightbox();
+      if (e.key === 'ArrowRight')  window.lbNav(1);
+      if (e.key === 'ArrowLeft')   window.lbNav(-1);
       return;
     }
     if (e.key === 'ArrowRight') nextSlide();
@@ -781,10 +797,12 @@ function submitForm(){
 
 <!-- ===== LIGHTBOX ===== -->
 <div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-nav lightbox-nav--prev" onclick="lbNav(-1)" aria-label="Image précédente">&#8249;</button>
   <div class="lightbox-inner">
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
     <img id="lbImg" src="" alt="">
   </div>
+  <button class="lightbox-nav lightbox-nav--next" onclick="lbNav(1)" aria-label="Image suivante">&#8250;</button>
 </div>
 <!-- ===== FIN LIGHTBOX ===== -->
 
