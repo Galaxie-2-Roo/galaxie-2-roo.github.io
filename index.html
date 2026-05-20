@@ -347,8 +347,8 @@
   inset: 0;
   z-index: 1;
   cursor: pointer;
-  background: none;  
-  border: none;      
+  background: none;
+  border: none;
 }
 
 /* ── Caption block — BELOW the wrap ── */
@@ -505,7 +505,7 @@
   transition: opacity 0.2s;
 }
 .lightbox-cta:hover { opacity: 0.85; }
-      
+
       /* ── ESSAI BANNER ── */
       #eb {
         background: var(--r);
@@ -1194,7 +1194,8 @@
 
         <!-- LEFT: texte -->
         <div class="hero-left fi">
-          <span class="badge">★ Gamme Voge 2026 ★</span>
+          <!-- CTA "Voir nos motos" replacing the "Gamme Voge 2026" badge -->
+          <a href="#gamme" class="btn-p" style="display:table;margin:0 auto 18px;" onclick="dlPush('cta_click', 'voir_motos_hero')">🏍️ Voir nos motos</a>
           <h1>Concessionnaire <span>Voge</span><br />Cholet</h1>
           <p class="hero-sub">
             <strong>Galaxie 2 Roo</strong>, votre concessionnaire Voge à Cholet
@@ -1202,7 +1203,6 @@
             équipé de série, essai gratuit sur rendez-vous.
           </p>
           <div class="actions">
-            <a href="#gamme" class="btn-p" onclick="dlPush('cta_click', 'gamme_hero')">🏍️ Voir la gamme</a>
             <a href="#essai-form" class="btn-s" onclick="dlPush('cta_click', 'essai_hero')">🏍️ Faire un essai</a>
           </div>
           <div class="stats">
@@ -1229,13 +1229,25 @@
         <div class="hero-right fi" style="transition-delay: 0.15s">
           <div class="carousel-wrap" id="carousel">
 
-            <div class="carousel-slide active" data-tag="Trail Aventure" data-model="DS 900X" data-href="https://galaxie2roo.fr/voge-900-dsx/">
+            <!-- Naked R 625 — most clicked, now first -->
+            <div class="carousel-slide active" data-tag="Roadster" data-model="Naked R 625" data-href="https://galaxie2roo.fr/voge-r625/">
+              <img
+                src="images/voge-r625-07.webp"
+                alt="Voge Naked R 625 2026 — Roadster"
+                width="700"
+                height="467"
+                fetchpriority="high"
+              />
+              <button class="carousel-link" aria-label="Voir la Naked R 625 en grand" onclick="openLightbox()"></button>
+            </div>
+
+            <div class="carousel-slide" data-tag="Trail Aventure" data-model="DS 900X" data-href="https://galaxie2roo.fr/voge-900-dsx/">
               <img
                 src="images/voge-ds900x-03.webp"
                 alt="Voge DS 900X 2026 — Trail Aventure"
                 width="700"
                 height="467"
-                fetchpriority="high"
+                loading="lazy"
               />
               <button class="carousel-link" aria-label="Voir la DS 900X en grand" onclick="openLightbox()"></button>
             </div>
@@ -1262,22 +1274,11 @@
               <button class="carousel-link" aria-label="Voir la DS 800X Rally en grand" onclick="openLightbox()"></button>
             </div>
 
-            <div class="carousel-slide" data-tag="Roadster" data-model="Naked R 625" data-href="https://galaxie2roo.fr/voge-r625/">
-              <img
-                src="images/voge-r625-07.webp"
-                alt="Voge Naked R 625 2026 — Roadster"
-                width="700"
-                height="467"
-                loading="lazy"
-              />
-              <button class="carousel-link" aria-label="Voir la Naked R 625 en grand" onclick="openLightbox()"></button>
-            </div>
-
             <div class="carousel-dots">
-              <button class="carousel-dot active" aria-label="DS 900X" onclick="goSlide(0)"></button>
-              <button class="carousel-dot" aria-label="625 DSX" onclick="goSlide(1)"></button>
-              <button class="carousel-dot" aria-label="DS 800X Rally" onclick="goSlide(2)"></button>
-              <button class="carousel-dot" aria-label="Naked R 625" onclick="goSlide(3)"></button>
+              <button class="carousel-dot active" aria-label="Naked R 625" onclick="goSlide(0)"></button>
+              <button class="carousel-dot" aria-label="DS 900X" onclick="goSlide(1)"></button>
+              <button class="carousel-dot" aria-label="625 DSX" onclick="goSlide(2)"></button>
+              <button class="carousel-dot" aria-label="DS 800X Rally" onclick="goSlide(3)"></button>
             </div>
             <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
             <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
@@ -1286,8 +1287,8 @@
           </div><!-- end .carousel-wrap -->
 
           <div class="carousel-info">
-            <span class="carousel-tag" id="carouselTag">Trail Aventure</span>
-            <span class="carousel-model" id="carouselModel">DS 900X</span>
+            <span class="carousel-tag" id="carouselTag">Roadster</span>
+            <span class="carousel-model" id="carouselModel">Naked R 625</span>
           </div>
 
         </div>
@@ -1320,7 +1321,40 @@
         </div>
         <div class="cards">
 
-          <a href="https://galaxie2roo.fr/voge-900-dsx/" class="card fi" onclick="dlPush('model_click', '900dsx')">
+          <!-- Naked R 625 — most clicked, now first -->
+          <a href="https://galaxie2roo.fr/voge-r625/" class="card fi" onclick="dlPush('model_click', 'r625')">
+            <div class="card-img">
+              <img src="images/voge-r625-07.webp" alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <span class="card-tag">Roadster</span>
+            </div>
+            <div class="card-body">
+              <span class="card-cat">Voge</span>
+              <div class="card-name">Naked R 625</div>
+              <div class="card-price">À partir de 5 795 € TTC</div>
+              <p class="card-desc">
+                Le roadster sportif de la famille Voge. 581 cm³ bicylindre DOHC,
+                64 ch, lignes tendues et comportement vif — accessible permis
+                A2. Pour ceux qui préfèrent le bitume.
+              </p>
+              <div class="card-specs">
+                <div>
+                  <div class="cs-val">581cc</div>
+                  <div class="cs-lbl">Bicylindre</div>
+                </div>
+                <div>
+                  <div class="cs-val">64ch</div>
+                  <div class="cs-lbl">Puissance</div>
+                </div>
+                <div>
+                  <div class="cs-val">A2</div>
+                  <div class="cs-lbl">Homologué</div>
+                </div>
+              </div>
+              <div class="card-cta">Découvrir la Naked R 625 <span class="card-arrow">→</span></div>
+            </div>
+          </a>
+
+          <a href="https://galaxie2roo.fr/voge-900-dsx/" class="card fi" style="transition-delay: 0.1s" onclick="dlPush('model_click', '900dsx')">
             <div class="card-img">
               <img src="images/voge-ds900x-03.webp" alt="Voge DS900X 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Trail Aventure</span>
@@ -1353,7 +1387,7 @@
             </div>
           </a>
 
-          <a href="https://galaxie2roo.fr/voge-625-dsx/" class="card fi" style="transition-delay: 0.1s" onclick="dlPush('model_click', '625dsx')">
+          <a href="https://galaxie2roo.fr/voge-625-dsx/" class="card fi" style="transition-delay: 0.2s" onclick="dlPush('model_click', '625dsx')">
             <div class="card-img">
               <img src="images/voge-625dsx-01.webp" alt="Voge 625 DSX 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Trail Routier</span>
@@ -1385,7 +1419,7 @@
             </div>
           </a>
 
-          <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="card fi" style="transition-delay: 0.2s" onclick="dlPush('model_click', '800rally')">
+          <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="card fi" style="transition-delay: 0.3s" onclick="dlPush('model_click', '800rally')">
             <div class="card-img">
               <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Rally Raid</span>
@@ -1414,38 +1448,6 @@
                 </div>
               </div>
               <div class="card-cta">Découvrir la DS 800X Rally <span class="card-arrow">→</span></div>
-            </div>
-          </a>
-
-          <a href="https://galaxie2roo.fr/voge-r625/" class="card fi" style="transition-delay: 0.3s" onclick="dlPush('model_click', 'r625')">
-            <div class="card-img">
-              <img src="images/voge-r625-07.webp" alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
-              <span class="card-tag">Roadster</span>
-            </div>
-            <div class="card-body">
-              <span class="card-cat">Voge</span>
-              <div class="card-name">Naked R 625</div>
-              <div class="card-price">À partir de 5 795 € TTC</div>
-              <p class="card-desc">
-                Le roadster sportif de la famille Voge. 581 cm³ bicylindre DOHC,
-                64 ch, lignes tendues et comportement vif — accessible permis
-                A2. Pour ceux qui préfèrent le bitume.
-              </p>
-              <div class="card-specs">
-                <div>
-                  <div class="cs-val">581cc</div>
-                  <div class="cs-lbl">Bicylindre</div>
-                </div>
-                <div>
-                  <div class="cs-val">64ch</div>
-                  <div class="cs-lbl">Puissance</div>
-                </div>
-                <div>
-                  <div class="cs-val">A2</div>
-                  <div class="cs-lbl">Homologué</div>
-                </div>
-              </div>
-              <div class="card-cta">Découvrir la Naked R 625 <span class="card-arrow">→</span></div>
             </div>
           </a>
 
@@ -1599,10 +1601,10 @@
               <div class="fg">
                 <label>Modèle souhaité</label>
                 <select id="fm">
+                  <option value="Voge Naked R625 2026">Voge Naked R 625 2026</option>
                   <option value="Voge DS900X 2026">Voge DS 900X 2026</option>
                   <option value="Voge 625 DSX 2026">Voge 625 DSX 2026</option>
                   <option value="Voge DS800X Rally 2026">Voge DS 800X Rally 2026</option>
-                  <option value="Voge Naked R625 2026">Voge Naked R 625 2026</option>
                 </select>
               </div>
               <div class="fg">
