@@ -20,21 +20,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/site.webmanifest" />
 <meta name="description" content="Voge 625 R 2026 à Cholet — Concessionnaire officiel Galaxie 2 Roo. Essai gratuit, prix, fiche technique. Roadster 581cc, sportif et accessible.">
 <title>Voge Naked R 625 2026 – Roadster A2 | Galaxie 2 Roo Cholet</title>
-<link rel="preload" as="image" href="images/.webp" fetchpriority="high">
-<!-- Google Fonts chargé en asynchrone pour éviter le blocage du rendu -->
+<link rel="preload" as="image" href="images/voge-r625-09-1.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap"></noscript>
-<!-- Fallback immédiat pendant le chargement des fonts -->
 <style>body{font-family:Arial,Helvetica,sans-serif;}h1,h2,h3,.stat-val,.price,.nav-links a{font-family:'Arial Narrow',Arial,sans-serif;}</style>
 <style>
 :root{--r:#E0190F;--dk:#0A0A0A;--md:#141414;--cd:#1C1C1C;--br:#2A2A2A;--tx:#F0F0F0;--mu:#AAAAAA;--gd:#C9942A;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--dk);color:var(--tx);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden;font-size:17px;line-height:1.6;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bottom:2px solid var(--r);padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .logo{height:40px;}
 .nav-links{display:flex;gap:18px;list-style:none;}
@@ -43,15 +39,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bo
 .cta-nav{background:var(--r);color:#fff;padding:10px 18px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;white-space:nowrap;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .burger span{width:26px;height:2px;background:#fff;display:block;}
-
-/* MOBILE MENU */
 .mmenu{display:none;position:fixed;inset:0;z-index:200;background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
 .mmenu.open{display:flex;}
 .mmenu a{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:900;text-transform:uppercase;color:#222;text-decoration:none;}
 .mmenu a.red{color:var(--r);}
 .mclose{position:absolute;top:18px;right:20px;background:none;border:none;color:#222;font-size:28px;cursor:pointer;}
-
-/* HERO */
 #hero{min-height:100vh;background:linear-gradient(160deg,#050505 0%,#0f0505 50%,#050505 100%);display:flex;align-items:center;padding:80px 20px 48px;position:relative;overflow:hidden;}
 #hero::before{content:'';position:absolute;top:-10%;right:-5%;width:60%;height:120%;background:radial-gradient(ellipse,rgba(224,25,15,.09),transparent 65%);pointer-events:none;}
 #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--r),transparent);}
@@ -70,19 +62,13 @@ h1 span{color:var(--r);}
 .stats{display:flex;gap:32px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap;}
 .sv{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:900;color:var(--r);}
 .sl{font-size:13px;color:#fff;letter-spacing:.5px;margin-top:2px;font-weight:500;}
-
-/* BADGE PERMIS A2 */
 .badge-a2{display:inline-flex;align-items:center;gap:8px;background:rgba(201,148,42,.12);border:1px solid rgba(201,148,42,.4);padding:6px 14px;border-radius:2px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gd);margin-bottom:16px;}
-
-/* ESSAI BANNER */
 #eb{background:var(--r);}
 .eb-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:30px 20px;gap:20px;flex-wrap:wrap;}
 .eb-in h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,4vw,38px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
 .eb-in p{color:rgba(255,255,255,.9);font-size:15px;margin-top:5px;font-weight:400;}
 .btn-w{background:#fff;color:var(--r);padding:16px 36px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all .25s;display:inline-block;}
 .btn-w:hover{background:#f0f0f0;transform:scale(1.02);}
-
-/* PRODUCT SECTION */
 #produit{padding:80px 20px;background:var(--md);}
 .prod-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .prod-img{position:sticky;top:80px;}
@@ -90,23 +76,34 @@ h1 span{color:var(--r);}
 .prod-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--r);margin-bottom:12px;display:block;}
 .prod-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:10px;color:#fff;}
 .prod-price{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--gd);margin-bottom:22px;}
-.prod-desc{color:var(--mu);line-height:1.8;margin-bottom:28px;font-size:17px;}
+.prod-desc{color:var(--mu);line-height:1.8;margin-bottom:14px;font-size:17px;}
 .prod-desc strong{color:#fff;font-weight:500;}
-
-/* SPECS */
 .specs-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--r);margin-bottom:14px;}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
 .si{background:var(--cd);border:1px solid var(--br);padding:13px 15px;border-radius:3px;}
 .sl2{font-size:10px;color:var(--mu);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
 .sv2{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:#fff;}
-
-/* FEATURES LIST */
 .feat-list{list-style:none;margin-bottom:28px;}
 .feat-list li{padding:10px 0;border-bottom:1px solid var(--br);font-size:16px;color:var(--mu);display:flex;gap:10px;align-items:flex-start;}
 .feat-list li::before{content:"✓";color:var(--r);font-weight:700;flex-shrink:0;margin-top:1px;}
 .feat-list li strong{color:#fff;font-weight:500;}
 .da{display:flex;gap:12px;flex-wrap:wrap;}
-
+/* COLLAPSIBLE */
+.collapsible-body{max-height:0;overflow:hidden;transition:max-height .45s ease;}
+.collapsible-body.open{max-height:800px;}
+.toggle-btn{background:none;border:none;color:var(--r);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;padding:8px 0 0;margin-bottom:28px;display:flex;align-items:center;gap:6px;}
+.toggle-btn::after{content:'↓';transition:transform .3s;display:inline-block;}
+.toggle-btn.open::after{transform:rotate(180deg);}
+.pourquoi-toggle{width:100%;background:none;border:none;border-bottom:1px solid var(--br);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,3vw,26px);font-weight:900;text-transform:uppercase;text-align:left;padding:20px 48px 20px 0;cursor:pointer;position:relative;letter-spacing:.5px;line-height:1.1;}
+.pourquoi-toggle::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
+.pourquoi-toggle.open::after{transform:translateY(-50%) rotate(45deg);}
+/* EDITORIAL */
+#pourquoi{padding:32px 20px;background:var(--dk);}
+.ed-in{max-width:800px;margin:0 auto;}
+.ed-h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--r);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
+.ed-p{color:var(--mu);line-height:1.85;margin-bottom:32px;font-size:16px;}
+.ed-p strong{color:#fff;}
+.ed-p a{color:var(--r);}
 /* SOCIAL PROOF */
 #avis{padding:80px 20px;background:var(--dk);}
 .in{max-width:1100px;margin:0 auto;}
@@ -135,11 +132,7 @@ h1 span{color:var(--r);}
 .g-logo .g-r{color:#EA4335;}
 .g-logo .g-y{color:#FBBC05;}
 .g-logo .g-g{color:#34A853;}
-@media(max-width:768px){
-  #avis{padding:40px 20px;}
-}
-
-/* CONTACT */
+@media(max-width:768px){#avis{padding:40px 20px;}}
 #contact{padding:40px 20px;background:var(--md);}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .ci h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;text-transform:uppercase;margin-bottom:26px;color:#fff;}
@@ -165,42 +158,29 @@ h1 span{color:var(--r);}
 .fg select option{background:var(--dk);}
 .fsub{width:100%;background:var(--r);color:#fff;border:none;padding:16px;border-radius:3px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;transition:background .2s;margin-top:6px;}
 .fsub:hover{background:#c0140b;}
-
-/* FOOTER */
 footer{background:#030303;border-top:1px solid var(--br);padding:28px 20px;text-align:center;}
 footer img{height:26px;margin-bottom:10px;}
 footer p{font-size:13px;color:var(--mu);}
 footer a{color:var(--mu);text-decoration:none;}
 footer a:hover{color:var(--r);}
-
-/* STICKY MOBILE */
 .sbar{position:fixed;bottom:0;left:0;right:0;z-index:99;display:none;background:var(--dk);border-top:2px solid var(--r);padding:10px 14px;gap:10px;}
 .sbar a{flex:1;text-align:center;padding:14px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;}
 .sc{background:var(--r);color:#fff;}
 .se{background:transparent;color:#fff;border: 1px solid var(--r);}
-
-/* FADE ANIM */
 .fi{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s;}
 .fi.vis{opacity:1;transform:translateY(0);}
-
-/* ===== CAROUSEL HERO ===== */
 .hero-carousel{position:relative;width:100%;overflow:hidden;border-radius:8px;background:#111;aspect-ratio:3/2;}
 .carousel-track{position:relative;height:100%;}
 .carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none;}
 .carousel-slide.active{opacity:1;pointer-events:auto;}
 .carousel-slide img{width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;filter:drop-shadow(0 24px 64px rgba(0,0,0,.85));}
-/* Flèches */
 .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(0,0,0,.45);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.8rem;line-height:1;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;opacity:.7;}
 .carousel-btn:hover,.carousel-btn:focus-visible{background:rgba(0,0,0,.8);opacity:1;outline:2px solid rgba(255,255,255,.6);}
 .carousel-btn--prev{left:10px;}
 .carousel-btn--next{right:10px;}
-/* Dots */
 .carousel-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
 .carousel-dot{width:9px;height:9px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;padding:0;transition:background .25s,transform .25s;}
 .carousel-dot.active,.carousel-dot:hover{background:#fff;transform:scale(1.3);}
-/* ===== FIN CAROUSEL ===== */
-
-/* ===== LIGHTBOX ===== */
 .carousel-slide img{cursor:zoom-in;}
 #lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;animation:lbIn .2s ease;}
 #lightbox.open{display:flex;}
@@ -213,9 +193,15 @@ footer a:hover{color:var(--r);}
 #lightbox-prev{left:16px;}
 #lightbox-next{right:16px;}
 #lightbox-counter{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2px;}
-/* ===== FIN LIGHTBOX ===== */
-
-/* RESPONSIVE */
+.faq-section{background:var(--md);padding:80px 20px 20px;}
+.faq-in{max-width:800px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--br);overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--tx);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-align:left;padding:22px 48px 22px 0;cursor:pointer;position:relative;letter-spacing:.5px;}
+.faq-q::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:18px;}
+.faq-a p{color:var(--mu);font-size:16px;line-height:1.7;}
 @media(max-width:768px){
 .nav-links{display:none;}
 .burger{display:flex;}
@@ -239,18 +225,6 @@ body{padding-bottom:70px;}
 .feat-list li{text-align:left;}
 .eb-in{text-align:center;justify-content:center;}
 }
-
-/* ===== FAQ ===== */
-.faq-section{background:var(--md);padding:80px 20px 20px;}
-.faq-in{max-width:800px;margin:0 auto;}
-.faq-item{border-bottom:1px solid var(--br);overflow:hidden;}
-.faq-q{width:100%;background:none;border:none;color:var(--tx);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-align:left;padding:22px 48px 22px 0;cursor:pointer;position:relative;letter-spacing:.5px;}
-.faq-q::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
-.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
-.faq-item.open .faq-a{max-height:300px;padding-bottom:18px;}
-.faq-a p{color:var(--mu);font-size:16px;line-height:1.7;}
-/* ===== FIN FAQ ===== */
 </style>
 <script type="application/ld+json">
 {
@@ -289,7 +263,7 @@ body{padding-bottom:70px;}
         {"@type":"Question","name":"La Voge 625 R a-t-elle un quickshifter ?","acceptedAnswer":{"@type":"Answer","text":"Non, la Voge 625 R ne dispose pas de quickshifter de série. Elle est équipée d'un embrayage anti-dribble (slipper clutch) pour les rétrogradages sportifs, d'un contrôle de traction TCS, et de deux modes moteur Eco et Sport."}},
         {"@type":"Question","name":"Quelle est la consommation de la Voge 625 R ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 625 R consomme environ 5 à 5,5 L/100 km en usage mixte. Avec son réservoir de 16,5 litres, l'autonomie est d'environ 280 à 310 km."}},
         {"@type":"Question","name":"La Voge 625 R est-elle fiable ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 625 R bénéficie d'une garantie 2 ans pièces et main d'œuvre. Son moteur DOHC 581cc est reconnu pour sa robustesse et son entretien accessible. Galaxie 2 Roo assure le SAV officiel à Cholet."}},
-        {"@type":"Question","name":"Comment essayer la Voge 625 R à Cholet ?","acceptedAnswer":{"@type":"Answer","text":"Galaxie 2 Roo propose des essais gratuits sur rendez-vous. Remplissez le formulaire sur cette page ou appelez le 09 63 22 14 70. Le concession est ouverte du mardi au samedi à La Séguinière (Cholet)."}}
+        {"@type":"Question","name":"Comment essayer la Voge 625 R à Cholet ?","acceptedAnswer":{"@type":"Answer","text":"Galaxie 2 Roo propose des essais gratuits sur rendez-vous. Remplissez le formulaire sur cette page ou appelez le 09 63 22 14 70. La concession est ouverte du mardi au samedi à La Séguinière (Cholet)."}}
       ]
     },
     {
@@ -316,11 +290,7 @@ body{padding-bottom:70px;}
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <a href="https://galaxie2roo.fr/" aria-label="Retour à l'accueil">
   <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" width="125" height="40">
@@ -333,7 +303,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="tel:+33963221470" class="cta-nav" onclick="dlPush('phone_call','nav')">📞 Appelez-nous</a>
   <button class="burger" onclick="openMenu()"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="mmenu" id="mm">
   <button class="mclose" onclick="closeMenu()">✕</button>
   <a href="#produit" onclick="closeMenu()">La Moto</a>
@@ -341,7 +310,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="tel:+33963221470" class="red" onclick="closeMenu();dlPush('phone_call','menu')">📞 Appelez-nous</a>
 </div>
-
 <!-- HERO -->
 <section id="hero">
   <div class="hero-in">
@@ -361,115 +329,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-img fi" style="animation-delay:.2s">
-      <!-- ===== CAROUSEL HERO ===== -->
       <div class="hero-carousel" id="heroCarousel" aria-label="Photos Voge Naked R 625 2026">
         <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide active">
-            <img src="images/voge-r625-09-1.webp"
-                 alt="Voge Naked R 625 2026 noir - Galaxie 2 Roo Cholet"
-                 loading="eager" width="700" height="467">
-          </div>
-          <div class="carousel-slide">
-            <img src="images/voge-r625-09-2.webp"
-                 alt="Voge Naked R 625 2026 noir face avant - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-          <div class="carousel-slide">
-            <img src="images/voge-r625-10.webp"
-                 alt="Voge Naked R 625 2026 noir profil - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-          <div class="carousel-slide">
-            <img src="images/voge-r625-11.webp"
-                 alt="Voge Naked R 625 2026 noir profil gauche - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-          <div class="carousel-slide">
-            <img src="images/voge-r625-12.webp"
-                 alt="Voge Naked R 625 2026 noir profil gauche arrière - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-13.webp"
-                 alt="Voge Naked R 625 2026 noir arrière - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-14.webp"
-                 alt="Voge Naked R 625 2026 noir profil droit arrière - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-15.webp"
-                 alt="Voge Naked R 625 2026 noir profil droit - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-16.webp"
-                 alt="Voge Naked R 625 2026 rouge profil droit avant - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-17.webp"
-                 alt="Voge Naked R 625 2026 rouge avant - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-18.webp"
-                 alt="Voge Naked R 625 2026 rouge profil avant gauche - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-19.webp"
-                 alt="Voge Naked R 625 2026 rouge profil gauche - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-20.webp"
-                 alt="Voge Naked R 625 2026 rouge profil arrière gauche - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-21.webp"
-                 alt="Voge Naked R 625 2026 rouge arrière - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
-           <div class="carousel-slide">
-            <img src="images/voge-r625-22.webp"
-                 alt="Voge Naked R 625 2026 rouge profil arrière droit - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
-          </div>
+          <div class="carousel-slide active"><img src="images/voge-r625-09-1.webp" alt="Voge Naked R 625 2026 noir - Galaxie 2 Roo Cholet" loading="eager" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-09-2.webp" alt="Voge Naked R 625 2026 noir face avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-10.webp" alt="Voge Naked R 625 2026 noir profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-11.webp" alt="Voge Naked R 625 2026 noir profil gauche - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-12.webp" alt="Voge Naked R 625 2026 noir profil gauche arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-13.webp" alt="Voge Naked R 625 2026 noir arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-14.webp" alt="Voge Naked R 625 2026 noir profil droit arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-15.webp" alt="Voge Naked R 625 2026 noir profil droit - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-16.webp" alt="Voge Naked R 625 2026 rouge profil droit avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-17.webp" alt="Voge Naked R 625 2026 rouge avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-18.webp" alt="Voge Naked R 625 2026 rouge profil avant gauche - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-19.webp" alt="Voge Naked R 625 2026 rouge profil gauche - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-20.webp" alt="Voge Naked R 625 2026 rouge profil arrière gauche - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-21.webp" alt="Voge Naked R 625 2026 rouge arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
+          <div class="carousel-slide"><img src="images/voge-r625-22.webp" alt="Voge Naked R 625 2026 rouge profil arrière droit - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467"></div>
         </div>
-
-        <button class="carousel-btn carousel-btn--prev" id="carouselPrev"
-                aria-label="Image précédente" type="button">&#8249;</button>
-        <button class="carousel-btn carousel-btn--next" id="carouselNext"
-                aria-label="Image suivante" type="button">&#8250;</button>
-
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
         <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation carousel">
-          <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Image 1" data-index="0"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 2" data-index="1"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 3" data-index="2"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 4" data-index="3"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 5" data-index="4"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 6" data-index="5"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 7" data-index="6"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 8" data-index="7"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 9" data-index="8"></button>
+          <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Image 1"  data-index="0"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 2"  data-index="1"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 3"  data-index="2"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 4"  data-index="3"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 5"  data-index="4"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 6"  data-index="5"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 7"  data-index="6"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 8"  data-index="7"></button>
+          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 9"  data-index="8"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 10" data-index="9"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 11" data-index="10"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 12" data-index="11"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 13" data-index="12"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 14" data-index="13"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 15" data-index="14"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 16" data-index="15"></button>
         </div>
       </div>
-      <!-- ===== FIN CAROUSEL ===== -->
     </div>
   </div>
 </section>
-
 <!-- ESSAI BANNER -->
 <div id="eb">
   <div class="eb-in">
@@ -480,21 +380,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#essai-form" class="btn-w" onclick="dlPush('cta_click','essai_banner')">Réserver un Essai →</a>
   </div>
 </div>
-
 <!-- PRODUIT -->
 <section id="produit">
   <div class="prod-in">
     <div class="prod-img fi">
-      <img src="images/voge-r625-02.webp" alt="Voge Naked R 625 2026 - Galaxie 2 Roo Cholet"
-      loading="lazy" width="700" height="467">
+      <img src="images/voge-r625-02.webp" alt="Voge Naked R 625 2026 - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
     </div>
     <div class="prod-info fi">
       <span class="prod-tag">Roadster — Naked — Euro 5+</span>
       <h2 class="prod-name">Voge Naked R 625</h2>
       <div class="prod-price">5 795 € TTC<br><small style="font-size:15px;color:var(--mu);font-weight:400;">Garantie 2 ans pièces &amp; main d'œuvre — Financement possible</small></div>
+
+      <!-- Paragraphe 1 — toujours visible -->
       <p class="prod-desc">
-        La Voge Naked R 625 2026 est un <strong>roadster bicylindre au rapport qualité/prix exceptionnel</strong>. Design agressif, équipements haut de gamme — freinage NISSIN, fourche KYB, pneus Pirelli — et une polyvalence rare grâce à son double homologation <strong>permis A et A2</strong>. Le roadster taillé pour les passionnés, sans compromis sur le budget.
+        La <strong>Voge Naked R 625 2026</strong> est un roadster bicylindre 581cc DOHC au rapport équipement/prix imbattable. Avec <strong>64 ch en version A et 48 ch en version A2 bridée</strong>, elle s'adresse aussi bien aux jeunes permis qu'aux pilotes confirmés souhaitant une machine compacte (195 kg, selle à 785 mm), efficace et bien équipée à moins de 6 000 €.
       </p>
+      <!-- Paragraphes 2 & 3 — masqués par défaut -->
+      <div class="collapsible-body" id="desc-more">
+        <p class="prod-desc">
+          Son équipement de série rivalise avec des roadsters vendus 2 000 € plus cher : <strong>freinage NISSIN double disque Ø298mm</strong> avec ABS double canal, <strong>fourche inversée KYB Ø41mm</strong> + mono-amortisseur réglable, <strong>pneus Pirelli sport ZR17</strong> avant et arrière, contrôle de traction TCS, slipper clutch, modes Eco &amp; Sport, TFT 5" connecté avec GPS. Tout est inclus — rien n'est en option.
+        </p>
+        <p class="prod-desc">
+          Chez <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à Cholet (La Séguinière, 49280), la R 625 est disponible en stock dans les deux coloris — <strong>Noir et Rouge</strong> — à <strong>5 795 € TTC</strong>, financement possible. Garantie 2 ans pièces et main-d'œuvre, SAV officiel assuré. Essai gratuit sur rendez-vous.
+        </p>
+      </div>
+      <button class="toggle-btn" id="desc-toggle" onclick="toggleCollapse('desc-more','desc-toggle')">Lire la suite</button>
 
       <div class="specs-title">Caractéristiques techniques</div>
       <div class="sg">
@@ -507,7 +417,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="si"><div class="sl2">Boîte</div><div class="sv2">6 rapports / chaîne</div></div>
         <div class="si"><div class="sl2">Permis</div><div class="sv2">A &amp; A2</div></div>
       </div>
-
       <div class="specs-title">Équipements &amp; technologie</div>
       <ul class="feat-list">
         <li><strong>Tableau de bord TFT 5"</strong> connectivité smartphone + navigation intégrée</li>
@@ -521,7 +430,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><strong>Indicateur de rapport engagé</strong>, température ext., horloge, trip</li>
         <li><strong>Prise USB</strong>, leviers réglables, poignées passager aluminium</li>
       </ul>
-
       <div class="da">
         <a href="#essai-form" class="btn-p" onclick="dlPush('cta_click','essai_produit')">🏍️ Réserver un Essai Gratuit</a>
         <a href="tel:+33963221470" class="btn-s" onclick="dlPush('phone_call','produit')">📞 Appelez-nous</a>
@@ -529,6 +437,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- SECTION EDITORIALE — foldable -->
+<section id="pourquoi">
+  <div class="ed-in fi">
+    <button class="pourquoi-toggle" id="pourquoi-toggle" onclick="togglePourquoi()" aria-expanded="false">
+      Voge R 625 2026 : NISSIN, KYB, Pirelli — à moins de 6 000 €
+    </button>
+    <div class="collapsible-body" id="pourquoi-body">
+      <div style="padding-top:28px;">
+        <h3 class="ed-h3">L'équipement d'un roadster premium, au prix d'une moyenne gamme</h3>
+        <p class="ed-p">
+          Sur une Kawasaki Z650 ou une Honda CB650R, le freinage Nissin double disque, les suspensions KYB réglables et les pneus Pirelli sport de série représentent un niveau d'équipement qu'on n'atteint généralement qu'à partir de <strong>8 000 €</strong>. La Voge R 625 2026 l'offre à <strong>5 795 € TTC</strong>. Pas de version dépouillée à compléter d'options — tout est là dès la sortie de boîte, financement disponible chez Galaxie 2 Roo à Cholet.
+        </p>
+
+        <h3 class="ed-h3">Permis A2 → Permis A : un seul achat pour toute la progression</h3>
+        <p class="ed-p">
+          La R 625 est disponible bridée à <strong>48 ch (A2)</strong> et peut être débridée à <strong>64 ch (A)</strong> directement chez votre concessionnaire dès l'obtention du permis A — sans frais importants, sans changer de moto. C'est une économie réelle : une moto A2 achetée pour être revendue 2 ans plus tard au profit d'un modèle A coûte souvent plusieurs milliers d'euros de différence. Avec la R 625, vous ne payez qu'une fois.
+        </p>
+
+        <h3 class="ed-h3">Essayez la Voge R 625 à Cholet — sans engagement</h3>
+        <p class="ed-p" style="margin-bottom:0;">
+          <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à La Séguinière (Cholet, 49280), propose des essais gratuits sur rendez-vous. La R 625 est disponible en stock dans les deux coloris — Noir et Rouge. Appelez le <a href="tel:+33963221470">09 63 22 14 70</a> ou remplissez le formulaire en bas de page. Ouvert du mardi au samedi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN SECTION EDITORIALE -->
 
 <!-- AVIS CLIENTS -->
 <section id="avis">
@@ -576,9 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="faq-in">
     <div class="sh fi">
@@ -595,7 +529,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">La Voge 625 R est-elle accessible en permis A2 ?</button>
-      <div class="faq-a"><p>Oui, la Voge 625 R est <strong>homologuée A2 à 48 ch</strong>. Elle est accessible dès le permis A2. Après 2 ans de permis, un dé-bridage vers 64 ch (version A) est possible chez Galaxie 2 Roo.</p></div>
+      <div class="faq-a"><p>Oui, la Voge 625 R est <strong>homologuée A2 à 48 ch</strong>. Après 2 ans de permis, un dé-bridage vers <strong>64 ch</strong> (version A) est possible directement chez Galaxie 2 Roo.</p></div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Quelle est la différence entre la Voge 625 R et la Voge 625 DSX ?</button>
@@ -623,8 +557,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-<!-- ===== FIN FAQ ===== -->
-
 <!-- CONTACT & FORM -->
 <section id="contact">
   <div class="in">
@@ -681,7 +613,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 <footer>
   <a href="https://galaxie2roo.fr/" aria-label="Retour à l'accueil">
   <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" width="125" height="40">
@@ -689,87 +620,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
   <p style="margin-top:8px"><a href="#">Mentions légales</a> &middot; <a href="#">Confidentialité</a></p>
 </footer>
-
 <div class="sbar">
   <a href="tel:+33963221470" class="sc" onclick="dlPush('phone_call','sticky')">📞 Appelez-nous</a>
   <a href="#essai-form" class="se" onclick="dlPush('cta_click','essai_sticky')">🏍️ Faire un essai</a>
 </div>
-
 <script>
-/* ===== CAROUSEL HERO — vanilla JS, zéro dépendance ===== */
 (function(){
   'use strict';
-  var TOTAL   = 5;
-  var DELAY   = 4500;
-  var DUR     = 600;
-  var current = 0;
-  var timer   = null;
-  var locked  = false;
-
-  var slides  = document.querySelectorAll('#carouselTrack .carousel-slide');
-  var dots    = document.querySelectorAll('#carouselDots .carousel-dot');
-  var btnP    = document.getElementById('carouselPrev');
-  var btnN    = document.getElementById('carouselNext');
-  var wrap    = document.getElementById('heroCarousel');
-
-  if(!slides.length) return;
-
+  var TOTAL=15,DELAY=4500,DUR=600,current=0,timer=null,locked=false;
+  var slides=document.querySelectorAll('#carouselTrack .carousel-slide');
+  var dots=document.querySelectorAll('#carouselDots .carousel-dot');
+  var btnP=document.getElementById('carouselPrev');
+  var btnN=document.getElementById('carouselNext');
+  var wrap=document.getElementById('heroCarousel');
+  if(!slides.length)return;
   function goTo(idx){
-    if(locked || idx === current) return;
-    locked = true;
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    dots[current].setAttribute('aria-selected','false');
-    current = ((idx % TOTAL) + TOTAL) % TOTAL;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    dots[current].setAttribute('aria-selected','true');
-    if(window.dataLayer) dataLayer.push({event:'carousel_slide_change',carousel_id:'hero',slide_index:current});
-    setTimeout(function(){ locked = false; }, DUR);
+    if(locked||idx===current)return;
+    locked=true;
+    slides[current].classList.remove('active');dots[current].classList.remove('active');dots[current].setAttribute('aria-selected','false');
+    current=((idx%TOTAL)+TOTAL)%TOTAL;
+    slides[current].classList.add('active');dots[current].classList.add('active');dots[current].setAttribute('aria-selected','true');
+    if(window.dataLayer)dataLayer.push({event:'carousel_slide_change',carousel_id:'hero',slide_index:current});
+    setTimeout(function(){locked=false;},DUR);
   }
-
-  function next(){ goTo(current + 1); }
-  function prev(){ goTo(current - 1); }
-  function startAuto(){ stopAuto(); timer = setInterval(next, DELAY); }
-  function stopAuto(){ clearInterval(timer); timer = null; }
-
-  btnN.addEventListener('click', function(){ next(); startAuto(); });
-  btnP.addEventListener('click', function(){ prev(); startAuto(); });
-
-  dots.forEach(function(d){
-    d.addEventListener('click', function(){ goTo(parseInt(d.dataset.index,10)); startAuto(); });
-  });
-
-  wrap.addEventListener('mouseenter', stopAuto);
-  wrap.addEventListener('mouseleave', startAuto);
-  wrap.addEventListener('focusin',    stopAuto);
-  wrap.addEventListener('focusout',   startAuto);
-
-  /* Swipe tactile */
-  var tx = 0;
-  wrap.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
-  wrap.addEventListener('touchend',   function(e){
-    var diff = tx - e.changedTouches[0].clientX;
-    if(Math.abs(diff) > 40){ diff > 0 ? next() : prev(); startAuto(); }
-  }, {passive:true});
-
+  function next(){goTo(current+1);}
+  function prev(){goTo(current-1);}
+  function startAuto(){stopAuto();timer=setInterval(next,DELAY);}
+  function stopAuto(){clearInterval(timer);timer=null;}
+  btnN.addEventListener('click',function(){next();startAuto();});
+  btnP.addEventListener('click',function(){prev();startAuto();});
+  dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.index,10));startAuto();});});
+  wrap.addEventListener('mouseenter',stopAuto);wrap.addEventListener('mouseleave',startAuto);
+  wrap.addEventListener('focusin',stopAuto);wrap.addEventListener('focusout',startAuto);
+  var tx=0;
+  wrap.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
+  wrap.addEventListener('touchend',function(e){var diff=tx-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?next():prev();startAuto();}},{passive:true});
   startAuto();
 })();
-/* ===== FIN CAROUSEL ===== */
 </script>
-
 <script>
 function openMenu(){document.getElementById('mm').classList.add('open');}
 function closeMenu(){document.getElementById('mm').classList.remove('open');}
-// IntersectionObserver optimisé
 const obs=new IntersectionObserver(e=>{
-  requestAnimationFrame(()=>{
-    e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});
-  });
+  requestAnimationFrame(()=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});});
 },{threshold:0,rootMargin:'0px 0px -40px 0px'});
 const fiEls=document.querySelectorAll('.fi');
 fiEls.forEach(el=>obs.observe(el));
-// Fallback
 setTimeout(()=>{fiEls.forEach(el=>{if(!el.classList.contains('vis'))el.classList.add('vis');});},400);
 function dlPush(event,label){window.dataLayer=window.dataLayer||[];dataLayer.push({event:event,cta_location:label});}
 function submitForm(){
@@ -778,45 +674,43 @@ function submitForm(){
   const m=document.getElementById('fm').value;
   const d=document.getElementById('fd').value;
   const msg=document.getElementById('fmsg').value.trim();
-
   if(!n){alert('Merci de renseigner votre prénom et nom.');return;}
   if(!p){alert('Merci de renseigner votre numéro de téléphone.');return;}
-
   const btn=document.querySelector('.fsub');
-  btn.disabled=true;
-  btn.textContent='Envoi en cours...';
-
-  fetch('https://formspree.io/f/xlgwqpez',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({
-      name:n,
-      phone:p,
-      model:m,
-      date:d||'Non précisée',
-      message:msg||'Aucun message'
-    })
-  })
+  btn.disabled=true;btn.textContent='Envoi en cours...';
+  fetch('https://formspree.io/f/xlgwqpez',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:n,phone:p,model:m,date:d||'Non précisée',message:msg||'Aucun message'})})
   .then(r=>{
     if(r.ok){
       window.dataLayer=window.dataLayer||[];
       dataLayer.push({event:'form_submit',form_type:'essai_gratuit',moto_model:m});
       document.querySelector('.ef').innerHTML='<div style="text-align:center;padding:40px 20px"><div style="font-size:48px;margin-bottom:16px">✅</div><h3 style="color:#fff;font-family:\'Barlow Condensed\',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3><p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au '+p+'<br>pour confirmer votre essai.</p></div>';
-    } else {
-      btn.disabled=false;
-      btn.textContent="Envoyer ma demande d'essai";
-      alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');
-    }
+    } else {btn.disabled=false;btn.textContent="Envoyer ma demande d'essai";alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');}
   })
-  .catch(()=>{
-    btn.disabled=false;
-    btn.textContent="Envoyer ma demande d'essai";
-    alert('Erreur de connexion. Merci de réessayer.');
-  });
+  .catch(()=>{btn.disabled=false;btn.textContent="Envoyer ma demande d'essai";alert('Erreur de connexion. Merci de réessayer.');});
+}
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+}
+function toggleCollapse(bodyId,btnId){
+  var body=document.getElementById(bodyId);
+  var btn=document.getElementById(btnId);
+  var isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  btn.textContent=isOpen?'Lire la suite':'Réduire';
+}
+function togglePourquoi(){
+  var body=document.getElementById('pourquoi-body');
+  var btn=document.getElementById('pourquoi-toggle');
+  var isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  btn.setAttribute('aria-expanded',!isOpen);
 }
 </script>
-
-<!-- ===== LIGHTBOX ===== -->
 <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
   <button id="lightbox-close" aria-label="Fermer">&#x2715;</button>
   <button id="lightbox-prev" aria-label="Image précédente">&#8249;</button>
@@ -824,73 +718,35 @@ function submitForm(){
   <button id="lightbox-next" aria-label="Image suivante">&#8250;</button>
   <div id="lightbox-counter"></div>
 </div>
-<!-- ===== FIN LIGHTBOX ===== -->
-
 <script>
-/* ===== LIGHTBOX ===== */
 (function(){
-  var lb      = document.getElementById('lightbox');
-  var lbImg   = document.getElementById('lightbox-img');
-  var lbCount = document.getElementById('lightbox-counter');
-  var lbClose = document.getElementById('lightbox-close');
-  var lbPrev  = document.getElementById('lightbox-prev');
-  var lbNext  = document.getElementById('lightbox-next');
-  var slides  = document.querySelectorAll('#carouselTrack .carousel-slide img');
-  var total   = slides.length;
-  var lbIndex = 0;
-
-  function openLb(idx){
-    lbIndex = ((idx % total) + total) % total;
-    lbImg.src = slides[lbIndex].src;
-    lbImg.alt = slides[lbIndex].alt;
-    lbCount.textContent = (lbIndex + 1) + ' / ' + total;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLb(){
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-    lbImg.src = '';
-  }
-  function nextLb(){ openLb(lbIndex + 1); }
-  function prevLb(){ openLb(lbIndex - 1); }
-
-  slides.forEach(function(img, i){
-    img.addEventListener('click', function(){ openLb(i); });
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lightbox-img');
+  var lbCount=document.getElementById('lightbox-counter');
+  var lbClose=document.getElementById('lightbox-close');
+  var lbPrev=document.getElementById('lightbox-prev');
+  var lbNext=document.getElementById('lightbox-next');
+  var slides=document.querySelectorAll('#carouselTrack .carousel-slide img');
+  var total=slides.length,lbIndex=0;
+  function openLb(idx){lbIndex=((idx%total)+total)%total;lbImg.src=slides[lbIndex].src;lbImg.alt=slides[lbIndex].alt;lbCount.textContent=(lbIndex+1)+' / '+total;lb.classList.add('open');document.body.style.overflow='hidden';}
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lbImg.src='';}
+  function nextLb(){openLb(lbIndex+1);}
+  function prevLb(){openLb(lbIndex-1);}
+  slides.forEach(function(img,i){img.addEventListener('click',function(){openLb(i);});});
+  lbClose.addEventListener('click',closeLb);
+  lbPrev.addEventListener('click',prevLb);
+  lbNext.addEventListener('click',nextLb);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowRight')nextLb();
+    if(e.key==='ArrowLeft')prevLb();
   });
-
-  lbClose.addEventListener('click', closeLb);
-  lbPrev.addEventListener('click', prevLb);
-  lbNext.addEventListener('click', nextLb);
-
-  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
-
-  document.addEventListener('keydown', function(e){
-    if(!lb.classList.contains('open')) return;
-    if(e.key === 'Escape')     closeLb();
-    if(e.key === 'ArrowRight') nextLb();
-    if(e.key === 'ArrowLeft')  prevLb();
-  });
-
-  var tx = 0;
-  lb.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
-  lb.addEventListener('touchend',   function(e){
-    var diff = tx - e.changedTouches[0].clientX;
-    if(Math.abs(diff) > 40){ diff > 0 ? nextLb() : prevLb(); }
-  }, {passive:true});
+  var tx=0;
+  lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){var diff=tx-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?nextLb():prevLb();}},{passive:true});
 })();
-/* ===== FIN LIGHTBOX ===== */
 </script>
-
-
-<script>
-function toggleFaq(btn){
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
-  if(!isOpen) item.classList.add('open');
-}
-</script>
-
 </body>
 </html>
