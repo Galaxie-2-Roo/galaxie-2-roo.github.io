@@ -175,6 +175,10 @@
       .mmenu a.red {
         color: var(--r);
       }
+      .mmenu a.model-link {
+        font-size: 20px;
+        color: #555;
+      }
       .mclose {
         position: absolute;
         top: 18px;
@@ -224,7 +228,6 @@
         gap: 56px;
         align-items: center;
       }
-      /* ── CHANGE 1: badge centered via display:table + auto margins ── */
       .badge {
         display: table;
         margin: 0 auto 18px;
@@ -259,6 +262,17 @@
         max-width: 520px;
         margin-bottom: 32px;
         font-weight: 400;
+      }
+      /* [1.4] Liens modèles inline dans le hero */
+      .hero-sub a {
+        color: var(--r);
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+      .hero-sub a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
       }
       .actions {
         display: flex;
@@ -347,8 +361,6 @@
   object-fit: cover;
   display: block;
 }
-/* gradient removed — text is now outside the image */
-
 .carousel-link {
   position: absolute;
   inset: 0;
@@ -357,12 +369,11 @@
   background: none;
   border: none;
 }
-
 /* ── Caption block — BELOW the wrap ── */
 .carousel-info {
   display: flex;
   align-items: center;
-  justify-content: center;  /* ← add this */
+  justify-content: center;
   gap: 10px;
   padding: 10px 4px 0;
   min-height: 36px;
@@ -387,7 +398,6 @@
   color: #fff;
   line-height: 1;
 }
-
 /* ── Dots ── */
 .carousel-dots {
   position: absolute;
@@ -412,8 +422,7 @@
   background: var(--r);
   transform: scale(1.35);
 }
-
-/* ── Arrows — discreet, round, red ── */
+/* ── Arrows ── */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -440,7 +449,6 @@
 }
 .carousel-btn--prev { left: 10px; }
 .carousel-btn--next { right: 10px; }
-
 .carousel-border {
   position: absolute;
   inset: 0;
@@ -512,7 +520,6 @@
   transition: opacity 0.2s;
 }
 .lightbox-cta:hover { opacity: 0.85; }
-
       /* ── ESSAI BANNER ── */
       #eb {
         background: var(--r);
@@ -701,7 +708,6 @@
         border-top: 1px solid var(--br);
         margin-bottom: 18px;
       }
-      /* ── CHANGE 8: card-spec values in red ── */
       .cs-val {
         font-family: "Barlow Condensed", sans-serif;
         font-size: 20px;
@@ -1033,6 +1039,30 @@
       footer a:hover {
         color: var(--r);
       }
+      /* [1.4] Liens modèles footer */
+      .footer-models {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 14px 0 18px;
+        padding: 14px 0;
+        border-top: 1px solid var(--br);
+        border-bottom: 1px solid var(--br);
+      }
+      .footer-models a {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--mu);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-models a:hover {
+        color: var(--r);
+      }
       /* ── STICKY MOBILE ── */
       .sbar {
         position: fixed;
@@ -1144,7 +1174,10 @@
         .sdesc {
           margin: 0 auto;
         }
+        .footer-models {
+          gap: 12px;
         }
+      }
       @media (hover: none) {
   .card {
     border-color: var(--r);
@@ -1171,7 +1204,6 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
     <!-- ── NAV ── -->
     <nav>
       <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo" />
@@ -1185,28 +1217,34 @@
         <span></span><span></span><span></span>
       </button>
     </nav>
-
     <!-- ── MOBILE MENU ── -->
     <div class="mmenu" id="mm">
       <button class="mclose" aria-label="Fermer le menu" onclick="closeMenu()">✕</button>
       <a href="#gamme" onclick="closeMenu()">Nos Motos</a>
+      <!-- [1.4] Liens modèles explicites dans le menu mobile -->
+      <a href="https://galaxie2roo.fr/voge-r625/" class="model-link" onclick="closeMenu()">Voge Naked R 625</a>
+      <a href="https://galaxie2roo.fr/voge-900-dsx/" class="model-link" onclick="closeMenu()">Voge DS 900X</a>
+      <a href="https://galaxie2roo.fr/voge-625-dsx/" class="model-link" onclick="closeMenu()">Voge 625 DSX</a>
+      <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="model-link" onclick="closeMenu()">Voge DS 800X Rally</a>
       <a href="#avis" onclick="closeMenu()">Avis Clients</a>
       <a href="#contact" onclick="closeMenu()">Contact</a>
       <a href="tel:+33963221470" class="red" onclick="closeMenu(); dlPush('phone_call', 'menu');">📞 Appelez-nous</a>
     </div>
-
     <!-- ── HERO ── -->
     <section id="hero">
       <div class="hero-in">
-
         <!-- LEFT: texte -->
         <div class="hero-left fi">
-          <!-- CTA "Voir nos motos" replacing the "Gamme Voge 2026" badge -->
           <a href="#gamme" class="btn-p" style="display:table;margin:0 auto 18px;" onclick="dlPush('cta_click', 'voir_motos_hero')">🏍️ Voir nos motos</a>
           <h1>Concessionnaire <span>Voge</span><br />Cholet</h1>
+          <!-- [1.4] Liens modèles inline dans le texte hero -->
           <p class="hero-sub">
-            <strong>Galaxie 2 Roo</strong>, votre magasin moto à Cholet (La Séguinière), 
-            vous propose la gamme complète Voge 2026 : 900 DSX, 625 DSX, 800 Rally et R625. 
+            <strong>Galaxie 2 Roo</strong>, votre magasin moto à Cholet (La Séguinière),
+            vous propose la gamme complète Voge 2026 :
+            <a href="https://galaxie2roo.fr/voge-900-dsx/">Voge DS 900X</a>,
+            <a href="https://galaxie2roo.fr/voge-625-dsx/">625 DSX</a>,
+            <a href="https://galaxie2roo.fr/voge-800-dsx-rally/">800 Rally</a> et
+            <a href="https://galaxie2roo.fr/voge-r625/">R625 Naked</a>.
             Tout équipé de série, essai gratuit sur rendez-vous.
           </p>
           <div class="actions">
@@ -1231,12 +1269,9 @@
             </div>
           </div>
         </div>
-
         <!-- RIGHT: carousel 4 modèles -->
         <div class="hero-right fi" style="transition-delay: 0.15s">
           <div class="carousel-wrap" id="carousel">
-
-            <!-- Naked R 625 — most clicked, now first -->
             <div class="carousel-slide active" data-tag="Roadster" data-model="Naked R 625" data-href="https://galaxie2roo.fr/voge-r625/">
               <img
                 src="images/voge-r625-07.webp"
@@ -1247,7 +1282,6 @@
               />
               <button class="carousel-link" aria-label="Voir la Naked R 625 en grand" onclick="openLightbox()"></button>
             </div>
-
             <div class="carousel-slide" data-tag="Trail Aventure" data-model="DS 900X" data-href="https://galaxie2roo.fr/voge-900-dsx/">
               <img
                 src="images/voge-ds900x-03.webp"
@@ -1258,7 +1292,6 @@
               />
               <button class="carousel-link" aria-label="Voir la DS 900X en grand" onclick="openLightbox()"></button>
             </div>
-
             <div class="carousel-slide" data-tag="Trail Routier" data-model="625 DSX" data-href="https://galaxie2roo.fr/voge-625-dsx/">
               <img
                 src="images/voge-625dsx-01.webp"
@@ -1269,7 +1302,6 @@
               />
               <button class="carousel-link" aria-label="Voir la 625 DSX en grand" onclick="openLightbox()"></button>
             </div>
-
             <div class="carousel-slide" data-tag="Rally Raid" data-model="DS 800X Rally" data-href="https://galaxie2roo.fr/voge-800-dsx-rally/">
               <img
                 src="images/voge-800dsx-02.webp"
@@ -1280,7 +1312,6 @@
               />
               <button class="carousel-link" aria-label="Voir la DS 800X Rally en grand" onclick="openLightbox()"></button>
             </div>
-
             <div class="carousel-dots">
               <button class="carousel-dot active" aria-label="Naked R 625" onclick="goSlide(0)"></button>
               <button class="carousel-dot" aria-label="DS 900X" onclick="goSlide(1)"></button>
@@ -1290,31 +1321,24 @@
             <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
             <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
             <div class="carousel-border"></div>
-
           </div><!-- end .carousel-wrap -->
-
           <div class="carousel-info">
             <span class="carousel-tag" id="carouselTag">Roadster</span>
             <span class="carousel-model" id="carouselModel">Naked R 625</span>
           </div>
-
         </div>
       </div>
     </section>
-
     <!-- ── ESSAI BANNER ── -->
     <section id="eb">
       <div class="eb-in">
         <div>
-          <!-- CHANGE 6: new banner headline -->
           <h2>Essayez votre prochaine Voge en concession</h2>
           <p>Sur rendez-vous à Cholet · Tous les modèles disponibles à l'essai</p>
         </div>
-        <!-- CHANGE 7: "Réserver un essai" → "Faire un essai" -->
         <a href="#essai-form" class="btn-w" onclick="dlPush('cta_click', 'essai_banner')">Faire un essai →</a>
       </div>
     </section>
-
     <!-- ── GAMME ── -->
     <section id="gamme">
       <div class="in">
@@ -1327,8 +1351,7 @@
           </p>
         </div>
         <div class="cards">
-
-          <!-- Naked R 625 — most clicked, now first -->
+          <!-- Naked R 625 -->
           <a href="https://galaxie2roo.fr/voge-r625/" class="card fi" onclick="dlPush('model_click', 'r625')">
             <div class="card-img">
               <img src="images/voge-r625-07.webp" alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
@@ -1357,10 +1380,11 @@
                   <div class="cs-lbl">Homologué</div>
                 </div>
               </div>
-              <div class="card-cta">Découvrir la Naked R 625 <span class="card-arrow">→</span></div>
+              <!-- [1.4] Ancre explicite avec "Voge" -->
+              <div class="card-cta">Découvrir la Voge Naked R 625 <span class="card-arrow">→</span></div>
             </div>
           </a>
-
+          <!-- DS 900X -->
           <a href="https://galaxie2roo.fr/voge-900-dsx/" class="card fi" style="transition-delay: 0.1s" onclick="dlPush('model_click', '900dsx')">
             <div class="card-img">
               <img src="images/voge-ds900x-03.webp" alt="Voge DS900X 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
@@ -1375,7 +1399,6 @@
                 ch, équipement électronique complet — radar de recul, contrôle
                 de traction, modes de conduite. Pour les grands voyages.
               </p>
-              <!-- CHANGE 8: cs-val color set to var(--r) in CSS -->
               <div class="card-specs">
                 <div>
                   <div class="cs-val">895cc</div>
@@ -1390,10 +1413,11 @@
                   <div class="cs-lbl">De série</div>
                 </div>
               </div>
-              <div class="card-cta">Découvrir la DS 900X <span class="card-arrow">→</span></div>
+              <!-- [1.4] Ancre explicite avec "Voge" -->
+              <div class="card-cta">Découvrir la Voge DS 900X <span class="card-arrow">→</span></div>
             </div>
           </a>
-
+          <!-- 625 DSX -->
           <a href="https://galaxie2roo.fr/voge-625-dsx/" class="card fi" style="transition-delay: 0.2s" onclick="dlPush('model_click', '625dsx')">
             <div class="card-img">
               <img src="images/voge-625dsx-01.webp" alt="Voge 625 DSX 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
@@ -1422,10 +1446,11 @@
                   <div class="cs-lbl">Homologué</div>
                 </div>
               </div>
-              <div class="card-cta">Découvrir la 625 DSX <span class="card-arrow">→</span></div>
+              <!-- [1.4] Ancre explicite avec "Voge" -->
+              <div class="card-cta">Découvrir la Voge 625 DSX <span class="card-arrow">→</span></div>
             </div>
           </a>
-
+          <!-- DS 800X Rally -->
           <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="card fi" style="transition-delay: 0.3s" onclick="dlPush('model_click', '800rally')">
             <div class="card-img">
               <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
@@ -1454,14 +1479,13 @@
                   <div class="cs-lbl">Réservoir</div>
                 </div>
               </div>
-              <div class="card-cta">Découvrir la DS 800X Rally <span class="card-arrow">→</span></div>
+              <!-- [1.4] Ancre explicite avec "Voge" -->
+              <div class="card-cta">Découvrir la Voge DS 800X Rally <span class="card-arrow">→</span></div>
             </div>
           </a>
-
         </div>
       </div>
     </section>
-
     <!-- ── AVIS ── -->
     <section id="avis">
       <div class="in">
@@ -1531,7 +1555,6 @@
         </div>
       </div>
     </section>
-
     <!-- ── CONTACT ── -->
     <section id="contact">
       <div class="in">
@@ -1593,7 +1616,6 @@
               ></iframe>
             </div>
           </div>
-
           <div class="fi" id="essai-form">
             <div class="ef">
               <h3>🏍️ Réserver un Essai Gratuit</h3>
@@ -1628,23 +1650,27 @@
         </div>
       </div>
     </section>
-
     <!-- ── FOOTER ── -->
     <footer>
       <div><img src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo" /></div>
+      <!-- [1.4] Liens modèles dans le footer avec ancres explicites -->
+      <nav class="footer-models" aria-label="Nos motos Voge">
+        <a href="https://galaxie2roo.fr/voge-r625/">Voge Naked R 625</a>
+        <a href="https://galaxie2roo.fr/voge-900-dsx/">Voge DS 900X</a>
+        <a href="https://galaxie2roo.fr/voge-625-dsx/">Voge 625 DSX</a>
+        <a href="https://galaxie2roo.fr/voge-800-dsx-rally/">Voge DS 800X Rally</a>
+      </nav>
       <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
       <p style="margin-top: 8px">
         <a href="#">Mentions légales</a> &middot;
         <a href="#">Confidentialité</a>
       </p>
     </footer>
-
     <!-- ── STICKY MOBILE ── -->
     <div class="sbar">
       <a href="tel:+33963221470" class="sc" onclick="dlPush('phone_call', 'sticky')">📞 Appelez-nous</a>
       <a href="#essai-form" class="se" onclick="dlPush('cta_click', 'essai_sticky')">🏍️ Faire un essai</a>
     </div>
-
     <script>
       /* NAV */
       function openMenu() {
@@ -1653,19 +1679,16 @@
       function closeMenu() {
         document.getElementById('mm').classList.remove('open');
       }
-
       /* CAROUSEL */
       (function () {
         var slides = document.querySelectorAll('.carousel-slide');
         var dots = document.querySelectorAll('.carousel-dot');
         var current = 0;
         var timer;
-
         function updateCaption(idx) {
           document.getElementById('carouselTag').textContent = slides[idx].dataset.tag;
           document.getElementById('carouselModel').textContent = slides[idx].dataset.model;
         }
-
         function goSlide(idx) {
           slides[current].classList.remove('active');
           dots[current].classList.remove('active');
@@ -1682,7 +1705,6 @@
           clearInterval(timer);
           timer = setInterval(nextSlide, 4200);
         }
-
         window.goSlide = goSlide;
         window.openLightbox = function () {
           var slide = slides[current];
@@ -1699,15 +1721,12 @@
           document.getElementById('lightbox').classList.remove('active');
           resetTimer();
         };
-
         document.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') window.closeLightbox();
         });
-
         document.getElementById('carouselPrev').addEventListener('click', function() { goSlide((current - 1 + slides.length) % slides.length); });
         document.getElementById('carouselNext').addEventListener('click', function() { goSlide((current + 1) % slides.length); });
         resetTimer();
-
         var carousel = document.getElementById('carousel');
         carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
         carousel.addEventListener('mouseleave', function () { resetTimer(); });
@@ -1722,7 +1741,6 @@
           }
         }, { passive: true });
       })();
-
       /* FADE IN ON SCROLL */
       var obs = new IntersectionObserver(function (entries) {
         requestAnimationFrame(function () {
@@ -1734,21 +1752,17 @@
           });
         });
       }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
-
       document.querySelectorAll('.fi').forEach(function (el) { obs.observe(el); });
-
       setTimeout(function () {
         document.querySelectorAll('.fi').forEach(function (el) {
           if (!el.classList.contains('vis')) el.classList.add('vis');
         });
       }, 400);
-
       /* GTM HELPER */
       function dlPush(event, label) {
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({ event: event, cta_location: label });
       }
-
       /* FORM SUBMIT */
       function submitForm() {
         var n = document.getElementById('fn').value.trim();
@@ -1756,14 +1770,11 @@
         var m = document.getElementById('fm').value;
         var d = document.getElementById('fd').value;
         var msg = document.getElementById('fmsg').value.trim();
-
         if (!n) { alert('Merci de renseigner votre prénom et nom.'); return; }
         if (!p) { alert('Merci de renseigner votre numéro de téléphone.'); return; }
-
         var btn = document.querySelector('.fsub');
         btn.disabled = true;
         btn.textContent = 'Envoi en cours...';
-
         fetch('https://formspree.io/f/xlgwqpez', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
