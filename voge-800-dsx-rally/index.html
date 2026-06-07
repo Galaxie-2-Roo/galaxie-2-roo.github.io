@@ -17,24 +17,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Galaxie2Roo" />
-  <link rel="manifest" href="/site.webmanifest" />  
+  <link rel="manifest" href="/site.webmanifest" />
 <meta name="description" content="Voge 800 Rally 2026 à Cholet — Concessionnaire officiel Galaxie 2 Roo. Essai gratuit, prix, fiche technique. Rally-trail 800cc, tout équipé de série.">
 <title>Voge DS 800X Rally 2026 – Prix & Essai | Galaxie 2 Roo</title>
 <link rel="preload" as="image" href="images/voge-800dsx-01.webp" fetchpriority="high">
-<!-- Google Fonts chargé en asynchrone pour éviter le blocage du rendu -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap"></noscript>
-<!-- Fallback immédiat pendant le chargement des fonts -->
 <style>body{font-family:Arial,Helvetica,sans-serif;}h1,h2,h3,.stat-val,.price,.nav-links a{font-family:'Arial Narrow',Arial,sans-serif;}</style>
 <style>
 :root{--r:#E0190F;--dk:#0A0A0A;--md:#141414;--cd:#1C1C1C;--br:#2A2A2A;--tx:#F0F0F0;--mu:#AAAAAA;--gd:#C9942A;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:var(--dk);color:var(--tx);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden;font-size:17px;line-height:1.6;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bottom:2px solid var(--r);padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .logo{height:40px;}
 .nav-links{display:flex;gap:18px;list-style:none;}
@@ -43,15 +39,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bo
 .cta-nav{background:var(--r);color:#fff;padding:10px 18px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;white-space:nowrap;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
 .burger span{width:26px;height:2px;background:#222;display:block;}
-
-/* MOBILE MENU */
 .mmenu{display:none;position:fixed;inset:0;z-index:200;background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
 .mmenu.open{display:flex;}
 .mmenu a{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:900;text-transform:uppercase;color:#222;text-decoration:none;}
 .mmenu a.red{color:var(--r);}
 .mclose{position:absolute;top:18px;right:20px;background:none;border:none;color:#222;font-size:28px;cursor:pointer;}
-
-/* HERO */
 #hero{min-height:100vh;background:linear-gradient(160deg,#050505 0%,#0f0505 50%,#050505 100%);display:flex;align-items:center;padding:80px 20px 48px;position:relative;overflow:hidden;}
 #hero::before{content:'';position:absolute;top:-10%;right:-5%;width:60%;height:120%;background:radial-gradient(ellipse,rgba(224,25,15,.09),transparent 65%);pointer-events:none;}
 #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--r),transparent);}
@@ -70,16 +62,12 @@ h1 span{color:var(--r);}
 .stats{display:flex;gap:32px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap;}
 .sv{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:900;color:var(--r);}
 .sl{font-size:13px;color:#fff;letter-spacing:.5px;margin-top:2px;font-weight:500;}
-
-/* ESSAI BANNER */
 #eb{background:var(--r);}
 .eb-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:30px 20px;gap:20px;flex-wrap:wrap;}
 .eb-in h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,4vw,38px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1;}
 .eb-in p{color:rgba(255,255,255,.9);font-size:15px;margin-top:5px;font-weight:400;}
 .btn-w{background:#fff;color:var(--r);padding:16px 36px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all .25s;display:inline-block;}
 .btn-w:hover{background:#f0f0f0;transform:scale(1.02);}
-
-/* PRODUCT SECTION */
 #produit{padding:80px 20px;background:var(--md);}
 .prod-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .prod-img{position:sticky;top:80px;}
@@ -87,23 +75,34 @@ h1 span{color:var(--r);}
 .prod-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--r);margin-bottom:12px;display:block;}
 .prod-name{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:10px;color:#fff;}
 .prod-price{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--gd);margin-bottom:22px;}
-.prod-desc{color:var(--mu);line-height:1.8;margin-bottom:28px;font-size:17px;}
+.prod-desc{color:var(--mu);line-height:1.8;margin-bottom:14px;font-size:17px;}
 .prod-desc strong{color:#fff;font-weight:500;}
-
-/* SPECS */
 .specs-title{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--r);margin-bottom:14px;}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
 .si{background:var(--cd);border:1px solid var(--br);padding:13px 15px;border-radius:3px;}
 .sl2{font-size:10px;color:var(--mu);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
 .sv2{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:#fff;}
-
-/* FEATURES LIST */
 .feat-list{list-style:none;margin-bottom:28px;}
 .feat-list li{padding:10px 0;border-bottom:1px solid var(--br);font-size:16px;color:var(--mu);display:flex;gap:10px;align-items:flex-start;}
 .feat-list li::before{content:"✓";color:var(--r);font-weight:700;flex-shrink:0;margin-top:1px;}
 .feat-list li strong{color:#fff;font-weight:500;}
 .da{display:flex;gap:12px;flex-wrap:wrap;}
-
+/* COLLAPSIBLE */
+.collapsible-body{max-height:0;overflow:hidden;transition:max-height .45s ease;}
+.collapsible-body.open{max-height:800px;}
+.toggle-btn{background:none;border:none;color:var(--r);font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;padding:8px 0 0;margin-bottom:28px;display:flex;align-items:center;gap:6px;}
+.toggle-btn::after{content:'↓';transition:transform .3s;display:inline-block;}
+.toggle-btn.open::after{transform:rotate(180deg);}
+.pourquoi-toggle{width:100%;background:none;border:none;border-bottom:1px solid var(--br);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,3vw,26px);font-weight:900;text-transform:uppercase;text-align:left;padding:20px 48px 20px 0;cursor:pointer;position:relative;letter-spacing:.5px;line-height:1.1;}
+.pourquoi-toggle::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
+.pourquoi-toggle.open::after{transform:translateY(-50%) rotate(45deg);}
+/* EDITORIAL */
+#pourquoi{padding:32px 20px;background:var(--dk);}
+.ed-in{max-width:800px;margin:0 auto;}
+.ed-h3{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:var(--r);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
+.ed-p{color:var(--mu);line-height:1.85;margin-bottom:32px;font-size:16px;}
+.ed-p strong{color:#fff;}
+.ed-p a{color:var(--r);}
 /* SOCIAL PROOF */
 #avis{padding:80px 20px;background:var(--dk);}
 .in{max-width:1100px;margin:0 auto;}
@@ -132,11 +131,7 @@ h1 span{color:var(--r);}
 .g-logo .g-r{color:#EA4335;}
 .g-logo .g-y{color:#FBBC05;}
 .g-logo .g-g{color:#34A853;}
-@media(max-width:768px){
-  #avis{padding:40px 20px;}
-}
-
-/* CONTACT */
+@media(max-width:768px){#avis{padding:40px 20px;}}
 #contact{padding:40px 20px;background:var(--md);}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .ci h2{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;text-transform:uppercase;margin-bottom:26px;color:#fff;}
@@ -162,25 +157,17 @@ h1 span{color:var(--r);}
 .fg select option{background:var(--dk);}
 .fsub{width:100%;background:var(--r);color:#fff;border:none;padding:16px;border-radius:3px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;transition:background .2s;margin-top:6px;}
 .fsub:hover{background:#c0140b;}
-
-/* FOOTER */
 footer{background:#030303;border-top:1px solid var(--br);padding:28px 20px;text-align:center;}
 footer img{height:26px;margin-bottom:10px;}
 footer p{font-size:13px;color:var(--mu);}
 footer a{color:var(--mu);text-decoration:none;}
 footer a:hover{color:var(--r);}
-
-/* STICKY MOBILE */
 .sbar{position:fixed;bottom:0;left:0;right:0;z-index:99;display:none;background:var(--dk);border-top:2px solid var(--r);padding:10px 14px;gap:10px;}
 .sbar a{flex:1;text-align:center;padding:14px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;}
 .sc{background:var(--r);color:#fff;}
 .se{background:transparent;color:#fff;border: 1px solid var(--r);}
-
-/* FADE ANIM */
 .fi{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s;}
 .fi.vis{opacity:1;transform:translateY(0);}
-
-/* ===== CAROUSEL HERO ===== */
 .hero-carousel{position:relative;width:100%;overflow:hidden;border-radius:8px;background:#111;aspect-ratio:3/2;}
 .carousel-track{position:relative;height:100%;}
 .carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease;pointer-events:none;}
@@ -193,9 +180,6 @@ footer a:hover{color:var(--r);}
 .carousel-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
 .carousel-dot{width:9px;height:9px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;padding:0;transition:background .25s,transform .25s;}
 .carousel-dot.active,.carousel-dot:hover{background:#fff;transform:scale(1.3);}
-/* ===== FIN CAROUSEL ===== */
-
-/* ===== LIGHTBOX ===== */
 .carousel-slide img{cursor:zoom-in;}
 #lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;animation:lbIn .2s ease;}
 #lightbox.open{display:flex;}
@@ -208,9 +192,15 @@ footer a:hover{color:var(--r);}
 #lightbox-prev{left:16px;}
 #lightbox-next{right:16px;}
 #lightbox-counter{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2px;}
-/* ===== FIN LIGHTBOX ===== */
-
-/* RESPONSIVE */
+.faq-section{background:var(--md);padding:80px 20px 20px;}
+.faq-in{max-width:800px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--br);overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--tx);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-align:left;padding:22px 48px 22px 0;cursor:pointer;position:relative;letter-spacing:.5px;}
+.faq-q::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:18px;}
+.faq-a p{color:var(--mu);font-size:16px;line-height:1.7;}
 @media(max-width:768px){
 .nav-links{display:none;}
 .burger{display:flex;}
@@ -234,18 +224,6 @@ body{padding-bottom:70px;}
 .feat-list li{text-align:left;}
 .eb-in{text-align:center;justify-content:center;}
 }
-
-/* ===== FAQ ===== */
-.faq-section{background:var(--md);padding:80px 20px 20px;}
-.faq-in{max-width:800px;margin:0 auto;}
-.faq-item{border-bottom:1px solid var(--br);overflow:hidden;}
-.faq-q{width:100%;background:none;border:none;color:var(--tx);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;text-align:left;padding:22px 48px 22px 0;cursor:pointer;position:relative;letter-spacing:.5px;}
-.faq-q::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--r);transition:transform .3s;}
-.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
-.faq-item.open .faq-a{max-height:300px;padding-bottom:18px;}
-.faq-a p{color:var(--mu);font-size:16px;line-height:1.7;}
-/* ===== FIN FAQ ===== */
 </style>
 <script type="application/ld+json">
 {
@@ -283,7 +261,7 @@ body{padding-bottom:70px;}
         {"@type":"Question","name":"Voge 800 Rally vs CF Moto 800MT : laquelle choisir ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 800 Rally se distingue par sa caméra embarquée de série, son radar d'angle mort, son réservoir de 24 litres et sa disponibilité chez un concessionnaire officiel à Cholet — Galaxie 2 Roo — avec SAV assuré et garantie 3 ans."}},
         {"@type":"Question","name":"La Voge 800 Rally a-t-elle une caméra embarquée ?","acceptedAnswer":{"@type":"Answer","text":"Oui, la Voge DS800X Rally est équipée d'une caméra frontale embarquée (dashcam) de série, ainsi que d'un radar d'angle mort et d'un écran TFT 7 pouces connecté. Ces équipements sont inclus dans le prix de 8 995 €."}},
         {"@type":"Question","name":"Quelle est la consommation de la Voge 800 Rally ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 800 Rally consomme environ 5,5 à 6 L/100 km en usage mixte. Avec son grand réservoir de 24 litres, l'autonomie dépasse les 380 à 400 km — idéal pour les grands voyages."}},
-        {"@type":"Question","name":"Quelle est la différence entre la Voge 800 Rally et la Voge 900 DSX ?","acceptedAnswer":{"@type":"Answer","text":"La 800 Rally est orientée trail-aventure long cours avec roues 21/18 pouces, réservoir 24L et position haute (selle 850 mm). La 900 DSX est un maxi-trail plus routier avec roues 21/17 pouces et selle à 825 mm. Les deux partagent un profil adventure, mais le 800 Rally est taillé pour le hors-route."}},
+        {"@type":"Question","name":"Quelle est la différence entre la Voge 800 Rally et la Voge 900 DSX ?","acceptedAnswer":{"@type":"Answer","text":"La 800 Rally est orientée trail aventure long cours avec roues 21/18 pouces, réservoir 24L et position haute (selle 850 mm). La 900 DSX est un maxi-trail plus routier avec roues 21/17 pouces et selle à 825 mm. Les deux partagent un profil adventure, mais le 800 Rally est taillé pour le hors-route."}},
         {"@type":"Question","name":"Comment essayer la Voge 800 Rally à Cholet ?","acceptedAnswer":{"@type":"Answer","text":"Galaxie 2 Roo propose des essais gratuits sur rendez-vous à La Séguinière (Cholet). Remplissez le formulaire sur cette page ou appelez le 09 63 22 14 70. Ouvert du mardi au samedi."}}
       ]
     },
@@ -311,11 +289,7 @@ body{padding-bottom:70px;}
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <a href="https://galaxie2roo.fr/" aria-label="Retour à l'accueil">
   <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" width="125" height="40">
@@ -328,7 +302,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="tel:+339 63 22 14 70" class="cta-nav" onclick="dlPush('phone_call','nav')">📞 Appelez-nous</a>
   <button class="burger" onclick="openMenu()"><span></span><span></span><span></span></button>
 </nav>
-
 <div class="mmenu" id="mm">
   <button class="mclose" onclick="closeMenu()">✕</button>
   <a href="#produit" onclick="closeMenu()">La Moto</a>
@@ -336,7 +309,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="tel:+339 63 22 14 70" class="red" onclick="closeMenu();dlPush('phone_call','menu')">📞 Appelez-nous</a>
 </div>
-
 <!-- HERO -->
 <section id="hero">
   <div class="hero-in">
@@ -355,41 +327,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-img fi" style="animation-delay:.2s">
-      <!-- ===== CAROUSEL HERO ===== -->
       <div class="hero-carousel" id="heroCarousel" aria-label="Photos Voge DS800X Rally 2026">
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-slide active">
-            <img src="images/voge-800dsx-06.webp"
-                 alt="Voge DS800X Rally 2026 - Galaxie 2 Roo Cholet"
-                 loading="eager" width="700" height="467">
+            <img src="images/voge-800dsx-06.webp" alt="Voge DS800X Rally 2026 - Galaxie 2 Roo Cholet" loading="eager" width="700" height="467">
           </div>
           <div class="carousel-slide">
-            <img src="images/voge-800dsx-02.webp"
-                 alt="Voge DS800X Rally 2026 face avant - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
+            <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 face avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
           <div class="carousel-slide">
-            <img src="images/voge-800dsx-03.webp"
-                 alt="Voge DS800X Rally 2026 profil - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
+            <img src="images/voge-800dsx-03.webp" alt="Voge DS800X Rally 2026 profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
           <div class="carousel-slide">
-            <img src="images/voge-800dsx-04.webp"
-                 alt="Voge DS800X Rally 2026 tableau de bord TFT 7 pouces - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
+            <img src="images/voge-800dsx-04.webp" alt="Voge DS800X Rally 2026 tableau de bord TFT 7 pouces - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
           <div class="carousel-slide">
-            <img src="images/voge-800dsx-05.webp"
-                 alt="Voge DS800X Rally 2026 détail - Galaxie 2 Roo Cholet"
-                 loading="lazy" width="700" height="467">
+            <img src="images/voge-800dsx-05.webp" alt="Voge DS800X Rally 2026 détail - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
         </div>
-
-        <button class="carousel-btn carousel-btn--prev" id="carouselPrev"
-                aria-label="Image précédente" type="button">&#8249;</button>
-        <button class="carousel-btn carousel-btn--next" id="carouselNext"
-                aria-label="Image suivante" type="button">&#8250;</button>
-
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
         <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation carousel">
           <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Image 1" data-index="0"></button>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 2" data-index="1"></button>
@@ -398,11 +355,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 5" data-index="4"></button>
         </div>
       </div>
-      <!-- ===== FIN CAROUSEL ===== -->
     </div>
   </div>
 </section>
-
 <!-- ESSAI BANNER -->
 <div id="eb">
   <div class="eb-in">
@@ -413,7 +368,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#essai-form" class="btn-w" onclick="dlPush('cta_click','essai_banner')">Réserver un Essai →</a>
   </div>
 </div>
-
 <!-- PRODUIT -->
 <section id="produit">
   <div class="prod-in">
@@ -424,9 +378,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="prod-tag">Trail Adventure — Bicylindre — Euro 5+</span>
       <h2 class="prod-name">Voge DS800X Rally</h2>
       <div class="prod-price">8 995 € TTC<br><small style="font-size:15px;color:var(--mu);font-weight:400;">Neuve · Garantie 3 ans Pièces &amp; MO</small></div>
+
+      <!-- Paragraphe 1 — toujours visible -->
       <p class="prod-desc">
-        La Voge DS800X Rally 2026 est une <strong>véritable trail adventure taillée pour l'aventure</strong>, animée par un bicylindre 4T 798cc calé à 270°, double ACT, 8 soupapes avec injection <strong>Bosch EFI</strong>. Inspirée du monde du rallye-raid, elle embarque une caméra frontale HD intégrée et un équipement de série exhaustif à un tarif imbattable. Disponible à l'essai chez <strong>Galaxie 2 Roo — La Séguinière (49)</strong>. Livraison possible.
+        La <strong>Voge DS800X Rally 2026</strong> est un trail aventure taillé pour les grands voyages, animé par un bicylindre 798cc à 270° double ACT avec injection <strong>Bosch EFI</strong>, développant <strong>95 ch à 9 000 tr/min</strong> et 81 Nm de couple. Inspirée du rallye-raid, elle embarque une caméra frontale HD et un radar d'angle mort de série — des équipements absents des concurrentes deux fois plus chères.
       </p>
+      <!-- Paragraphes 2 & 3 — masqués par défaut -->
+      <div class="collapsible-body" id="desc-more">
+        <p class="prod-desc">
+          Son équipement de série est exhaustif : <strong>écran TFT 7" vertical</strong> connecté Bluetooth + TPMS, ABS cornering (IMU 6 axes) déconnectable, suspensions <strong>KYB entièrement réglables</strong> (fourche inversée Ø43mm + amortisseur à bonbonne séparée), amortisseur de direction rotatif, freinage Nissin double disque Ø310mm radiaux 4 pistons, <strong>pneus Pirelli Scorpion Rally STR</strong> tubeless à rayons 21/18". Réservoir 24 litres — soit plus de 400 km d'autonomie.
+        </p>
+        <p class="prod-desc">
+          Chez <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à Cholet (La Séguinière, 49280), la Voge DS800X Rally 2026 est disponible en stock à <strong>8 995 € TTC</strong>, garantie 3 ans constructeur incluse. Livraison possible. Essai gratuit sur rendez-vous.
+        </p>
+      </div>
+      <button class="toggle-btn" id="desc-toggle" onclick="toggleCollapse('desc-more','desc-toggle')">Lire la suite</button>
 
       <div class="specs-title">Caractéristiques techniques</div>
       <div class="sg">
@@ -441,21 +407,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="si"><div class="sl2">Pneus</div><div class="sv2">Pirelli Scorpion Rally STR</div></div>
         <div class="si"><div class="sl2">Dimensions</div><div class="sv2">2380 × 910 × 1460 mm</div></div>
       </div>
-
       <div class="specs-title">Équipements de série</div>
       <ul class="feat-list">
         <li><strong>Écran TFT 7 pouces vertical</strong> connecté — Bluetooth, navigation via appli VOGE, TPMS, rapport engagé, température ext., consommation</li>
         <li><strong>Caméra frontale HD intégrée</strong> — éclairage Full LED + feux longue portée</li>
+        <li><strong>Radar d'angle mort</strong> dans les rétroviseurs — alerte de dépassement de série</li>
         <li><strong>2 modes de conduite</strong> (Normal / Sport) + TCS anti-patinage réglable et déconnectable + embrayage anti-dribble hydraulique</li>
         <li><strong>Cornering ABS (IMU)</strong> avec alerte freinage d'urgence ESS — déconnectable AV seul ou AV+AR</li>
         <li><strong>Suspensions KYB entièrement réglables</strong> — fourche inversée Ø43mm (207mm) + mono-amortisseur bonbonne séparée (190mm)</li>
         <li><strong>Amortisseur de direction rotatif</strong> réglable de série</li>
-        <li><strong>Freinage Nissin</strong> — double disque Ø310mm avant (étriers radiaux 4 pistons) + disque Ø240mm arrière (1 piston)</li>
+        <li><strong>Freinage Nissin</strong> — double disque Ø310mm avant (étriers radiaux 4 pistons) + disque Ø240mm arrière</li>
         <li><strong>Pneus Pirelli Scorpion Rally STR</strong> tubeless à rayons — 90/90-21 av / 150/70-18 ar</li>
         <li><strong>Sabot moteur, protège-mains, porte-paquet arrière</strong> + prises USB &amp; 12V de série</li>
-        <li><strong>Livraison possible</strong> — Moto neuve garantie constructeur, disponible immédiatement</li>
       </ul>
-
       <div class="da">
         <a href="#essai-form" class="btn-p" onclick="dlPush('cta_click','essai_produit')">🏍️ Réserver un Essai Gratuit</a>
         <a href="tel:+339 63 22 14 70" class="btn-s" onclick="dlPush('phone_call','produit')">📞 Appelez-nous</a>
@@ -463,6 +427,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- SECTION EDITORIALE — foldable -->
+<section id="pourquoi">
+  <div class="ed-in fi">
+    <button class="pourquoi-toggle" id="pourquoi-toggle" onclick="togglePourquoi()" aria-expanded="false">
+      Voge DS800X Rally 2026 : le trail aventure qui change la donne
+    </button>
+    <div class="collapsible-body" id="pourquoi-body">
+      <div style="padding-top:28px;">
+        <h3 class="ed-h3">Caméra + radar d'angle mort de série — une première à ce prix</h3>
+        <p class="ed-p">
+          À <strong>8 995 €</strong>, la Voge DS800X Rally 2026 est la seule trail aventure de sa catégorie à embarquer une <strong>caméra frontale HD</strong> et un <strong>radar d'angle mort</strong> dans les rétroviseurs de série. Sur une BMW F 900 GS Adventure ou une Honda Africa Twin, ces équipements n'existent pas en option — ou représentent plusieurs milliers d'euros de personnalisation. Ici, c'est inclus sans supplément, avec l'ABS cornering 6 axes et les suspensions KYB réglables.
+        </p>
+
+        <h3 class="ed-h3">24 litres → 400 km : quand la Ténéré 700 s'arrête, vous continuez</h3>
+        <p class="ed-p">
+          Le réservoir de <strong>24 litres</strong> est l'un des plus grands de la catégorie trail aventure — contre 16 litres sur la Yamaha Ténéré 700 et 19 litres sur la CFMoto 800 MT. Avec une consommation de 5,5 à 6 L/100 km, la 800 Rally dépasse les <strong>400 km d'autonomie par plein</strong>. Pour un rallye, une traversée de la France ou un week-end dans les Pyrénées, c'est la différence entre une étape de plus et un arrêt forcé.
+        </p>
+
+        <h3 class="ed-h3">Essayez la Voge 800 Rally à Cholet — sans engagement</h3>
+        <p class="ed-p" style="margin-bottom:0;">
+          <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à La Séguinière (Cholet, 49280), propose un essai gratuit sur rendez-vous pour tous les modèles. La DS800X Rally est disponible à l'essai en Maine-et-Loire — permis A requis. Appelez le <a href="tel:+33963221470">09 63 22 14 70</a> ou réservez via le formulaire en bas de page.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FIN SECTION EDITORIALE -->
 
 <!-- AVIS CLIENTS -->
 <section id="avis">
@@ -481,7 +473,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="avis-grid">
       <div class="avis-card fi">
         <div class="avis-top">
-          <div class="avis-avatar">E</div>
+          <div class="avis-avatar">B</div>
           <div><div class="avis-name">Bertrand L.</div><div class="avis-date">Il y a 8 mois</div></div>
         </div>
         <div class="stars">★★★★★</div>
@@ -489,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="avis-card fi" style="transition-delay:.1s">
         <div class="avis-top">
-          <div class="avis-avatar" style="background:#1a6bc4">F</div>
+          <div class="avis-avatar" style="background:#1a6bc4">L</div>
           <div><div class="avis-name">Laurent D.</div><div class="avis-date">Il y a 2 mois</div></div>
         </div>
         <div class="stars">★★★★★</div>
@@ -497,7 +489,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="avis-card fi" style="transition-delay:.15s">
         <div class="avis-top">
-          <div class="avis-avatar" style="background:#c97a2a">P</div>
+          <div class="avis-avatar" style="background:#c97a2a">F</div>
           <div><div class="avis-name">Franck M.</div><div class="avis-date">Il y a 2 mois</div></div>
         </div>
         <div class="stars">★★★★★</div>
@@ -510,9 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="faq-in">
     <div class="sh fi">
@@ -557,8 +547,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-<!-- ===== FIN FAQ ===== -->
-
 <!-- CONTACT & FORM -->
 <section id="contact">
   <div class="in">
@@ -611,7 +599,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
 <footer>
   <a href="https://galaxie2roo.fr/" aria-label="Retour à l'accueil">
   <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" width="125" height="40">
@@ -619,81 +606,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
   <p style="margin-top:8px"><a href="#">Mentions légales</a> &middot; <a href="#">Confidentialité</a></p>
 </footer>
-
 <div class="sbar">
   <a href="tel:+339 63 22 14 70" class="sc" onclick="dlPush('phone_call','sticky')">📞 Appelez-nous</a>
   <a href="#essai-form" class="se" onclick="dlPush('cta_click','essai_sticky')">🏍️ Faire un essai</a>
 </div>
-
 <script>
-/* ===== CAROUSEL HERO — vanilla JS, zéro dépendance ===== */
 (function(){
   'use strict';
-  var TOTAL   = 5;
-  var DELAY   = 4500;
-  var DUR     = 600;
-  var current = 0;
-  var timer   = null;
-  var locked  = false;
-
-  var slides  = document.querySelectorAll('#carouselTrack .carousel-slide');
-  var dots    = document.querySelectorAll('#carouselDots .carousel-dot');
-  var btnP    = document.getElementById('carouselPrev');
-  var btnN    = document.getElementById('carouselNext');
-  var wrap    = document.getElementById('heroCarousel');
-
-  if(!slides.length) return;
-
+  var TOTAL=5,DELAY=4500,DUR=600,current=0,timer=null,locked=false;
+  var slides=document.querySelectorAll('#carouselTrack .carousel-slide');
+  var dots=document.querySelectorAll('#carouselDots .carousel-dot');
+  var btnP=document.getElementById('carouselPrev');
+  var btnN=document.getElementById('carouselNext');
+  var wrap=document.getElementById('heroCarousel');
+  if(!slides.length)return;
   function goTo(idx){
-    if(locked || idx === current) return;
-    locked = true;
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    dots[current].setAttribute('aria-selected','false');
-    current = ((idx % TOTAL) + TOTAL) % TOTAL;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    dots[current].setAttribute('aria-selected','true');
-    if(window.dataLayer) dataLayer.push({event:'carousel_slide_change',carousel_id:'hero',slide_index:current});
-    setTimeout(function(){ locked = false; }, DUR);
+    if(locked||idx===current)return;
+    locked=true;
+    slides[current].classList.remove('active');dots[current].classList.remove('active');dots[current].setAttribute('aria-selected','false');
+    current=((idx%TOTAL)+TOTAL)%TOTAL;
+    slides[current].classList.add('active');dots[current].classList.add('active');dots[current].setAttribute('aria-selected','true');
+    setTimeout(function(){locked=false;},DUR);
   }
-
-  function next(){ goTo(current + 1); }
-  function prev(){ goTo(current - 1); }
-  function startAuto(){ stopAuto(); timer = setInterval(next, DELAY); }
-  function stopAuto(){ clearInterval(timer); timer = null; }
-
-  btnN.addEventListener('click', function(){ next(); startAuto(); });
-  btnP.addEventListener('click', function(){ prev(); startAuto(); });
-
-  dots.forEach(function(d){
-    d.addEventListener('click', function(){ goTo(parseInt(d.dataset.index,10)); startAuto(); });
-  });
-
-  wrap.addEventListener('mouseenter', stopAuto);
-  wrap.addEventListener('mouseleave', startAuto);
-  wrap.addEventListener('focusin',    stopAuto);
-  wrap.addEventListener('focusout',   startAuto);
-
-  var tx = 0;
-  wrap.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
-  wrap.addEventListener('touchend',   function(e){
-    var diff = tx - e.changedTouches[0].clientX;
-    if(Math.abs(diff) > 40){ diff > 0 ? next() : prev(); startAuto(); }
-  }, {passive:true});
-
+  function next(){goTo(current+1);}
+  function prev(){goTo(current-1);}
+  function startAuto(){stopAuto();timer=setInterval(next,DELAY);}
+  function stopAuto(){clearInterval(timer);timer=null;}
+  btnN.addEventListener('click',function(){next();startAuto();});
+  btnP.addEventListener('click',function(){prev();startAuto();});
+  dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.index,10));startAuto();});});
+  wrap.addEventListener('mouseenter',stopAuto);wrap.addEventListener('mouseleave',startAuto);
+  wrap.addEventListener('focusin',stopAuto);wrap.addEventListener('focusout',startAuto);
+  var tx=0;
+  wrap.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
+  wrap.addEventListener('touchend',function(e){var diff=tx-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?next():prev();startAuto();}},{passive:true});
   startAuto();
 })();
-/* ===== FIN CAROUSEL ===== */
 </script>
-
 <script>
 function openMenu(){document.getElementById('mm').classList.add('open');}
 function closeMenu(){document.getElementById('mm').classList.remove('open');}
 const obs=new IntersectionObserver(e=>{
-  requestAnimationFrame(()=>{
-    e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});
-  });
+  requestAnimationFrame(()=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');obs.unobserve(x.target);}});});
 },{threshold:0,rootMargin:'0px 0px -40px 0px'});
 const fiEls=document.querySelectorAll('.fi');
 fiEls.forEach(el=>obs.observe(el));
@@ -705,45 +659,43 @@ function submitForm(){
   const m=document.getElementById('fm').value;
   const d=document.getElementById('fd').value;
   const msg=document.getElementById('fmsg').value.trim();
-
   if(!n){alert('Merci de renseigner votre prénom et nom.');return;}
   if(!p){alert('Merci de renseigner votre numéro de téléphone.');return;}
-
   const btn=document.querySelector('.fsub');
-  btn.disabled=true;
-  btn.textContent='Envoi en cours...';
-
-  fetch('https://formspree.io/f/xlgwqpez',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({
-      name:n,
-      phone:p,
-      model:m,
-      date:d||'Non précisée',
-      message:msg||'Aucun message'
-    })
-  })
+  btn.disabled=true;btn.textContent='Envoi en cours...';
+  fetch('https://formspree.io/f/xlgwqpez',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:n,phone:p,model:m,date:d||'Non précisée',message:msg||'Aucun message'})})
   .then(r=>{
     if(r.ok){
       window.dataLayer=window.dataLayer||[];
       dataLayer.push({event:'form_submit',form_type:'essai_gratuit',moto_model:m});
       document.querySelector('.ef').innerHTML='<div style="text-align:center;padding:40px 20px"><div style="font-size:48px;margin-bottom:16px">✅</div><h3 style="color:#fff;font-family:\'Barlow Condensed\',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;margin-bottom:12px">Demande envoyée !</h3><p style="color:rgba(255,255,255,0.7);font-size:14px">Nous vous recontacterons rapidement au '+p+'<br>pour confirmer votre essai.</p></div>';
-    } else {
-      btn.disabled=false;
-      btn.textContent="Envoyer ma demande d'essai";
-      alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');
-    }
+    } else {btn.disabled=false;btn.textContent="Envoyer ma demande d'essai";alert('Une erreur est survenue. Merci de réessayer ou de nous appeler directement.');}
   })
-  .catch(()=>{
-    btn.disabled=false;
-    btn.textContent="Envoyer ma demande d'essai";
-    alert('Erreur de connexion. Merci de réessayer.');
-  });
+  .catch(()=>{btn.disabled=false;btn.textContent="Envoyer ma demande d'essai";alert('Erreur de connexion. Merci de réessayer.');});
+}
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');});
+  if(!isOpen)item.classList.add('open');
+}
+function toggleCollapse(bodyId,btnId){
+  var body=document.getElementById(bodyId);
+  var btn=document.getElementById(btnId);
+  var isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  btn.textContent=isOpen?'Lire la suite':'Réduire';
+}
+function togglePourquoi(){
+  var body=document.getElementById('pourquoi-body');
+  var btn=document.getElementById('pourquoi-toggle');
+  var isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  btn.classList.toggle('open',!isOpen);
+  btn.setAttribute('aria-expanded',!isOpen);
 }
 </script>
-
-<!-- ===== LIGHTBOX ===== -->
 <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
   <button id="lightbox-close" aria-label="Fermer">&#x2715;</button>
   <button id="lightbox-prev" aria-label="Image précédente">&#8249;</button>
@@ -751,73 +703,35 @@ function submitForm(){
   <button id="lightbox-next" aria-label="Image suivante">&#8250;</button>
   <div id="lightbox-counter"></div>
 </div>
-<!-- ===== FIN LIGHTBOX ===== -->
-
 <script>
-/* ===== LIGHTBOX ===== */
 (function(){
-  var lb      = document.getElementById('lightbox');
-  var lbImg   = document.getElementById('lightbox-img');
-  var lbCount = document.getElementById('lightbox-counter');
-  var lbClose = document.getElementById('lightbox-close');
-  var lbPrev  = document.getElementById('lightbox-prev');
-  var lbNext  = document.getElementById('lightbox-next');
-  var slides  = document.querySelectorAll('#carouselTrack .carousel-slide img');
-  var total   = slides.length;
-  var lbIndex = 0;
-
-  function openLb(idx){
-    lbIndex = ((idx % total) + total) % total;
-    lbImg.src = slides[lbIndex].src;
-    lbImg.alt = slides[lbIndex].alt;
-    lbCount.textContent = (lbIndex + 1) + ' / ' + total;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLb(){
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-    lbImg.src = '';
-  }
-  function nextLb(){ openLb(lbIndex + 1); }
-  function prevLb(){ openLb(lbIndex - 1); }
-
-  slides.forEach(function(img, i){
-    img.addEventListener('click', function(){ openLb(i); });
+  var lb=document.getElementById('lightbox');
+  var lbImg=document.getElementById('lightbox-img');
+  var lbCount=document.getElementById('lightbox-counter');
+  var lbClose=document.getElementById('lightbox-close');
+  var lbPrev=document.getElementById('lightbox-prev');
+  var lbNext=document.getElementById('lightbox-next');
+  var slides=document.querySelectorAll('#carouselTrack .carousel-slide img');
+  var total=slides.length,lbIndex=0;
+  function openLb(idx){lbIndex=((idx%total)+total)%total;lbImg.src=slides[lbIndex].src;lbImg.alt=slides[lbIndex].alt;lbCount.textContent=(lbIndex+1)+' / '+total;lb.classList.add('open');document.body.style.overflow='hidden';}
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lbImg.src='';}
+  function nextLb(){openLb(lbIndex+1);}
+  function prevLb(){openLb(lbIndex-1);}
+  slides.forEach(function(img,i){img.addEventListener('click',function(){openLb(i);});});
+  lbClose.addEventListener('click',closeLb);
+  lbPrev.addEventListener('click',prevLb);
+  lbNext.addEventListener('click',nextLb);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLb();
+    if(e.key==='ArrowRight')nextLb();
+    if(e.key==='ArrowLeft')prevLb();
   });
-
-  lbClose.addEventListener('click', closeLb);
-  lbPrev.addEventListener('click', prevLb);
-  lbNext.addEventListener('click', nextLb);
-
-  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
-
-  document.addEventListener('keydown', function(e){
-    if(!lb.classList.contains('open')) return;
-    if(e.key === 'Escape')     closeLb();
-    if(e.key === 'ArrowRight') nextLb();
-    if(e.key === 'ArrowLeft')  prevLb();
-  });
-
-  var tx = 0;
-  lb.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
-  lb.addEventListener('touchend',   function(e){
-    var diff = tx - e.changedTouches[0].clientX;
-    if(Math.abs(diff) > 40){ diff > 0 ? nextLb() : prevLb(); }
-  }, {passive:true});
+  var tx=0;
+  lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){var diff=tx-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?nextLb():prevLb();}},{passive:true});
 })();
-/* ===== FIN LIGHTBOX ===== */
 </script>
-
-
-<script>
-function toggleFaq(btn){
-  var item = btn.parentElement;
-  var isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
-  if(!isOpen) item.classList.add('open');
-}
-</script>
-
 </body>
 </html>
