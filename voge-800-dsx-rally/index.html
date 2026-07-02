@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/site.webmanifest" />
 <meta name="description" content="Voge 800 Rally 2026 à Cholet — Concessionnaire officiel Galaxie 2 Roo. Essai gratuit, prix, fiche technique. Rally-trail 800cc, tout équipé de série.">
 <title>Voge DS 800X Rally 2026 – Prix & Essai | Galaxie 2 Roo</title>
-<link rel="preload" as="image" href="images/voge-800dsx-01.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/voge-800dsx-07.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap">
@@ -330,7 +330,7 @@ body{padding-bottom:70px;}
       <div class="hero-carousel" id="heroCarousel" aria-label="Photos Voge DS800X Rally 2026">
         <div class="carousel-track" id="carouselTrack">
           <div class="carousel-slide active">
-            <img src="images/voge-800dsx-07.webp" alt="Voge DS800X Rally 2026 Bleu et blanc - Galaxie 2 Roo Cholet" loading="eager" width="700" height="467">
+            <img src="images/voge-800dsx-07.webp" alt="Voge DS800X Rally 2026 Bleu et blanc - Galaxie 2 Roo Cholet" loading="eager" fetchpriority="high" width="700" height="467">
           </div>
           <div class="carousel-slide">
             <img src="images/voge-800dsx-08.webp" alt="Voge DS800X Rally 2026 Bleu et blanc avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
@@ -398,6 +398,7 @@ body{padding-bottom:70px;}
           <div class="carousel-slide">
             <img src="images/voge-800dsx-29.webp" alt="Voge DS800X Rally 2026 Noir et jaune profil gauche - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
+         </div>
         <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
         <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
         <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation carousel">
@@ -636,6 +637,10 @@ body{padding-bottom:70px;}
           <div class="ii">📞</div>
           <div class="ic"><div class="lbl">Téléphone</div><div class="val"><a href="tel:+339 63 22 14 70" onclick="dlPush('phone_call','contact')">09 63 22 14 70</a></div></div>
         </div>
+       <div class="ib">
+          <div class="ii">✉️</div>
+          <div class="ic"><div class="lbl">Email</div><div class="val"><a href="mailto:galaxie2roo@orange.fr">galaxie2roo@orange.fr</a></div></div>
+        </div>
         <div class="ib">
           <div class="ii">🕐</div>
           <div class="ic">
@@ -684,8 +689,9 @@ body{padding-bottom:70px;}
 <script>
 (function(){
   'use strict';
-  var TOTAL=5,DELAY=4500,DUR=600,current=0,timer=null,locked=false;
+  var DELAY=4500,DUR=600,current=0,timer=null,locked=false;
   var slides=document.querySelectorAll('#carouselTrack .carousel-slide');
+  var TOTAL=slides.length;
   var dots=document.querySelectorAll('#carouselDots .carousel-dot');
   var btnP=document.getElementById('carouselPrev');
   var btnN=document.getElementById('carouselNext');
