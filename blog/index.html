@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NVHGDDZM");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Galaxie2Roo" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Blog Voge Cholet | Avis, Guides et Actus Moto | Galaxie 2 Roo</title>
+    <meta name="description" content="Le blog de Galaxie 2 Roo : avis, fiches techniques et guides sur la gamme Voge (900 DSX, 800 Rally, 625 DSX, R625 Naked). Concessionnaire officiel à Cholet." />
+    <link rel="canonical" href="https://galaxie2roo.fr/blog/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet';"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap"
+    /></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://galaxie2roo.fr" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://galaxie2roo.fr/blog/" }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "Blog Galaxie 2 Roo",
+          "url": "https://galaxie2roo.fr/blog/",
+          "description": "Avis, fiches techniques et guides sur la gamme Voge — Galaxie 2 Roo, concessionnaire officiel à Cholet."
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;}
+      h1,h2,.stitle,.nav-links a{font-family:'Arial Narrow',Arial,sans-serif;}
+    </style>
+    <style>
+      :root{--r:#E0190F;--dk:#0A0A0A;--md:#141414;--cd:#1C1C1C;--br:#2A2A2A;--tx:#F0F0F0;--mu:#AAAAAA;--gd:#C9942A;}
+      *{margin:0;padding:0;box-sizing:border-box;}
+      html{scroll-behavior:smooth;}
+      body{background:var(--dk);color:var(--tx);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden;font-size:17px;line-height:1.6;}
+      nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bottom:2px solid var(--r);padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+      .logo{height:40px;}
+      .nav-links{display:flex;gap:18px;list-style:none;}
+      .nav-links a{color:#fff;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;}
+      .nav-links a:hover{color:var(--r);}
+      .cta-nav{background:var(--r);color:#fff;padding:10px 18px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;white-space:nowrap;}
+      .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+      .burger span{width:26px;height:2px;background:#222;display:block;}
+      .mmenu{display:none;position:fixed;inset:0;z-index:200;background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:26px;}
+      .mmenu.open{display:flex;}
+      .mmenu a{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;color:#222;text-decoration:none;}
+      .mmenu a.red{color:var(--r);}
+      .mclose{position:absolute;top:18px;right:20px;background:none;border:none;color:#222;font-size:28px;cursor:pointer;}
+      .breadcrumb{max-width:1000px;margin:84px auto 0;padding:0 20px;font-size:13px;color:var(--mu);}
+      .breadcrumb a{color:var(--mu);text-decoration:none;}
+      .breadcrumb a:hover{color:var(--r);}
+      #bhero{max-width:1000px;margin:0 auto;padding:24px 20px 40px;}
+      .art-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--r);margin-bottom:14px;display:block;}
+      h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:900;line-height:1;letter-spacing:-.5px;text-transform:uppercase;margin-bottom:14px;color:#fff;}
+      #bhero p{color:var(--mu);font-size:17px;max-width:600px;line-height:1.7;}
+      #posts{max-width:1000px;margin:0 auto;padding:0 20px 80px;display:grid;grid-template-columns:1fr;gap:24px;}
+      .post-card{display:grid;grid-template-columns:280px 1fr;gap:28px;background:var(--md);border:1px solid var(--br);border-radius:6px;overflow:hidden;text-decoration:none;transition:border-color .25s;}
+      .post-card:hover{border-color:rgba(224,25,15,.4);}
+      .post-card img{width:100%;height:100%;object-fit:cover;min-height:200px;}
+      .post-body{padding:26px 26px 26px 0;display:flex;flex-direction:column;justify-content:center;}
+      .post-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--r);margin-bottom:10px;}
+      .post-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.1;margin-bottom:12px;}
+      .post-excerpt{color:var(--mu);font-size:15px;line-height:1.7;margin-bottom:14px;}
+      .post-meta{font-size:13px;color:var(--mu);}
+      .post-cta{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--r);margin-top:14px;}
+      .soon-card{border:1px dashed var(--br);border-radius:6px;padding:26px;text-align:center;color:var(--mu);font-size:14px;}
+      footer{background:#030303;border-top:1px solid var(--br);padding:36px 20px 28px;text-align:center;}
+      footer img{height:26px;margin-bottom:16px;}
+      .footer-models{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;}
+      .footer-models a{color:var(--mu);text-decoration:none;font-size:13px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.5px;text-transform:uppercase;font-weight:700;}
+      .footer-models a:hover{color:var(--r);}
+      footer p{font-size:13px;color:var(--mu);}
+      footer a{color:var(--mu);text-decoration:none;}
+      footer a:hover{color:var(--r);}
+      @media(max-width:768px){
+        .nav-links{display:none;}
+        .burger{display:flex;}
+        .breadcrumb{margin-top:78px;}
+        .post-card{grid-template-columns:1fr;}
+        .post-card img{aspect-ratio:16/9;min-height:0;}
+        .post-body{padding:20px;}
+      }
+    </style>
+  </head>
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav>
+      <a href="https://galaxie2roo.fr" aria-label="Retour à l'accueil"><img class="logo" src="/images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" /></a>
+      <ul class="nav-links">
+        <li><a href="https://galaxie2roo.fr/#gamme">Nos Motos</a></li>
+        <li><a href="https://galaxie2roo.fr/blog/">Blog</a></li>
+        <li><a href="https://galaxie2roo.fr/#contact">Contact</a></li>
+      </ul>
+      <a href="tel:+33963221470" class="cta-nav">📞 09 63 22 14 70</a>
+      <button class="burger" aria-label="Menu" onclick="openMenu()"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mmenu" id="mm">
+      <button class="mclose" aria-label="Fermer le menu" onclick="closeMenu()">✕</button>
+      <a href="https://galaxie2roo.fr/#gamme" onclick="closeMenu()">Nos Motos</a>
+      <a href="https://galaxie2roo.fr/blog/" onclick="closeMenu()">Blog</a>
+      <a href="https://galaxie2roo.fr/#contact" onclick="closeMenu()">Contact</a>
+      <a href="tel:+33963221470" class="red" onclick="closeMenu()">📞 Appelez-nous</a>
+    </div>
+
+    <div class="breadcrumb"><a href="https://galaxie2roo.fr">Accueil</a> › <span>Blog</span></div>
+
+    <div id="bhero">
+      <span class="art-tag">Le Blog Galaxie 2 Roo</span>
+      <h1>Avis, guides &amp; actus Voge</h1>
+      <p>Fiches techniques, avis détaillés et conseils d'achat sur la gamme Voge — pour vous aider à choisir votre prochaine moto, à Cholet et partout en Maine-et-Loire.</p>
+    </div>
+
+    <div id="posts">
+      <a class="post-card" href="https://galaxie2roo.fr/blog/voge-625-dsx-2026-avis-prix/">
+        <img src="/images/voge-625dsx-07.webp" alt="Voge 625 DSX 2026 Black Knight - Galaxie 2 Roo Cholet" loading="lazy" width="280" height="200">
+        <div class="post-body">
+          <div class="post-tag">Avis &amp; Fiche Technique</div>
+          <div class="post-title">Voge 625 DSX 2026 : avis, fiche technique et prix</div>
+          <p class="post-excerpt">Notre avis complet sur le trail A2 le mieux équipé de sa catégorie : fiche technique, points forts, comparatif face à la CFMoto 700 MT et prix à Cholet.</p>
+          <div class="post-meta">23 juillet 2026</div>
+          <div class="post-cta">Lire l'article →</div>
+        </div>
+      </a>
+      <div class="soon-card">D'autres articles arrivent prochainement — Voge DS 900X, DS 800X Rally et Naked R 625.</div>
+    </div>
+
+    <footer>
+      <img src="/images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo — Concessionnaire Voge Cholet" />
+      <div class="footer-models">
+        <a href="https://galaxie2roo.fr/voge-r625/">Voge Naked R 625</a>
+        <a href="https://galaxie2roo.fr/voge-900-dsx/">Voge DS 900X</a>
+        <a href="https://galaxie2roo.fr/voge-625-dsx/">Voge 625 DSX</a>
+        <a href="https://galaxie2roo.fr/voge-800-dsx-rally/">Voge DS 800X Rally</a>
+      </div>
+      <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
+      <p style="margin-top:8px">
+        <a href="https://galaxie2roo.fr">Accueil</a> &middot;
+        <a href="#">Mentions légales</a> &middot;
+        <a href="#">Confidentialité</a>
+      </p>
+    </footer>
+
+    <script>
+      function openMenu(){document.getElementById('mm').classList.add('open');}
+      function closeMenu(){document.getElementById('mm').classList.remove('open');}
+    </script>
+  </body>
+</html>
