@@ -71,8 +71,8 @@
       :root{--r:#E0190F;--dk:#0A0A0A;--md:#141414;--cd:#1C1C1C;--br:#2A2A2A;--tx:#F0F0F0;--mu:#AAAAAA;--gd:#C9942A;}
       *{margin:0;padding:0;box-sizing:border-box;}
       html{scroll-behavior:smooth;}
-      body{background:var(--dk);color:var(--tx);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden;font-size:17px;line-height:1.6;}
-      nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#0B0505;border-bottom:2px solid var(--r);padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+      body{background:var(--dk);color:var(--tx);font-family:'Barlow',sans-serif;font-weight:400;overflow-x:hidden;font-size:17px;line-height:1.6;margin-top:var(--banner-h,0px);}
+      #summer-banner{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--r);color:#fff;text-align:center;padding:10px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.3px;line-height:1.4;}nav{position:fixed;top:var(--banner-h,0px);left:0;right:0;z-index:100;background:#0B0505;border-bottom:2px solid var(--r);padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
       .logo{height:40px;}
       .nav-links{display:flex;gap:18px;list-style:none;}
       .nav-links a{color:#fff;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s;}
@@ -122,6 +122,9 @@
     </style>
   </head>
   <body>
+<div id="summer-banner">☀️ Fermeture estivale du samedi 1er au dimanche 17 août inclus. Réouverture le mardi 18 août&nbsp;!</div>
+<script>(function(){function setBannerHeight(){var b=document.getElementById('summer-banner');document.documentElement.style.setProperty('--banner-h', b? b.offsetHeight+'px':'0px');}setBannerHeight();window.addEventListener('resize',setBannerHeight);window.addEventListener('load',setBannerHeight);})();</script>
+
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVHGDDZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav>
