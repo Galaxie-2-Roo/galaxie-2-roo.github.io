@@ -387,7 +387,7 @@
   background: none;
   border: none;
 }
-/* ── Caption block — BELOW the wrap ── */
+/* ── Caption block: BELOW the wrap ── */
 .carousel-info {
   display: flex;
   align-items: center;
@@ -1209,7 +1209,34 @@
     transform: translateX(4px);
   }
 }
+          /* ===== PROMO LAST SUMMER DAYS 2026 (auto-masquée dès le 01/10/2026) ===== */
+      .promo-off{display:none;}
+      html.promo-ended .promo-only{display:none!important;}
+      html.promo-ended .promo-off{display:inline;}
+      .old-price{text-decoration:line-through;color:var(--mu);font-weight:600;margin-right:6px;}
+      #promo{background:linear-gradient(135deg,#140303 0%,var(--dk) 55%);border-bottom:3px solid var(--r);padding:104px 20px 48px;}
+      .promo-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;}
+      .promo-tag{display:inline-block;background:var(--gd);color:#000;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:2px;margin-bottom:16px;}
+      .promo-txt h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1;color:#fff;margin-bottom:14px;}
+      .promo-txt h2 span{color:var(--r);}
+      .promo-txt p{color:var(--tx);font-size:16px;margin-bottom:10px;}
+      .promo-txt .promo-price{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,6vw,64px);font-weight:900;color:var(--gd);line-height:1.1;margin-bottom:14px;}
+      .promo-txt .promo-price s{color:var(--mu);font-size:.5em;font-weight:600;margin-right:10px;}
+      .promo-txt .promo-count{color:var(--gd);font-weight:700;}
+      .promo-txt .actions{margin-top:22px;}
+      .promo-txt .promo-legal{font-size:12px;color:var(--mu);margin-top:18px;}
+      .promo-img{display:block;}
+      .promo-img img{width:100%;max-width:440px;height:auto;display:block;margin:0 auto;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.8);transition:transform .25s;}
+      .promo-img img:hover{transform:scale(1.02);}
+      @media(max-width:900px){
+        #promo{padding:88px 16px 36px;}
+        .promo-in{grid-template-columns:1fr;gap:28px;text-align:center;}
+        .promo-img img{max-width:300px;}
+        .promo-txt .actions{justify-content:center;}
+      }
     </style>
+    <script>/* Promo Last Summer Days : masquée automatiquement à partir du 01/10/2026 */
+    if(Date.now()>=Date.parse('2026-10-01T00:00:00+02:00'))document.documentElement.classList.add('promo-ended');</script>
   </head>
   <body>
 
@@ -1252,6 +1279,29 @@
       <a href="#contact" onclick="closeMenu()">Contact</a>
       <a href="tel:+33963221470" class="red" onclick="closeMenu(); dlPush('phone_call', 'menu');">📞 Appelez-nous</a>
     </div>
+    <!-- PROMO LAST SUMMER DAYS 2026 (se masque seule à partir du 01/10/2026) -->
+    <section id="promo" class="promo-only" aria-label="Offre Last Summer Days 2026">
+      <div class="promo-in">
+        <div class="promo-txt">
+          <span class="promo-tag">Opération commerciale · Last Summer Days 2026</span>
+          <h2>-1 000 € sur la <span>Voge 800 Rally</span></h2>
+          <p class="promo-price"><s>8 995 € TTC</s>7 995 € TTC*</p>
+          <p>Du 1er au 30 septembre 2026 chez <strong>Galaxie 2 Roo</strong> à La Séguinière (Cholet). Dans la limite des stocks disponibles.</p>
+          <p class="promo-count" id="promoCount"></p>
+          <div class="actions">
+            <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="btn-p" onclick="dlPush('cta_click','promo_home')">Découvrir l'offre</a>
+            <a href="tel:+33963221470" class="btn-s" onclick="dlPush('phone_call','promo_home')">📞 09 63 22 14 70</a>
+          </div>
+          <p class="promo-legal">*Offre valable du 01/09 au 30/09/2026 sur le modèle Voge 800 Rally 2026, soit 1 000 € de remise sur le prix public de 8 995 € TTC. Dans la limite des stocks disponibles. Voir conditions en magasin.</p>
+        </div>
+        <a class="promo-img" href="https://galaxie2roo.fr/voge-800-dsx-rally/" onclick="dlPush('promo_click','affiche_home')">
+          <img src="/voge-800-dsx-rally/images/promo-last-summer-days-2026.webp" alt="Affiche Last Summer Days 2026 : Voge 800 Rally à 7 995 € TTC au lieu de 8 995 €, Galaxie 2 Roo Cholet" loading="eager" width="700" height="1050" />
+        </a>
+      </div>
+    </section>
+    <script>(function(){var el=document.getElementById('promoCount');if(!el)return;
+    var d=Math.ceil((Date.parse('2026-10-01T00:00:00+02:00')-Date.now())/86400000);
+    if(d>1)el.textContent='⏳ Plus que '+d+' jours pour en profiter !';else if(d===1)el.textContent='⏳ Dernier jour pour en profiter !';})();</script>
     <!-- ── HERO ── -->
     <section id="hero">
       <div class="hero-in">
@@ -1297,7 +1347,7 @@
             <div class="carousel-slide active" data-tag="Roadster" data-model="Naked R 625" data-href="https://galaxie2roo.fr/voge-r625/">
               <img
                 src="images/voge-r625-07.webp"
-                alt="Voge Naked R 625 2026 — Roadster"
+                alt="Voge Naked R 625 2026 · Roadster"
                 width="700"
                 height="467"
                 fetchpriority="high"
@@ -1307,7 +1357,7 @@
             <div class="carousel-slide" data-tag="Trail Aventure" data-model="DS 900X" data-href="https://galaxie2roo.fr/voge-900-dsx/">
               <img
                 src="images/voge-ds900x-03.webp"
-                alt="Voge DS 900X 2026 — Trail Aventure"
+                alt="Voge DS 900X 2026 · Trail Aventure"
                 width="700"
                 height="467"
                 loading="lazy"
@@ -1317,7 +1367,7 @@
             <div class="carousel-slide" data-tag="Trail Routier" data-model="625 DSX" data-href="https://galaxie2roo.fr/voge-625-dsx/">
               <img
                 src="images/voge-625dsx-01.webp"
-                alt="Voge 625 DSX 2026 — Trail Routier"
+                alt="Voge 625 DSX 2026 · Trail Routier"
                 width="700"
                 height="467"
                 loading="lazy"
@@ -1327,7 +1377,7 @@
             <div class="carousel-slide" data-tag="Rally Raid" data-model="DS 800X Rally" data-href="https://galaxie2roo.fr/voge-800-dsx-rally/">
               <img
                 src="images/voge-800dsx-02.webp"
-                alt="Voge DS 800X Rally 2026 — Rally Raid"
+                alt="Voge DS 800X Rally 2026 · Rally Raid"
                 width="700"
                 height="467"
                 loading="lazy"
@@ -1368,7 +1418,7 @@
           <span class="stag">La gamme Voge 2026</span>
           <h2 class="stitle">Quatre motos,<br /><span>une passion.</span></h2>
           <p class="sdesc">
-            Trails aventure ou roadster sportif — chaque Voge est conçue pour
+            Trails aventure ou roadster sportif, chaque Voge est conçue pour
             repousser vos limites. Tout équipé de série, garantie 3 ans.
           </p>
         </div>
@@ -1376,7 +1426,7 @@
           <!-- Naked R 625 -->
           <a href="https://galaxie2roo.fr/voge-r625/" class="card fi" onclick="dlPush('model_click', 'r625')">
             <div class="card-img">
-              <img src="images/voge-r625-07.webp" alt="Voge Naked R 625 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <img src="images/voge-r625-07.webp" alt="Voge Naked R 625 2026 · Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Roadster</span>
             </div>
             <div class="card-body">
@@ -1385,7 +1435,7 @@
               <div class="card-price">À partir de 5 795 € TTC</div>
               <p class="card-desc">
                 Le roadster sportif de la famille Voge. 581 cm³ bicylindre DOHC,
-                64 ch, lignes tendues et comportement vif — accessible permis
+                64 ch, lignes tendues et comportement vif, accessible permis
                 A2. Pour ceux qui préfèrent le bitume.
               </p>
               <div class="card-specs">
@@ -1409,7 +1459,7 @@
           <!-- DS 900X -->
           <a href="https://galaxie2roo.fr/voge-900-dsx/" class="card fi" style="transition-delay: 0.1s" onclick="dlPush('model_click', '900dsx')">
             <div class="card-img">
-              <img src="images/voge-ds900x-03.webp" alt="Voge DS900X 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <img src="images/voge-ds900x-03.webp" alt="Voge DS900X 2026 · Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Trail Aventure</span>
             </div>
             <div class="card-body">
@@ -1418,7 +1468,7 @@
               <div class="card-price">À partir de 10 990 € TTC</div>
               <p class="card-desc">
                 Le trail premium de la gamme. 895 cm³ bicylindre parallèle, 95
-                ch, équipement électronique complet — radar de recul, contrôle
+                ch, équipement électronique complet, radar de recul, contrôle
                 de traction, modes de conduite. Pour les grands voyages.
               </p>
               <div class="card-specs">
@@ -1442,7 +1492,7 @@
           <!-- 625 DSX -->
           <a href="https://galaxie2roo.fr/voge-625-dsx/" class="card fi" style="transition-delay: 0.2s" onclick="dlPush('model_click', '625dsx')">
             <div class="card-img">
-              <img src="images/voge-625dsx-01.webp" alt="Voge 625 DSX 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <img src="images/voge-625dsx-01.webp" alt="Voge 625 DSX 2026 · Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Trail Routier</span>
             </div>
             <div class="card-body">
@@ -1451,7 +1501,7 @@
               <div class="card-price">À partir de 6 990 € TTC</div>
               <p class="card-desc">
                 La polyvalence incarnée. 581 cm³ bicylindre DOHC, 64 ch,
-                accessible permis A2 — TFT 7", quickshifter, contrôle de
+                accessible permis A2, TFT 7", quickshifter, contrôle de
                 traction. Le trail idéal pour le quotidien comme le voyage.
               </p>
               <div class="card-specs">
@@ -1475,13 +1525,13 @@
           <!-- DS 800X Rally -->
           <a href="https://galaxie2roo.fr/voge-800-dsx-rally/" class="card fi" style="transition-delay: 0.3s" onclick="dlPush('model_click', '800rally')">
             <div class="card-img">
-              <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 — Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
+              <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 · Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467" />
               <span class="card-tag">Rally Raid</span>
             </div>
             <div class="card-body">
               <span class="card-cat">Voge</span>
               <div class="card-name">DS 800X Rally</div>
-              <div class="card-price">À partir de 8 995 € TTC</div>
+              <div class="card-price"><span class="promo-only"><span class="old-price">8 995 €</span>7 995 € TTC* jusqu'au 30/09</span><span class="promo-off">À partir de 8 995 € TTC</span></div>
               <p class="card-desc">
                 Inspiré du rally-raid. 798 cm³ bicylindre parallèle, 95 ch,
                 suspensions longue course Marzocchi/KYB, réservoir 24 L. Pour
@@ -1534,7 +1584,7 @@
             <div class="stars">★★★★★</div>
             <p class="avis-text">
               Accueil exceptionnel, l'équipe prend le temps d'expliquer chaque
-              moto. <strong>J'ai pu essayer la DS900X avant d'acheter</strong> —
+              moto. <strong>J'ai pu essayer la DS900X avant d'acheter</strong>,
               une expérience top, livraison rapide et moto parfaitement préparée.
             </p>
           </div>
@@ -1634,7 +1684,7 @@
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Galaxie 2 Roo — Carte"
+                title="Galaxie 2 Roo · Carte"
               ></iframe>
             </div>
           </div>
@@ -1684,7 +1734,7 @@
         <a href="https://galaxie2roo.fr/concession-cholet/">Concession Cholet</a>
         <a href="https://galaxie2roo.fr/blog/">Blog</a>
       </div>
-      <p>© 2026 Galaxie 2 Roo — Concessionnaire Voge officiel · Cholet La Séguinière</p>
+      <p>© 2026 Galaxie 2 Roo · Concessionnaire Voge officiel · Cholet La Séguinière</p>
       <p style="margin-top: 8px">
         <a href="#">Mentions légales</a> &middot;
         <a href="#">Confidentialité</a>
