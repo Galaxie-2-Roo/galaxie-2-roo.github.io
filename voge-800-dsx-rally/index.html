@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html.promo-ended .promo-only{display:none!important;}
 html.promo-ended .promo-off{display:inline;}
 .old-price{text-decoration:line-through;color:var(--mu);font-weight:600;font-size:.6em;margin-right:6px;}
-#promo{background:linear-gradient(135deg,#140303 0%,var(--dk) 55%);border-top:3px solid var(--gd);border-bottom:3px solid var(--r);padding:56px 20px;}
+#promo{background:linear-gradient(135deg,#140303 0%,var(--dk) 55%);border-bottom:3px solid var(--r);padding:104px 20px 48px;}
 .promo-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;}
 .promo-tag{display:inline-block;background:var(--gd);color:#000;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:2px;margin-bottom:16px;}
 .promo-txt h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1;color:#fff;margin-bottom:14px;}
@@ -47,8 +47,8 @@ html.promo-ended .promo-off{display:inline;}
 .promo-img img:hover{transform:scale(1.02);}
 @media(max-width:900px){
   .promo-in{grid-template-columns:1fr;gap:28px;text-align:center;}
-  .promo-img{order:-1;}
-  .promo-img img{max-width:320px;}
+  #promo{padding:88px 16px 36px;}
+  .promo-img img{max-width:300px;}
   .promo-txt .actions{justify-content:center;}
 }
 </style>
@@ -346,6 +346,29 @@ if(Date.now()>=Date.parse('2026-10-01T00:00:00+02:00'))document.documentElement.
   <a href="tel:+339 63 22 14 70" class="red" onclick="closeMenu();dlPush('phone_call','menu')">📞 Appelez-nous</a>
 </div>
 <!-- HERO -->
+<!-- PROMO LAST SUMMER DAYS 2026 (se masque seule à partir du 01/10/2026) -->
+<section id="promo" class="promo-only" aria-label="Offre Last Summer Days 2026">
+  <div class="promo-in">
+    <div class="promo-txt fi">
+      <span class="promo-tag">Opération commerciale · Last Summer Days 2026</span>
+      <h2>-1 000 € sur la <span>Voge 800 Rally</span></h2>
+      <p class="promo-price"><s>8 995 € TTC</s>7 995 € TTC*</p>
+      <p>Du 1er au 30 septembre 2026 chez <strong>Galaxie 2 Roo</strong> à La Séguinière (Cholet). Dans la limite des stocks disponibles.</p>
+      <p class="promo-count" id="promoCount"></p>
+      <div class="actions">
+        <a href="#essai-form" class="btn-p" onclick="dlPush('cta_click','essai_promo')">Profiter de l'offre</a>
+        <a href="tel:+33963221470" class="btn-s" onclick="dlPush('phone_call','promo')">📞 09 63 22 14 70</a>
+      </div>
+      <p class="promo-legal">*Offre valable du 01/09 au 30/09/2026 sur le modèle Voge 800 Rally 2026, soit 1 000 € de remise sur le prix public de 8 995 € TTC. Dans la limite des stocks disponibles. Voir conditions en magasin.</p>
+    </div>
+    <a class="promo-img fi" href="images/promo-last-summer-days-2026.webp" target="_blank" rel="noopener" onclick="dlPush('promo_click','affiche')">
+      <img src="images/promo-last-summer-days-2026.webp" alt="Affiche Last Summer Days 2026 : Voge 800 Rally à 7 995 € TTC au lieu de 8 995 €, Galaxie 2 Roo Cholet" loading="eager" width="700" height="1050">
+    </a>
+  </div>
+</section>
+<script>(function(){var el=document.getElementById('promoCount');if(!el)return;
+var d=Math.ceil((Date.parse('2026-10-01T00:00:00+02:00')-Date.now())/86400000);
+if(d>1)el.textContent='⏳ Plus que '+d+' jours pour en profiter !';else if(d===1)el.textContent='⏳ Dernier jour pour en profiter !';})();</script>
 <section id="hero">
   <div class="hero-in">
     <div class="fi">
@@ -394,29 +417,6 @@ if(Date.now()>=Date.parse('2026-10-01T00:00:00+02:00'))document.documentElement.
     </div>
   </div>
 </section>
-<!-- PROMO LAST SUMMER DAYS 2026 (se masque seule à partir du 01/10/2026) -->
-<section id="promo" class="promo-only" aria-label="Offre Last Summer Days 2026">
-  <div class="promo-in">
-    <div class="promo-txt fi">
-      <span class="promo-tag">Opération commerciale · Last Summer Days 2026</span>
-      <h2>-1 000 € sur la <span>Voge 800 Rally</span></h2>
-      <p class="promo-price"><s>8 995 € TTC</s>7 995 € TTC*</p>
-      <p>Du 1er au 30 septembre 2026 chez <strong>Galaxie 2 Roo</strong> à La Séguinière (Cholet). Dans la limite des stocks disponibles.</p>
-      <p class="promo-count" id="promoCount"></p>
-      <div class="actions">
-        <a href="#essai-form" class="btn-p" onclick="dlPush('cta_click','essai_promo')">Profiter de l'offre</a>
-        <a href="tel:+33963221470" class="btn-s" onclick="dlPush('phone_call','promo')">📞 09 63 22 14 70</a>
-      </div>
-      <p class="promo-legal">*Offre valable du 01/09 au 30/09/2026 sur le modèle Voge 800 Rally 2026, soit 1 000 € de remise sur le prix public de 8 995 € TTC. Dans la limite des stocks disponibles. Voir conditions en magasin.</p>
-    </div>
-    <a class="promo-img fi" href="images/promo-last-summer-days-2026.webp" target="_blank" rel="noopener" onclick="dlPush('promo_click','affiche')">
-      <img src="images/promo-last-summer-days-2026.webp" alt="Affiche Last Summer Days 2026 : Voge 800 Rally à 7 995 € TTC au lieu de 8 995 €, Galaxie 2 Roo Cholet" loading="lazy" width="700" height="1050">
-    </a>
-  </div>
-</section>
-<script>(function(){var el=document.getElementById('promoCount');if(!el)return;
-var d=Math.ceil((Date.parse('2026-10-01T00:00:00+02:00')-Date.now())/86400000);
-if(d>1)el.textContent='⏳ Plus que '+d+' jours pour en profiter !';else if(d===1)el.textContent='⏳ Dernier jour pour en profiter !';})();</script>
 <!-- ESSAI BANNER -->
 <div id="eb">
   <div class="eb-in">
