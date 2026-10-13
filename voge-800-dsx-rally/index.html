@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/site.webmanifest" />
 <meta name="description" content="Voge 800 Rally 2026 à Cholet. Concessionnaire officiel Galaxie 2 Roo. Essai gratuit, prix, fiche technique. Rally-trail 800cc, tout équipé de série.">
 <title>Voge DS 800X Rally 2026 – Prix & Essai | Galaxie 2 Roo</title>
-<link rel="preload" as="image" href="images/voge-800dsx-01.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/voge-800dsx-07.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;500&display=swap">
@@ -225,6 +225,22 @@ body{padding-bottom:70px;}
 .feat-list li{text-align:left;}
 .eb-in{text-align:center;justify-content:center;}
 }
+.hero-carousel{background:#fff;}
+.carousel-slide img{object-fit:contain;filter:none;background:#fff;}
+.carousel-count{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;background:rgba(0,0,0,.6);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2px;padding:3px 12px;border-radius:12px;}
+.color-picker{margin-top:16px;text-align:center;}
+.color-label{font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--mu);margin-bottom:10px;}
+.color-label strong{color:#fff;font-weight:700;}
+.color-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.color-btn{display:inline-flex;align-items:center;gap:9px;background:var(--cd);border:1px solid var(--br);color:#fff;padding:9px 16px 9px 10px;border-radius:30px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:border-color .2s,background .2s,transform .2s;}
+.color-btn:hover{border-color:rgba(224,25,15,.6);transform:translateY(-1px);}
+.color-btn.active{border-color:var(--r);background:#241010;box-shadow:0 0 18px rgba(224,25,15,.25);}
+.color-btn:focus-visible{outline:2px solid #fff;outline-offset:2px;}
+.sw{width:22px;height:22px;border-radius:50%;border:1px solid rgba(255,255,255,.45);flex-shrink:0;}
+.sw-blanc{background:linear-gradient(135deg,#f4f4f4 50%,#1f4fa3 50%);}
+.sw-noir{background:linear-gradient(135deg,#1a1a1a 50%,#8d9094 50%);}
+.sw-jaune{background:linear-gradient(135deg,#f2c200 50%,#161616 50%);}
+@media(max-width:768px){.color-btn{font-size:14px;padding:8px 12px 8px 8px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -241,7 +257,7 @@ body{padding-bottom:70px;}
       "@type": "Product",
       "name": "Voge 800 Rally 2026",
       "brand": { "@type": "Brand", "name": "Voge" },
-      "image": "https://galaxie2roo.fr/voge-800-dsx-rally/images/voge-800dsx-01.webp",
+      "image": "https://galaxie2roo.fr/voge-800-dsx-rally/images/voge-800dsx-02.webp",
       "description": "Rally-trail 798cc, 95 hp at 9,000 rpm, fully equipped as standard. Official Voge dealer in Cholet: Galaxie 2 Roo. Free test ride available.",
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -270,6 +286,7 @@ body{padding-bottom:70px;}
         {"@type":"Question","name":"La Voge 800 Rally a-t-elle une caméra embarquée ?","acceptedAnswer":{"@type":"Answer","text":"Oui, la Voge DS800X Rally est équipée d'une caméra frontale embarquée (dashcam) de série, ainsi que d'un radar d'angle mort et d'un écran TFT 7 pouces connecté. Ces équipements sont inclus dans le prix de 8 995 €."}},
         {"@type":"Question","name":"Quelle est la consommation de la Voge 800 Rally ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 800 Rally consomme environ 5,5 à 6 L/100 km en usage mixte. Avec son grand réservoir de 24 litres, l'autonomie dépasse les 380 à 400 km, idéal pour les grands voyages."}},
         {"@type":"Question","name":"Quelle est la différence entre la Voge 800 Rally et la Voge 900 DSX ?","acceptedAnswer":{"@type":"Answer","text":"La 800 Rally est orientée trail aventure long cours avec roues 21/18 pouces, réservoir 24L et position haute (selle 850 mm). La 900 DSX est un maxi-trail plus routier avec roues 21/17 pouces et selle à 825 mm. Les deux partagent un profil adventure, mais le 800 Rally est taillé pour le hors-route."}},
+        {"@type":"Question","name":"Quels sont les coloris de la Voge 800 Rally ?","acceptedAnswer":{"@type":"Answer","text":"La Voge 800 Rally est disponible en 3 coloris : Blanc & Bleu, Noir & Gris et Jaune & Noir. Contactez Galaxie 2 Roo à Cholet pour connaître les coloris en stock."}},
         {"@type":"Question","name":"Comment essayer la Voge 800 Rally à Cholet ?","acceptedAnswer":{"@type":"Answer","text":"Galaxie 2 Roo propose des essais gratuits sur rendez-vous à La Séguinière (Cholet). Remplissez le formulaire sur cette page ou appelez le 09 63 22 14 70. Ouvert du mardi au samedi."}}
       ]
     },
@@ -338,30 +355,86 @@ body{padding-bottom:70px;}
     <div class="hero-img fi" style="animation-delay:.2s">
       <div class="hero-carousel" id="heroCarousel" aria-label="Photos Voge DS800X Rally 2026">
         <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide active">
-            <img src="images/voge-800dsx-06.webp" alt="Voge DS800X Rally 2026 - Galaxie 2 Roo Cholet" loading="eager" width="700" height="467">
+          <div class="carousel-slide active" data-color="blanc">
+            <img src="images/voge-800dsx-07.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="eager" width="700" height="467">
           </div>
-          <div class="carousel-slide">
-            <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 face avant - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-08.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue de face - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
-          <div class="carousel-slide">
-            <img src="images/voge-800dsx-03.webp" alt="Voge DS800X Rally 2026 profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-09.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
-          <div class="carousel-slide">
-            <img src="images/voge-800dsx-04.webp" alt="Voge DS800X Rally 2026 tableau de bord TFT 7 pouces - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-10.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
-          <div class="carousel-slide">
-            <img src="images/voge-800dsx-05.webp" alt="Voge DS800X Rally 2026 détail - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-11.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue trois-quarts arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-12.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="blanc">
+            <img src="images/voge-800dsx-13.webp" alt="Voge DS800X Rally 2026 blanc et bleu, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-14.webp" alt="Voge DS800X Rally 2026 noir et gris, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-15.webp" alt="Voge DS800X Rally 2026 noir et gris, vue de face - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-16.webp" alt="Voge DS800X Rally 2026 noir et gris, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-17.webp" alt="Voge DS800X Rally 2026 noir et gris, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-18.webp" alt="Voge DS800X Rally 2026 noir et gris, vue trois-quarts arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-19.webp" alt="Voge DS800X Rally 2026 noir et gris, vue arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-20.webp" alt="Voge DS800X Rally 2026 noir et gris, vue trois-quarts arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="noir">
+            <img src="images/voge-800dsx-21.webp" alt="Voge DS800X Rally 2026 noir et gris, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-22.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-23.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue de face - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-24.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue avant trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-25.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue trois-quarts - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-26.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-27.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue trois-quarts arrière - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-28.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+          </div>
+          <div class="carousel-slide" data-color="jaune">
+            <img src="images/voge-800dsx-29.webp" alt="Voge DS800X Rally 2026 jaune et noir, vue de profil - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
           </div>
         </div>
         <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Image précédente" type="button">&#8249;</button>
         <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Image suivante" type="button">&#8250;</button>
-        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation carousel">
-          <button class="carousel-dot active" role="tab" aria-selected="true"  aria-label="Image 1" data-index="0"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 2" data-index="1"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 3" data-index="2"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 4" data-index="3"></button>
-          <button class="carousel-dot"        role="tab" aria-selected="false" aria-label="Image 5" data-index="4"></button>
+        <div class="carousel-count" id="carouselCount" aria-live="polite">1 / 7</div>
+      </div>
+      <div class="color-picker" id="colorPicker" role="group" aria-label="Choisir le coloris de la Voge 800 Rally">
+        <div class="color-label">Coloris : <strong id="colorName">Blanc &amp; Bleu</strong></div>
+        <div class="color-btns">
+          <button type="button" class="color-btn active" data-color="blanc" data-name="Blanc &amp; Bleu" aria-pressed="true"><span class="sw sw-blanc"></span>Blanc &amp; Bleu</button>
+          <button type="button" class="color-btn" data-color="noir" data-name="Noir &amp; Gris" aria-pressed="false"><span class="sw sw-noir"></span>Noir &amp; Gris</button>
+          <button type="button" class="color-btn" data-color="jaune" data-name="Jaune &amp; Noir" aria-pressed="false"><span class="sw sw-jaune"></span>Jaune &amp; Noir</button>
         </div>
       </div>
     </div>
@@ -381,7 +454,7 @@ body{padding-bottom:70px;}
 <section id="produit">
   <div class="prod-in">
     <div class="prod-img fi">
-      <img src="images/voge-800dsx-01.webp" alt="Voge DS800X Rally 2026 - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
+      <img src="images/voge-800dsx-02.webp" alt="Voge DS800X Rally 2026 jaune et noir - Galaxie 2 Roo Cholet" loading="lazy" width="700" height="467">
     </div>
     <div class="prod-info fi">
       <span class="prod-tag">Trail Adventure · Bicylindre · Euro 5+</span>
@@ -398,7 +471,7 @@ body{padding-bottom:70px;}
           Son équipement de série est exhaustif : <strong>écran TFT 7" vertical</strong> connecté Bluetooth + TPMS, ABS cornering (IMU 6 axes) déconnectable, suspensions <strong>KYB entièrement réglables</strong> (fourche inversée Ø43mm + amortisseur à bonbonne séparée), amortisseur de direction rotatif, freinage Nissin double disque Ø310mm radiaux 4 pistons, <strong>pneus Pirelli Scorpion Rally STR</strong> tubeless à rayons 21/18". Réservoir 24 litres, soit plus de 400 km d'autonomie.
         </p>
         <p class="prod-desc">
-          Chez <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à Cholet (La Séguinière, 49280), la Voge DS800X Rally 2026 est disponible en stock à <strong>8 995 € TTC</strong>, garantie 3 ans constructeur incluse. Livraison possible. Essai gratuit sur rendez-vous.
+          Chez <strong>Galaxie 2 Roo</strong>, concessionnaire Voge officiel à Cholet (La Séguinière, 49280), la Voge DS800X Rally 2026 est disponible en stock à <strong>8 995 € TTC</strong>, garantie 3 ans constructeur incluse. Disponible en <strong>3 coloris</strong> (Blanc &amp; Bleu, Noir &amp; Gris, Jaune &amp; Noir). Livraison possible. Essai gratuit sur rendez-vous.
         </p>
       </div>
       <button class="toggle-btn" id="desc-toggle" onclick="toggleCollapse('desc-more','desc-toggle')">Lire la suite</button>
@@ -415,6 +488,7 @@ body{padding-bottom:70px;}
         <div class="si"><div class="sl2">Roues</div><div class="sv2">21" av / 18" ar · tubeless</div></div>
         <div class="si"><div class="sl2">Pneus</div><div class="sv2">Pirelli Scorpion Rally STR</div></div>
         <div class="si"><div class="sl2">Dimensions</div><div class="sv2">2380 × 910 × 1460 mm</div></div>
+        <div class="si" style="grid-column:1/-1"><div class="sl2">Coloris</div><div class="sv2">3 coloris : Blanc &amp; Bleu · Noir &amp; Gris · Jaune &amp; Noir</div></div>
       </div>
       <div class="specs-title">Équipements de série</div>
       <ul class="feat-list">
@@ -552,6 +626,10 @@ body{padding-bottom:70px;}
       <div class="faq-a"><p>La <strong>800 Rally</strong> est orientée trail aventure long cours : roues 21/18", réservoir 24L, selle à 850 mm. La <strong>900 DSX</strong> est plus routière : roues 21/17", selle 825 mm. Même esprit adventure, mais le 800 Rally est taillé pour le hors-route.</p></div>
     </div>
     <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Quels sont les coloris de la Voge 800 Rally ?</button>
+      <div class="faq-a"><p>La Voge 800 Rally est disponible en <strong>3 coloris</strong> : <strong>Blanc &amp; Bleu</strong>, <strong>Noir &amp; Gris</strong> et <strong>Jaune &amp; Noir</strong>. Utilisez le sélecteur de coloris au-dessus de la fiche pour voir chaque version en photo, puis contactez Galaxie 2 Roo pour connaître les coloris en stock.</p></div>
+    </div>
+    <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Comment essayer la Voge 800 Rally à Cholet ?</button>
       <div class="faq-a"><p>Galaxie 2 Roo propose des <strong>essais gratuits sur rendez-vous</strong> à La Séguinière (Cholet). Remplissez le formulaire sur cette page ou appelez le <a href="tel:+33963221470" style="color:var(--r)">09 63 22 14 70</a>. Ouvert du mardi au samedi.</p></div>
     </div>
@@ -623,33 +701,50 @@ body{padding-bottom:70px;}
 <script>
 (function(){
   'use strict';
-  var TOTAL=5,DELAY=4500,DUR=600,current=0,timer=null,locked=false;
-  var slides=document.querySelectorAll('#carouselTrack .carousel-slide');
-  var dots=document.querySelectorAll('#carouselDots .carousel-dot');
+  var DELAY=4500,DUR=600,pos=0,timer=null,locked=false,color='blanc';
+  var all=document.querySelectorAll('#carouselTrack .carousel-slide');
+  var counter=document.getElementById('carouselCount');
+  var nameEl=document.getElementById('colorName');
+  var btns=document.querySelectorAll('#colorPicker .color-btn');
   var btnP=document.getElementById('carouselPrev');
   var btnN=document.getElementById('carouselNext');
   var wrap=document.getElementById('heroCarousel');
-  if(!slides.length)return;
-  function goTo(idx){
-    if(locked||idx===current)return;
+  if(!all.length)return;
+  function list(){return Array.prototype.filter.call(all,function(s){return s.dataset.color===color;});}
+  function render(){
+    var l=list();
+    all.forEach(function(s){s.classList.remove('active');});
+    l[pos].classList.add('active');
+    if(counter)counter.textContent=(pos+1)+' / '+l.length;
+  }
+  function goTo(i){
+    var l=list();
+    if(locked||!l.length)return;
     locked=true;
-    slides[current].classList.remove('active');dots[current].classList.remove('active');dots[current].setAttribute('aria-selected','false');
-    current=((idx%TOTAL)+TOTAL)%TOTAL;
-    slides[current].classList.add('active');dots[current].classList.add('active');dots[current].setAttribute('aria-selected','true');
+    pos=((i%l.length)+l.length)%l.length;
+    render();
     setTimeout(function(){locked=false;},DUR);
   }
-  function next(){goTo(current+1);}
-  function prev(){goTo(current-1);}
+  function next(){goTo(pos+1);}
+  function prev(){goTo(pos-1);}
+  function setColor(c,name){
+    color=c;pos=0;
+    btns.forEach(function(b){var on=b.dataset.color===c;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false');});
+    if(nameEl)nameEl.textContent=name;
+    render();
+    if(window.dataLayer)dataLayer.push({event:'color_select',moto_model:'Voge DS800X Rally 2026',moto_color:name});
+  }
   function startAuto(){stopAuto();timer=setInterval(next,DELAY);}
   function stopAuto(){clearInterval(timer);timer=null;}
+  btns.forEach(function(b){b.addEventListener('click',function(){setColor(b.dataset.color,b.dataset.name);startAuto();});});
   btnN.addEventListener('click',function(){next();startAuto();});
   btnP.addEventListener('click',function(){prev();startAuto();});
-  dots.forEach(function(d){d.addEventListener('click',function(){goTo(parseInt(d.dataset.index,10));startAuto();});});
   wrap.addEventListener('mouseenter',stopAuto);wrap.addEventListener('mouseleave',startAuto);
   wrap.addEventListener('focusin',stopAuto);wrap.addEventListener('focusout',startAuto);
   var tx=0;
   wrap.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
   wrap.addEventListener('touchend',function(e){var diff=tx-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?next():prev();startAuto();}},{passive:true});
+  render();
   startAuto();
 })();
 </script>
@@ -721,13 +816,17 @@ function togglePourquoi(){
   var lbClose=document.getElementById('lightbox-close');
   var lbPrev=document.getElementById('lightbox-prev');
   var lbNext=document.getElementById('lightbox-next');
-  var slides=document.querySelectorAll('#carouselTrack .carousel-slide img');
-  var total=slides.length,lbIndex=0;
+  var allImgs=document.querySelectorAll('#carouselTrack .carousel-slide img');
+  var slides=[],total=0,lbIndex=0;
   function openLb(idx){lbIndex=((idx%total)+total)%total;lbImg.src=slides[lbIndex].src;lbImg.alt=slides[lbIndex].alt;lbCount.textContent=(lbIndex+1)+' / '+total;lb.classList.add('open');document.body.style.overflow='hidden';}
   function closeLb(){lb.classList.remove('open');document.body.style.overflow='';lbImg.src='';}
   function nextLb(){openLb(lbIndex+1);}
   function prevLb(){openLb(lbIndex-1);}
-  slides.forEach(function(img,i){img.addEventListener('click',function(){openLb(i);});});
+  allImgs.forEach(function(img){img.addEventListener('click',function(){
+    var c=img.closest('.carousel-slide').dataset.color;
+    slides=Array.prototype.filter.call(allImgs,function(x){return x.closest('.carousel-slide').dataset.color===c;});
+    total=slides.length;openLb(slides.indexOf(img));
+  });});
   lbClose.addEventListener('click',closeLb);
   lbPrev.addEventListener('click',prevLb);
   lbNext.addEventListener('click',nextLb);
