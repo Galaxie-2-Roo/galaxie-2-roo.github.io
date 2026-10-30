@@ -18,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Galaxie2Roo" />
   <link rel="manifest" href="/site.webmanifest" />
-<meta name="description" content="Voge 625 DSX 2026 à partir de 6 990 € TTC. Concessionnaire Voge officiel à Cholet, trail 581cc A2 noté 4,8/5 (128 avis). Essai gratuit sur rendez-vous.">
+<meta name="description" content="Voge 625 DSX 2026 à partir de 6 990 € TTC, occasion quasi neuve 164 km à 6 290 €. Concessionnaire Voge officiel à Cholet, trail 581cc A2 noté 4,8/5. Essai gratuit.">
 <title>Voge 625 DSX 2026 : Prix, Essai, Fiche Technique | Cholet</title>
 <link rel="preload" as="image" href="images/voge-625dsx-07.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +68,25 @@ h1 span{color:var(--r);}
 .eb-in p{color:rgba(255,255,255,.9);font-size:15px;margin-top:5px;font-weight:400;}
 .btn-w{background:#fff;color:var(--r);padding:16px 36px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:all .25s;display:inline-block;}
 .btn-w:hover{background:#f0f0f0;transform:scale(1.02);}
+/* OCCASION */
+#occasion{padding:70px 20px;background:var(--dk);border-top:2px solid var(--r);}
+.occ-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.occ-gal{background:#e9e9ec;border-radius:6px;padding:14px;box-shadow:0 20px 60px rgba(0,0,0,.6);}
+.occ-main{width:100%;height:440px;object-fit:contain;display:block;}
+.occ-thumbs{display:flex;gap:8px;justify-content:center;margin-top:10px;}
+.occ-thumbs button{background:#fff;border:2px solid transparent;border-radius:4px;padding:2px;cursor:pointer;width:64px;height:64px;}
+.occ-thumbs button.on{border-color:var(--r);}
+.occ-thumbs img{width:100%;height:100%;object-fit:contain;display:block;}
+.occ-tag{display:inline-block;background:var(--r);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:14px;}
+.occ-info h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4.5vw,44px);font-weight:900;text-transform:uppercase;line-height:1.05;color:#fff;margin-bottom:14px;}
+.occ-info p{color:var(--mu);margin-bottom:16px;}
+.occ-price{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;color:#fff;line-height:1;margin:6px 0 4px;}
+.occ-price s{font-size:22px;font-weight:400;color:var(--mu);margin-left:10px;}
+.occ-sub{font-size:14px;color:var(--mu);margin-bottom:18px;}
+.occ-list{list-style:none;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.occ-list li{padding-left:22px;position:relative;font-size:16px;}
+.occ-list li:before{content:"\2713";position:absolute;left:0;color:var(--r);font-weight:700;}
+@media(max-width:768px){#occasion{padding:40px 20px;}.occ-in{grid-template-columns:1fr;gap:26px;}.occ-main{height:320px;}.occ-info{text-align:center;}.occ-list{text-align:left;}}
 #produit{padding:80px 20px;background:var(--md);}
 .prod-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .prod-img{position:sticky;top:80px;}
@@ -253,14 +272,27 @@ body{padding-bottom:70px;}
         "bestRating": "5",
         "worstRating": "1"
       },
-      "offers": {
-        "@type": "Offer",
-        "price": "6990",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://galaxie2roo.fr/voge-625-dsx/",
-        "seller": { "@type": "Organization", "name": "Galaxie 2 Roo" }
-      }
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "6990",
+          "priceCurrency": "EUR",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": "https://schema.org/InStock",
+          "url": "https://galaxie2roo.fr/voge-625-dsx/",
+          "seller": { "@type": "Organization", "name": "Galaxie 2 Roo" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Voge 625 DSX noire, occasion quasi neuve, 164 km, garantie 2 ans",
+          "price": "6290",
+          "priceCurrency": "EUR",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/LimitedAvailability",
+          "url": "https://galaxie2roo.fr/voge-625-dsx/#occasion",
+          "seller": { "@type": "Organization", "name": "Galaxie 2 Roo" }
+        }
+      ]
     },
     {
       "@type": "MotorcycleDealer",
@@ -391,6 +423,37 @@ body{padding-bottom:70px;}
     <a href="#essai-form" class="btn-w" onclick="dlPush('cta_click','essai_banner')">Réserver un Essai →</a>
   </div>
 </div>
+<!-- OCCASION -->
+<section id="occasion" aria-label="Occasion du mois : Voge 625 DSX noire quasi neuve">
+  <div class="occ-in">
+    <div class="occ-gal fi">
+      <img class="occ-main" id="occMain" src="images/voge-625dsx-occasion-01.webp" alt="Voge 625 DSX noire occasion quasi neuve 164 km, vue avant trois quarts" width="600" height="440" loading="lazy">
+      <div class="occ-thumbs"><button type="button" class="on" aria-label="Photo 1" onclick="occSlide(0)"><img src="images/voge-625dsx-occasion-01.webp" alt="" loading="lazy" width="60" height="60"></button><button type="button" class="" aria-label="Photo 2" onclick="occSlide(1)"><img src="images/voge-625dsx-occasion-02.webp" alt="" loading="lazy" width="60" height="60"></button><button type="button" class="" aria-label="Photo 3" onclick="occSlide(2)"><img src="images/voge-625dsx-occasion-03.webp" alt="" loading="lazy" width="60" height="60"></button><button type="button" class="" aria-label="Photo 4" onclick="occSlide(3)"><img src="images/voge-625dsx-occasion-04.webp" alt="" loading="lazy" width="60" height="60"></button><button type="button" class="" aria-label="Photo 5" onclick="occSlide(4)"><img src="images/voge-625dsx-occasion-05.webp" alt="" loading="lazy" width="60" height="60"></button></div>
+    </div>
+    <div class="occ-info fi">
+      <span class="occ-tag">Occasion du mois · 1 exemplaire</span>
+      <h2>Voge 625 DSX noire : occasion quasi neuve, 164 km</h2>
+      <p>Vous rêvez d'une moto au look aventurier et aux sensations uniques ? Cette Voge 625 DSX noire n'a que 164 km au compteur : une occasion à ne pas manquer, prête à prendre la route chez Galaxie 2 Roo à Cholet.</p>
+      <div class="occ-price">6 290 € TTC<s>6 990 €</s></div>
+      <div class="occ-sub">Prix de la 625 DSX neuve : 6 990 € TTC</div>
+      <ul class="occ-list">
+        <li>Occasion · quasi neuve</li>
+        <li>164 km au compteur</li>
+        <li>Garantie 2 ans</li>
+        <li>Coloris noir</li>
+      </ul>
+      <p>Contactez-nous dès maintenant ou venez la découvrir chez Galaxie 2 Roo : votre passion, notre priorité !</p>
+      <div class="actions">
+        <a href="#essai-form" class="btn-p" onclick="dlPush('cta_click','occasion_essai')">🏍️ Réserver cette moto</a>
+        <a href="tel:+33963221470" class="btn-s" onclick="dlPush('phone_call','occasion')">📞 Appelez-nous</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+var occImgs=["voge-625dsx-occasion-01.webp","voge-625dsx-occasion-02.webp","voge-625dsx-occasion-03.webp","voge-625dsx-occasion-04.webp","voge-625dsx-occasion-05.webp"],occAlts=["Voge 625 DSX noire occasion quasi neuve 164 km, vue avant trois quarts","Voge 625 DSX noire occasion quasi neuve, vue arrière trois quarts","Voge 625 DSX noire occasion quasi neuve, écran TFT et commandes au guidon","Voge 625 DSX noire occasion quasi neuve, vue avant profil","Voge 625 DSX noire occasion quasi neuve, vue de face"];
+function occSlide(i){var m=document.getElementById('occMain');m.src='images/'+occImgs[i];m.alt=occAlts[i];var b=document.querySelectorAll('.occ-thumbs button');for(var k=0;k<b.length;k++){b[k].className=k===i?'on':'';}}
+</script>
 <!-- PRODUIT -->
 <section id="produit">
   <div class="prod-in">
