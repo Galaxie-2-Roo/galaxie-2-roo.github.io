@@ -75,6 +75,7 @@
     <style>
       /* ── TOKENS ── */
       :root {
+        --banner-h: 46px;
         --r: #e0190f;
         --dk: #0a0a0a;
         --md: #141414;
@@ -1209,6 +1210,14 @@
     transform: translateX(4px);
   }
 }
+      /* BLACK FRIDAY */
+      .bf-banner{position:fixed;top:0;left:0;right:0;height:var(--banner-h);z-index:101;background:#000;border-bottom:2px solid #c9942a;display:flex;align-items:center;justify-content:center;gap:14px;padding:0 14px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;letter-spacing:.5px;color:#fff;text-transform:uppercase;}
+      .bf-banner .bf-tag{background:#c9942a;color:#000;padding:2px 10px;border-radius:3px;font-weight:900;}
+      .bf-banner .bf-off{color:#c9942a;}
+      .bf-banner a{background:#e0190f;color:#fff;padding:5px 14px;border-radius:3px;text-decoration:none;font-size:16px;white-space:nowrap;}
+      .bf-banner s{color:#aaa;font-weight:400;}
+      @media (max-width: 1100px){.bf-banner .bf-long{display:none;}}
+      @media (max-width: 768px){:root{--banner-h:52px;}.bf-banner{font-size:15px;gap:8px;flex-wrap:wrap;align-content:center;line-height:1.2;}.bf-banner a{font-size:14px;padding:4px 10px;}}
     </style>
   </head>
   <body>
@@ -1223,6 +1232,11 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="bf-banner" role="region" aria-label="Offre Black Friday Voge R625 et 800 Rally">
+      <span class="bf-tag">Black Friday</span>
+      <span><span class="bf-off">1 000 € de remise</span> sur la R625 et la 800 Rally<span class="bf-long"> · R625 <s>5 990 €</s> 4 990 € · 800 Rally <s>8 995 €</s> 7 995 € · jusqu'au 30/11</span></span>
+      <a href="#gamme" onclick="dlPush('cta_click', 'black_friday_banner_home')">Voir les offres</a>
+    </div>
     <!-- ── NAV ── -->
     <nav>
       <img class="logo" src="images/logo-galaxie2roo.webp" alt="Galaxie 2 Roo" />
@@ -1395,7 +1409,7 @@
             <div class="card-body">
               <span class="card-cat">Voge</span>
               <div class="card-name">Naked R 625</div>
-              <div class="card-price"><s style="color:#AAAAAA;font-weight:400;font-size:.8em;">5 990 €</s> 4 990 € TTC <span style="background:#C9942A;color:#000;font-size:.65em;font-weight:900;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;">Black Friday</span></div>
+              <div class="card-price"><s style="color:#AAAAAA;font-weight:400;font-size:.8em;">5 990 €</s> 4 990 € TTC <span style="background:#C9942A;color:#000;font-size:.65em;font-weight:900;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;">-1 000 €</span><span style="display:block;font-size:.7em;color:#c9942a;text-transform:uppercase;letter-spacing:.5px;">Offre Black Friday jusqu'au 30/11</span></div>
               <p class="card-desc">
                 Le plaisir accessible. 581 cm³ bicylindre DOHC, 64 ch,
                 suspensions Kayaba, pneus Pirelli, accessible permis
@@ -1494,7 +1508,7 @@
             <div class="card-body">
               <span class="card-cat">Voge</span>
               <div class="card-name">DS 800X Rally</div>
-              <div class="card-price"><s style="color:#AAAAAA;font-weight:400;font-size:.8em;">8 995 €</s> 7 995 € TTC <span style="background:#C9942A;color:#000;font-size:.65em;font-weight:900;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;">Black Friday</span></div>
+              <div class="card-price"><s style="color:#AAAAAA;font-weight:400;font-size:.8em;">8 995 €</s> 7 995 € TTC <span style="background:#C9942A;color:#000;font-size:.65em;font-weight:900;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;">-1 000 €</span><span style="display:block;font-size:.7em;color:#c9942a;text-transform:uppercase;letter-spacing:.5px;">Offre Black Friday jusqu'au 30/11</span></div>
               <p class="card-desc">
                 Inspiré du rally-raid. 798 cm³ bicylindre parallèle, 95 ch,
                 suspensions longue course Marzocchi/KYB, réservoir 24 L. Pour
