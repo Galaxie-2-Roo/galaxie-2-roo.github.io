@@ -1218,6 +1218,8 @@
       .bf-banner s{color:#aaa;font-weight:400;}
       @media (max-width: 1100px){.bf-banner .bf-long{display:none;}}
       @media (max-width: 768px){:root{--banner-h:64px;}.bf-banner{flex-direction:column;justify-content:center;gap:3px;padding:4px 10px;overflow:hidden;font-size:14px;line-height:1.15;}.bf-banner .bf-tag{font-size:12px;padding:1px 8px;line-height:1.3;}.bf-banner>span:last-child{text-wrap:balance;}}
+      a.cta-nav.bf-cta,a.btn-p.bf-cta{background:#c9942a;color:#000;border-color:#c9942a;box-shadow:none;}
+      a.cta-nav.bf-cta:hover,a.btn-p.bf-cta:hover{background:#e0ad3c;color:#000;border-color:#e0ad3c;}
     </style>
   </head>
   <body>
@@ -1245,7 +1247,7 @@
         <li><a href="#avis">Avis</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#gamme" class="cta-nav" onclick="dlPush('cta_click', 'motos_hero')">🏍️ Offres Black Friday</a>
+      <a href="#gamme" class="cta-nav bf-cta" onclick="dlPush('cta_click', 'motos_hero')">🏍️ Offres Black Friday</a>
       <button class="burger" aria-label="Menu" onclick="openMenu()">
         <span></span><span></span><span></span>
       </button>
@@ -1271,7 +1273,7 @@
       <div class="hero-in">
         <!-- LEFT: texte -->
         <div class="hero-left fi">
-          <a href="#gamme" class="btn-p" style="display:table;margin:0 auto 18px;" onclick="dlPush('cta_click', 'voir_motos_hero')">🏍️ Offres Black Friday</a>
+          <a href="#gamme" class="btn-p bf-cta" style="display:table;margin:0 auto 18px;" onclick="dlPush('cta_click', 'voir_motos_hero')">🏍️ Offres Black Friday</a>
           <h1>Concessionnaire <span>Voge</span><br />Cholet</h1>
           <!-- [1.4] Liens modèles inline dans le texte hero -->
           <p class="hero-sub">
